@@ -1,0 +1,1045 @@
+{
+  "degenerate_tier_composition": {
+    "over_invested": 285,
+    "high_debt_investor": 232,
+    "outlier": 58,
+    "normal": 7,
+    "wealthy_exposed": 1
+  },
+  "investment_rate_distributions": {
+    "normal": {
+      "n": 4550,
+      "p50": 0.0884,
+      "p95": 0.1571,
+      "p99": 0.1854,
+      "max": 0.2607,
+      "p01": 0.0,
+      "min": 0.0
+    },
+    "over_invested": {
+      "n": 292,
+      "p50": 0.3103,
+      "p95": 0.3917,
+      "p99": 0.3965,
+      "max": 0.3996,
+      "p01": 0.2213,
+      "min": 0.2206
+    },
+    "high_debt_investor": {
+      "n": 291,
+      "p50": 0.277,
+      "p95": 0.3665,
+      "p99": 0.3773,
+      "max": 0.3799,
+      "p01": 0.1853,
+      "min": 0.1806
+    }
+  },
+  "tier1_investment_rate_floor": 0.1981,
+  "per_combination": [
+    {
+      "combination": "A|agglomerative|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.5154,
+      "min_normal_tier_pct": 38.79,
+      "normal_tier_shares_pct": [
+        38.79,
+        61.21
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.0
+    },
+    {
+      "combination": "A|agglomerative|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2876,
+      "min_normal_tier_pct": 23.6,
+      "normal_tier_shares_pct": [
+        23.6,
+        25.67,
+        50.73
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.037
+    },
+    {
+      "combination": "A|agglomerative|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.261,
+      "min_normal_tier_pct": 10.77,
+      "normal_tier_shares_pct": [
+        10.77,
+        27.87,
+        36.68,
+        24.68
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.0,
+      "min_headroom": 0.065
+    },
+    {
+      "combination": "A|agglomerative|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.24,
+      "min_normal_tier_pct": 14.15,
+      "normal_tier_shares_pct": [
+        20.51,
+        18.13,
+        24.95,
+        22.26,
+        14.15
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.1,
+      "min_headroom": 0.111
+    },
+    {
+      "combination": "A|birch|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.4853,
+      "min_normal_tier_pct": 40.2,
+      "normal_tier_shares_pct": [
+        40.2,
+        59.8
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.003
+    },
+    {
+      "combination": "A|fuzzy_cmeans|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2481,
+      "min_normal_tier_pct": 33.6,
+      "normal_tier_shares_pct": [
+        33.6,
+        66.4
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.002
+    },
+    {
+      "combination": "A|fuzzy_cmeans|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2989,
+      "min_normal_tier_pct": 21.93,
+      "normal_tier_shares_pct": [
+        33.87,
+        21.93,
+        44.2
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.026
+    },
+    {
+      "combination": "A|fuzzy_cmeans|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.289,
+      "min_normal_tier_pct": 21.27,
+      "normal_tier_shares_pct": [
+        28.33,
+        21.65,
+        21.27,
+        28.75
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.2,
+      "min_headroom": 0.071
+    },
+    {
+      "combination": "A|fuzzy_cmeans|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.2686,
+      "min_normal_tier_pct": 5.01,
+      "normal_tier_shares_pct": [
+        25.96,
+        5.01,
+        21.85,
+        25.32,
+        21.87
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.2,
+      "min_headroom": 0.171
+    },
+    {
+      "combination": "A|fuzzy_cmeans|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.2476,
+      "min_normal_tier_pct": 7.87,
+      "normal_tier_shares_pct": [
+        19.76,
+        14.02,
+        7.87,
+        19.78,
+        20.31,
+        18.26
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.086,
+      "min_headroom": 0.291
+    },
+    {
+      "combination": "A|gmm_diag|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.5147,
+      "min_normal_tier_pct": 0.18,
+      "normal_tier_shares_pct": [
+        0.18,
+        99.82
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.001
+    },
+    {
+      "combination": "A|gmm_diag|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2808,
+      "min_normal_tier_pct": 12.62,
+      "normal_tier_shares_pct": [
+        51.78,
+        12.62,
+        35.6
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.5,
+      "min_headroom": 0.011
+    },
+    {
+      "combination": "A|gmm_full|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.5148,
+      "min_normal_tier_pct": 19.49,
+      "normal_tier_shares_pct": [
+        19.49,
+        80.51
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.001
+    },
+    {
+      "combination": "A|gmm_full|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2863,
+      "min_normal_tier_pct": 13.85,
+      "normal_tier_shares_pct": [
+        56.57,
+        13.85,
+        29.58
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.5,
+      "min_headroom": 0.015
+    },
+    {
+      "combination": "A|kmeans|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.4954,
+      "min_normal_tier_pct": 0.48,
+      "normal_tier_shares_pct": [
+        0.48,
+        99.52
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.0
+    },
+    {
+      "combination": "A|kmeans|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.3079,
+      "min_normal_tier_pct": 11.56,
+      "normal_tier_shares_pct": [
+        46.55,
+        11.56,
+        41.89
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.5,
+      "min_headroom": 0.003
+    },
+    {
+      "combination": "A|kmeans|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.287,
+      "min_normal_tier_pct": 13.85,
+      "normal_tier_shares_pct": [
+        22.88,
+        13.85,
+        35.85,
+        27.43
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.6,
+      "min_headroom": 0.024
+    },
+    {
+      "combination": "A|kmeans|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.273,
+      "min_normal_tier_pct": 6.66,
+      "normal_tier_shares_pct": [
+        28.46,
+        6.66,
+        23.08,
+        21.14,
+        20.66
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.1,
+      "min_headroom": 0.113
+    },
+    {
+      "combination": "A|kmeans|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.2633,
+      "min_normal_tier_pct": 4.11,
+      "normal_tier_shares_pct": [
+        17.69,
+        25.41,
+        4.11,
+        20.51,
+        16.15,
+        16.13
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -0.143,
+      "min_headroom": 0.081
+    },
+    {
+      "combination": "A|kmedoids|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2442,
+      "min_normal_tier_pct": 41.6,
+      "normal_tier_shares_pct": [
+        41.6,
+        58.4
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.004
+    },
+    {
+      "combination": "A|kmedoids|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2537,
+      "min_normal_tier_pct": 26.86,
+      "normal_tier_shares_pct": [
+        26.86,
+        30.9,
+        42.24
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.5,
+      "min_headroom": 0.025
+    },
+    {
+      "combination": "A|kmedoids|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2847,
+      "min_normal_tier_pct": 8.33,
+      "normal_tier_shares_pct": [
+        29.16,
+        8.33,
+        33.91,
+        28.59
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.075
+    },
+    {
+      "combination": "A|spectral|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.5085,
+      "min_normal_tier_pct": 20.4,
+      "normal_tier_shares_pct": [
+        20.4,
+        79.6
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.001
+    },
+    {
+      "combination": "A|spectral|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.3198,
+      "min_normal_tier_pct": 27.27,
+      "normal_tier_shares_pct": [
+        40.18,
+        32.55,
+        27.27
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.02
+    },
+    {
+      "combination": "A|spectral|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2928,
+      "min_normal_tier_pct": 21.76,
+      "normal_tier_shares_pct": [
+        23.93,
+        21.76,
+        31.21,
+        23.1
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.0,
+      "min_headroom": 0.17
+    },
+    {
+      "combination": "A|spectral|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.2758,
+      "min_normal_tier_pct": 10.57,
+      "normal_tier_shares_pct": [
+        30.73,
+        17.96,
+        10.57,
+        22.62,
+        18.13
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.1,
+      "min_headroom": 0.275
+    },
+    {
+      "combination": "A|spectral|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.2709,
+      "min_normal_tier_pct": 0.07,
+      "normal_tier_shares_pct": [
+        28.46,
+        25.76,
+        0.07,
+        19.25,
+        15.23,
+        11.23
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -0.2,
+      "min_headroom": 0.213
+    },
+    {
+      "combination": "B|agglomerative|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.4005,
+      "min_normal_tier_pct": 0.33,
+      "normal_tier_shares_pct": [
+        99.67,
+        0.33
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.002
+    },
+    {
+      "combination": "B|agglomerative|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2993,
+      "min_normal_tier_pct": 0.33,
+      "normal_tier_shares_pct": [
+        0.33,
+        64.73,
+        34.95
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.042
+    },
+    {
+      "combination": "B|agglomerative|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.1972,
+      "min_normal_tier_pct": 0.33,
+      "normal_tier_shares_pct": [
+        44.57,
+        0.33,
+        34.95,
+        20.15
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.167
+    },
+    {
+      "combination": "B|agglomerative|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.1976,
+      "min_normal_tier_pct": 0.33,
+      "normal_tier_shares_pct": [
+        0.33,
+        44.57,
+        11.3,
+        34.95,
+        8.86
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": true,
+      "min_rho": 0.5,
+      "min_headroom": 0.167
+    },
+    {
+      "combination": "B|agglomerative|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.1852,
+      "min_normal_tier_pct": 0.33,
+      "normal_tier_shares_pct": [
+        0.33,
+        11.3,
+        44.57,
+        22.57,
+        8.86,
+        12.37
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.314,
+      "min_headroom": 0.234
+    },
+    {
+      "combination": "B|birch|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.3649,
+      "min_normal_tier_pct": 1.03,
+      "normal_tier_shares_pct": [
+        1.03,
+        98.97
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.008
+    },
+    {
+      "combination": "B|birch|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2373,
+      "min_normal_tier_pct": 1.03,
+      "normal_tier_shares_pct": [
+        1.03,
+        61.32,
+        37.65
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.084
+    },
+    {
+      "combination": "B|fuzzy_cmeans|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2769,
+      "min_normal_tier_pct": 47.21,
+      "normal_tier_shares_pct": [
+        52.79,
+        47.21
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 1.0,
+      "min_headroom": 0.038
+    },
+    {
+      "combination": "B|fuzzy_cmeans|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2566,
+      "min_normal_tier_pct": 20.42,
+      "normal_tier_shares_pct": [
+        20.42,
+        40.95,
+        38.64
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.086
+    },
+    {
+      "combination": "B|fuzzy_cmeans|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2217,
+      "min_normal_tier_pct": 0.51,
+      "normal_tier_shares_pct": [
+        28.59,
+        0.51,
+        37.47,
+        33.43
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.092
+    },
+    {
+      "combination": "B|fuzzy_cmeans|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.1822,
+      "min_normal_tier_pct": 0.15,
+      "normal_tier_shares_pct": [
+        23.34,
+        0.15,
+        23.36,
+        28.88,
+        24.26
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": true,
+      "min_rho": 0.6,
+      "min_headroom": 0.118
+    },
+    {
+      "combination": "B|fuzzy_cmeans|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.1826,
+      "min_normal_tier_pct": 0.07,
+      "normal_tier_shares_pct": [
+        19.93,
+        21.05,
+        0.07,
+        18.18,
+        19.93,
+        20.84
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": true,
+      "min_rho": 0.714,
+      "min_headroom": 0.132
+    },
+    {
+      "combination": "B|gmm_diag|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.278,
+      "min_normal_tier_pct": 43.65,
+      "normal_tier_shares_pct": [
+        56.35,
+        43.65
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 1.0,
+      "min_headroom": 0.03
+    },
+    {
+      "combination": "B|gmm_diag|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.319,
+      "min_normal_tier_pct": 0.2,
+      "normal_tier_shares_pct": [
+        56.33,
+        0.2,
+        43.47
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.079
+    },
+    {
+      "combination": "B|gmm_diag|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.218,
+      "min_normal_tier_pct": 0.18,
+      "normal_tier_shares_pct": [
+        38.55,
+        34.2,
+        0.18,
+        27.08
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.2,
+      "min_headroom": 0.086
+    },
+    {
+      "combination": "B|gmm_diag|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.1697,
+      "min_normal_tier_pct": 0.46,
+      "normal_tier_shares_pct": [
+        34.15,
+        0.46,
+        34.73,
+        20.68,
+        9.98
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.073
+    },
+    {
+      "combination": "B|gmm_full|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.4021,
+      "min_normal_tier_pct": 0.15,
+      "normal_tier_shares_pct": [
+        99.85,
+        0.15
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.003
+    },
+    {
+      "combination": "B|gmm_full|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.3153,
+      "min_normal_tier_pct": 0.13,
+      "normal_tier_shares_pct": [
+        57.87,
+        0.13,
+        42.0
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.068
+    },
+    {
+      "combination": "B|gmm_full|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2186,
+      "min_normal_tier_pct": 0.75,
+      "normal_tier_shares_pct": [
+        37.08,
+        0.75,
+        38.62,
+        23.56
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.316,
+      "min_headroom": 0.089
+    },
+    {
+      "combination": "B|gmm_full|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.1719,
+      "min_normal_tier_pct": 0.31,
+      "normal_tier_shares_pct": [
+        34.24,
+        0.31,
+        34.79,
+        20.68,
+        9.98
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.076
+    },
+    {
+      "combination": "B|kmeans|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2774,
+      "min_normal_tier_pct": 46.53,
+      "normal_tier_shares_pct": [
+        53.47,
+        46.53
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 1.0,
+      "min_headroom": 0.045
+    },
+    {
+      "combination": "B|kmeans|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.3162,
+      "min_normal_tier_pct": 0.35,
+      "normal_tier_shares_pct": [
+        53.87,
+        0.35,
+        45.78
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.088
+    },
+    {
+      "combination": "B|kmeans|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2473,
+      "min_normal_tier_pct": 0.04,
+      "normal_tier_shares_pct": [
+        40.11,
+        0.04,
+        32.02,
+        27.82
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.4,
+      "min_headroom": 0.086
+    },
+    {
+      "combination": "B|kmeans|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.2215,
+      "min_normal_tier_pct": 0.04,
+      "normal_tier_shares_pct": [
+        25.43,
+        0.04,
+        30.46,
+        20.48,
+        23.58
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.7,
+      "min_headroom": 0.069
+    },
+    {
+      "combination": "B|kmeans|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.2148,
+      "min_normal_tier_pct": 0.04,
+      "normal_tier_shares_pct": [
+        25.16,
+        22.73,
+        0.04,
+        14.18,
+        19.19,
+        18.7
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.371,
+      "min_headroom": 0.223
+    },
+    {
+      "combination": "B|kmedoids|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2754,
+      "min_normal_tier_pct": 49.12,
+      "normal_tier_shares_pct": [
+        50.88,
+        49.12
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.012
+    },
+    {
+      "combination": "B|kmedoids|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.3156,
+      "min_normal_tier_pct": 0.29,
+      "normal_tier_shares_pct": [
+        51.78,
+        0.29,
+        47.93
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.08
+    },
+    {
+      "combination": "B|kmedoids|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.2454,
+      "min_normal_tier_pct": 0.15,
+      "normal_tier_shares_pct": [
+        34.13,
+        0.15,
+        20.57,
+        45.14
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": true,
+      "min_rho": 0.6,
+      "min_headroom": 0.105
+    },
+    {
+      "combination": "B|spectral|2",
+      "k": 2,
+      "k_found": 2,
+      "macro_sil": 0.2814,
+      "min_normal_tier_pct": 39.63,
+      "normal_tier_shares_pct": [
+        60.37,
+        39.63
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -1.0,
+      "min_headroom": 0.05
+    },
+    {
+      "combination": "B|spectral|3",
+      "k": 3,
+      "k_found": 3,
+      "macro_sil": 0.2016,
+      "min_normal_tier_pct": 20.15,
+      "normal_tier_shares_pct": [
+        39.8,
+        20.15,
+        40.04
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.5,
+      "min_headroom": 0.035
+    },
+    {
+      "combination": "B|spectral|4",
+      "k": 4,
+      "k_found": 4,
+      "macro_sil": 0.0804,
+      "min_normal_tier_pct": 19.45,
+      "normal_tier_shares_pct": [
+        40.07,
+        20.15,
+        19.45,
+        20.33
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": -0.4,
+      "min_headroom": 0.094
+    },
+    {
+      "combination": "B|spectral|5",
+      "k": 5,
+      "k_found": 5,
+      "macro_sil": 0.0953,
+      "min_normal_tier_pct": 19.38,
+      "normal_tier_shares_pct": [
+        20.31,
+        19.38,
+        20.15,
+        19.45,
+        20.7
+      ],
+      "passes_normal_floor": true,
+      "passes_gates": false,
+      "min_rho": 0.1,
+      "min_headroom": 0.108
+    },
+    {
+      "combination": "B|spectral|6",
+      "k": 6,
+      "k_found": 6,
+      "macro_sil": 0.1368,
+      "min_normal_tier_pct": 0.04,
+      "normal_tier_shares_pct": [
+        20.33,
+        0.04,
+        20.15,
+        19.43,
+        19.34,
+        20.7
+      ],
+      "passes_normal_floor": false,
+      "passes_gates": false,
+      "min_rho": 0.486,
+      "min_headroom": 0.104
+    }
+  ],
+  "summary": {
+    "n_survivors": 60,
+    "n_gate_passers": 4,
+    "n_normal_non_degenerate": 32,
+    "n_passing_both": 0,
+    "normal_floor": 0.05
+  }
+}

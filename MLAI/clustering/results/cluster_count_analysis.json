@@ -1,0 +1,45 @@
+{
+  "dataset": "SCF 2022 age 21-35 (n=1210)",
+  "model": "KMeans",
+  "random_state": 42,
+  "results": [
+    {
+      "k": 2,
+      "silhouette_score": 0.4951,
+      "cluster_sizes": [
+        748,
+        462
+      ]
+    },
+    {
+      "k": 3,
+      "silhouette_score": 0.5584,
+      "cluster_sizes": [
+        684,
+        418,
+        108
+      ]
+    },
+    {
+      "k": 4,
+      "silhouette_score": 0.5583,
+      "cluster_sizes": [
+        672,
+        380,
+        80,
+        78
+      ]
+    },
+    {
+      "k": 5,
+      "silhouette_score": 0.5319,
+      "cluster_sizes": [
+        618,
+        365,
+        89,
+        72,
+        66
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "policy_id": "001",
+  "filename": "policy_001.pdf",
+  "ground_truth": {
+    "policy_name": null,
+    "insurer": null,
+    "policy_type": null,
+    "policy_type_raw": null,
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": null,
+    "renewal_date": null,
+    "exclusions": [],
+    "coverage_gaps": []
+  },
+  "absent_fields": {
+    "sum_assured_sgd": false,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": ""
+}

@@ -1,0 +1,14 @@
+# MLAI — clustering benchmarks and insurance parser evaluation.
+# The insurance_eval harness also imports the production parser package from
+# backend/, so install backend/requirements.txt in the same environment
+# (google-genai, python-dotenv, pypdf, pydantic).
+joblib==1.5.3
+matplotlib==3.10.9
+numpy==2.4.4
+pandas==3.0.2
+scikit-fuzzy==0.5.0
+scikit-learn==1.8.0
+scikit-learn-extra==0.3.0
+scipy==1.17.1
+seaborn==0.13.2
+umap-learn==0.5.12  # version inferred from backend/venv; the 27 Sep 2026 rerun did not record it

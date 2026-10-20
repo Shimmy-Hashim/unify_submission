@@ -1,0 +1,50 @@
+{
+  "policy_id": "001",
+  "filename": "policy_10.pdf",
+  "ground_truth": {
+    "policy_name": "PruPersonal Accident",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "personal_accident",
+    "policy_type_raw": "PruPersonal Accident",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 200.0,
+    "renewal_date": "2074-07",
+    "exclusions": [
+      "Accidents that took place before the cover start date or date of reinstatement",
+      "War, riot, revolution or any similar event",
+      "Terrorism involving the use of nuclear, biological or chemical agents",
+      "Illnesses of any kind, fits, hernia, venereal disease, or AIDS",
+      "Any infectious disease not listed under the Medical Reimbursement benefit",
+      "Physical or mental defect or infirmity existing at the cover start date",
+      "Accidents arising from pregnancy, confinement or related complications",
+      "Deliberate acts including taking intoxicating liquor or drugs, suicide or attempted suicide, or intentional self-injury",
+      "Unlawful acts or deliberately recklessly putting oneself in unnecessary danger",
+      "Death or injury from committing, attempting or provoking an assault, crime, or breaking the law",
+      "State of unsound mind",
+      "Dangerous activities unless specifically covered under the high-risk activities provisions",
+      "Professional or competitive sports where the life assured earns income or pay",
+      "Being in an aircraft of any type except as a fare-paying passenger on a scheduled commercial airline",
+      "Radiation or contamination from radioactivity",
+      "Racing of all kinds other than on foot or bicycle",
+      "Commando or bomb-disposal duties, active military duties, or travel by military aircraft or waterborne vessel",
+      "Any pre-existing medical condition",
+      "Infectious disease diagnosed within 14 days of cover start date",
+      "Infectious disease announced as an epidemic by Singapore health authority or pandemic by WHO"
+    ],
+    "coverage_gaps": [
+      "No life insurance coverage for natural death — this is a personal accident policy covering accidental death only",
+      "No critical illness lump-sum payout",
+      "No Integrated Shield Plan or comprehensive hospitalisation coverage — medical reimbursement is limited to $2,000 per accident (Plan A)",
+      "No income protection or disability income benefit",
+      "No coverage for illness-related death or disability"
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "Personal accident policy, accidental death only, not life insurance. sum_assured_sgd set to null per schema; model may extract $100,000 from ADD Plan A table. This is a fabrication test case for sum_assured_sgd."
+}

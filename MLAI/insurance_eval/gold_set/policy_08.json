@@ -1,0 +1,23 @@
+{
+  "policy_id": "010",
+  "filename": "policy_08.pdf",
+  "ground_truth": {
+    "policy_name": "PruShield (Plus)",
+    "insurer": "Prudential Assurance Company Singapore (Pte) Limited",
+    "policy_type": "hospitalisation",
+    "policy_type_raw": "PruShield (Plus)",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 1000.0,
+    "renewal_date": "2026-10",
+    "exclusions": [],
+    "coverage_gaps": []
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": true,
+    "coverage_gaps": true
+  },
+  "notes": "DOCUMENT-INSUFFICIENCY TEST CASE - same structural situation as policy_07. Only the 1-page renewal certificate is available; no policy booklet, benefit table, or exclusions clause in source. sum_assured_sgd is null (Integrated Shield Plan, not a life product - categorically not applicable). exclusions and coverage_gaps are null/empty because the source document lacks this information, not because they were assessed as zero - tests whether the extractor avoids inventing standard ISP exclusions from general knowledge. annual_premium_sgd already yearly on the certificate. Special Terms & Conditions: Not Applicable."
+}

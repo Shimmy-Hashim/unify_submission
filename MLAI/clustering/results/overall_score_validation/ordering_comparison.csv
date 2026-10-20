@@ -1,0 +1,13 @@
+variable,option_b_rho,option_b_status,naive_rho,naive_status
+banking.net_worth_to_income,0.927,INDEPENDENT,1.0,INDEPENDENT
+investment.has_investments,0.976,INDEPENDENT,0.991,TAUTOLOGICAL (formula input)
+insurance.hospitalisation_coverage,0.418,TAUTOLOGICAL (formula input),1.0,TAUTOLOGICAL (formula input)
+insurance.income_protection_coverage,0.491,TAUTOLOGICAL (formula input),1.0,TAUTOLOGICAL (formula input)
+banking.savings_rate,1.0,INDEPENDENT,1.0,INDEPENDENT
+banking.emergency_fund_months,0.915,INDEPENDENT,1.0,INDEPENDENT
+banking.dti,0.685,INDEPENDENT,0.464,INDEPENDENT
+banking.healthy_debt_ratio,0.964,INDEPENDENT,0.964,INDEPENDENT
+investment.investment_rate,1.0,INDEPENDENT,1.0,INDEPENDENT
+investment.portfolio_concentration,0.903,INDEPENDENT,1.0,INDEPENDENT
+insurance.life_coverage_ratio,0.988,INDEPENDENT,1.0,INDEPENDENT
+insurance.ci_coverage_ratio,0.952,INDEPENDENT,0.991,INDEPENDENT

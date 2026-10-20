@@ -1,0 +1,12 @@
+policy_id,filename,policy_name_correct,insurer_correct,policy_type_correct,policy_type_gold,policy_type_predicted,policy_type_raw_predicted,sum_assured_correct,annual_premium_correct,renewal_date_correct,document_accuracy,exclusions_geval,coverage_gaps_geval,sum_assured_fabricated,renewal_date_fabricated,exclusions_fabricated,retries_needed
+001,policy_10.pdf,True,True,True,personal_accident,personal_accident,PruPersonal Accident,True,True,True,True,1.0,1.0,False,,,0
+002,policy_11.pdf,True,True,True,personal_accident,personal_accident,PruPersonal Accident,True,True,True,True,1.0,1.0,False,,,0
+003,policy_01.pdf,True,True,True,critical_illness,critical_illness,Critical Illness and Death Plan,True,True,True,True,0.94,1.0,,,,0
+004,policy_02.pdf,True,True,True,life,life,PruActive Term,True,True,True,True,1.0,1.0,,,,0
+005,policy_03.pdf,True,True,True,hospitalisation,hospitalisation,PruExtra (Premier CoPay),True,True,True,True,,1.0,False,,False,0
+006,policy_04.pdf,True,True,True,hospitalisation,hospitalisation,PruExtra (Plus CoPay),True,True,True,True,,1.0,False,,False,0
+007,policy_05.pdf,True,True,True,critical_illness,critical_illness,PruLady,True,True,True,True,1.0,1.0,False,,,0
+008,policy_06.pdf,True,True,True,critical_illness,critical_illness,PRUMan,True,True,True,True,1.0,1.0,False,,,0
+009,policy_07.pdf,True,True,True,hospitalisation,hospitalisation,PruShield Policy (Renewal) Certificate,True,True,True,True,,1.0,False,,False,0
+010,policy_08.pdf,True,True,True,hospitalisation,hospitalisation,PruShield (Plus),True,True,True,True,,1.0,False,,False,0
+011,policy_09.pdf,True,True,True,life,life,Endowment Plan,True,True,True,True,,1.0,False,,,0

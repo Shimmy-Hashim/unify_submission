@@ -1,0 +1,649 @@
+{
+  "benchmark_vars": [
+    "investment_rate",
+    "portfolio_concentration",
+    "has_investments"
+  ],
+  "population_base_rates_pct": {
+    "investment_rate": 43.7,
+    "portfolio_concentration": 47.0,
+    "has_investments": 88.8
+  },
+  "per_band_normal_floor": {
+    "A|kmeans|3": {
+      "k_found": 3,
+      "pooled_min_pct": 23.78,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            0.0,
+            58.87,
+            41.13
+          ],
+          "min_pct": 0.0
+        },
+        "2": {
+          "shares_pct": [
+            0.0,
+            59.43,
+            40.57
+          ],
+          "min_pct": 0.0
+        },
+        "3": {
+          "shares_pct": [
+            64.47,
+            0.0,
+            35.53
+          ],
+          "min_pct": 0.0
+        },
+        "4": {
+          "shares_pct": [
+            54.63,
+            0.23,
+            45.15
+          ],
+          "min_pct": 0.23
+        },
+        "5": {
+          "shares_pct": [
+            0.11,
+            52.67,
+            47.22
+          ],
+          "min_pct": 0.11
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 0.0,
+      "passes_per_band_floor": false
+    },
+    "B|fuzzy_cmeans|3": {
+      "k_found": 3,
+      "pooled_min_pct": 20.42,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            2.34,
+            0.0,
+            97.66
+          ],
+          "min_pct": 0.0
+        },
+        "2": {
+          "shares_pct": [
+            25.11,
+            0.11,
+            74.77
+          ],
+          "min_pct": 0.11
+        },
+        "3": {
+          "shares_pct": [
+            62.1,
+            18.36,
+            19.55
+          ],
+          "min_pct": 18.36
+        },
+        "4": {
+          "shares_pct": [
+            12.3,
+            87.7,
+            0.0
+          ],
+          "min_pct": 0.0
+        },
+        "5": {
+          "shares_pct": [
+            0.22,
+            99.78,
+            0.0
+          ],
+          "min_pct": 0.0
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 0.0,
+      "passes_per_band_floor": false
+    },
+    "A|fuzzy_cmeans|2": {
+      "k_found": 2,
+      "pooled_min_pct": 33.6,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            29.76,
+            70.24
+          ],
+          "min_pct": 29.76
+        },
+        "2": {
+          "shares_pct": [
+            33.52,
+            66.48
+          ],
+          "min_pct": 33.52
+        },
+        "3": {
+          "shares_pct": [
+            40.6,
+            59.4
+          ],
+          "min_pct": 40.6
+        },
+        "4": {
+          "shares_pct": [
+            32.62,
+            67.38
+          ],
+          "min_pct": 32.62
+        },
+        "5": {
+          "shares_pct": [
+            31.52,
+            68.48
+          ],
+          "min_pct": 31.52
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 29.76,
+      "passes_per_band_floor": true
+    },
+    "A|fuzzy_cmeans|6": {
+      "k_found": 6,
+      "pooled_min_pct": 8.92,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            0.0,
+            17.32,
+            22.42,
+            20.62,
+            21.79,
+            17.85
+          ],
+          "min_pct": 0.0
+        },
+        "2": {
+          "shares_pct": [
+            22.73,
+            21.48,
+            0.0,
+            19.2,
+            18.64,
+            17.95
+          ],
+          "min_pct": 0.0
+        },
+        "3": {
+          "shares_pct": [
+            20.52,
+            21.17,
+            0.0,
+            23.54,
+            20.41,
+            14.36
+          ],
+          "min_pct": 0.0
+        },
+        "4": {
+          "shares_pct": [
+            16.37,
+            0.23,
+            22.01,
+            21.78,
+            19.98,
+            19.64
+          ],
+          "min_pct": 0.23
+        },
+        "5": {
+          "shares_pct": [
+            26.17,
+            17.88,
+            0.0,
+            18.97,
+            18.1,
+            18.87
+          ],
+          "min_pct": 0.0
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 0.0,
+      "passes_per_band_floor": false
+    }
+  },
+  "tier_semantics_by_band": {
+    "A|kmeans|3": {
+      "band1": {
+        "share_pct": 9.64,
+        "investment_rate_mean": 0.3233,
+        "portfolio_concentration_mean": 0.4771,
+        "n": 139,
+        "characterisation": "small ultra-high-investment cluster"
+      },
+      "band2": {
+        "share_pct": 9.27,
+        "investment_rate_mean": 0.3145,
+        "portfolio_concentration_mean": 0.3971,
+        "n": 129,
+        "characterisation": "small ultra-high-investment cluster"
+      },
+      "band3": {
+        "share_pct": 56.2,
+        "investment_rate_mean": 0.1278,
+        "portfolio_concentration_mean": 0.2844,
+        "n": 802,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band4": {
+        "share_pct": 49.27,
+        "investment_rate_mean": 0.121,
+        "portfolio_concentration_mean": 0.2409,
+        "n": 679,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band5": {
+        "share_pct": 7.71,
+        "investment_rate_mean": 0.3218,
+        "portfolio_concentration_mean": 0.265,
+        "n": 105,
+        "characterisation": "small ultra-high-investment cluster"
+      },
+      "_consistency": {
+        "best_tier_share_range_pp": 48.5,
+        "consistent": false
+      }
+    },
+    "A|fuzzy_cmeans|2": {
+      "band1": {
+        "share_pct": 35.3,
+        "investment_rate_mean": 0.1773,
+        "portfolio_concentration_mean": 0.405,
+        "n": 509,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band2": {
+        "share_pct": 38.58,
+        "investment_rate_mean": 0.1771,
+        "portfolio_concentration_mean": 0.3494,
+        "n": 537,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band3": {
+        "share_pct": 43.52,
+        "investment_rate_mean": 0.1763,
+        "portfolio_concentration_mean": 0.2766,
+        "n": 621,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band4": {
+        "share_pct": 38.46,
+        "investment_rate_mean": 0.1758,
+        "portfolio_concentration_mean": 0.2464,
+        "n": 530,
+        "characterisation": "broad moderate-investment cluster"
+      },
+      "band5": {
+        "share_pct": 34.53,
+        "investment_rate_mean": 0.1682,
+        "portfolio_concentration_mean": 0.2292,
+        "n": 470,
+        "characterisation": "mid-sized cluster"
+      },
+      "_consistency": {
+        "best_tier_share_range_pp": 9.0,
+        "consistent": true
+      }
+    },
+    "A|fuzzy_cmeans|6": {
+      "band1": {
+        "share_pct": 8.67,
+        "investment_rate_mean": 0.3345,
+        "portfolio_concentration_mean": 0.4788,
+        "n": 125,
+        "characterisation": "small ultra-high-investment cluster"
+      },
+      "band2": {
+        "share_pct": 19.4,
+        "investment_rate_mean": 0.1036,
+        "portfolio_concentration_mean": 0.2767,
+        "n": 270,
+        "characterisation": "mid-sized cluster"
+      },
+      "band3": {
+        "share_pct": 18.71,
+        "investment_rate_mean": 0.1481,
+        "portfolio_concentration_mean": 0.2218,
+        "n": 267,
+        "characterisation": "mid-sized cluster"
+      },
+      "band4": {
+        "share_pct": 17.27,
+        "investment_rate_mean": 0.1498,
+        "portfolio_concentration_mean": 0.1982,
+        "n": 238,
+        "characterisation": "mid-sized cluster"
+      },
+      "band5": {
+        "share_pct": 22.7,
+        "investment_rate_mean": 0.0858,
+        "portfolio_concentration_mean": 0.1895,
+        "n": 309,
+        "characterisation": "mid-sized cluster"
+      },
+      "_consistency": {
+        "best_tier_share_range_pp": 14.0,
+        "consistent": true
+      }
+    }
+  },
+  "head_to_head": {
+    "A|kmeans|3": {
+      "approach": "A",
+      "k": 3,
+      "macro_silhouette": 0.3079,
+      "micro_silhouette": 0.2734,
+      "davies_bouldin": 1.2311,
+      "calinski_harabasz": 763.1031,
+      "min_cluster_pct": 7.36,
+      "min_rho": 0.5,
+      "min_headroom_captured": 0.133,
+      "min_lift_pp": 7.3,
+      "passes_gate": true,
+      "normal_tier_share_pct": {
+        "0": 23.78,
+        "1": 34.33,
+        "2": 41.89
+      },
+      "normal_min_tier_pct": 23.78,
+      "per_band_normal_min_pct": 0.0,
+      "normal_ordering": {
+        "investment_rate": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            75.6,
+            55.1,
+            6.3
+          ]
+        },
+        "portfolio_concentration": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            72.6,
+            50.8,
+            30.2
+          ]
+        },
+        "has_investments": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            100.0,
+            99.2,
+            70.5
+          ]
+        }
+      },
+      "top_feature_share_of_separation_range": [
+        0.737,
+        0.835
+      ],
+      "rad_separation_iqr_units_range": [
+        0.089,
+        0.676
+      ],
+      "n_features_separating": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "archetype_placement": {
+        "normal": {
+          "n": 4550,
+          "tier_pct": {
+            "0": 23.8,
+            "1": 34.3,
+            "2": 41.9
+          },
+          "normalised_mean_tier": 0.591
+        },
+        "conservative_saver": {
+          "n": 292,
+          "tier_pct": {
+            "0": 0.0,
+            "1": 7.9,
+            "2": 92.1
+          },
+          "normalised_mean_tier": 0.961
+        },
+        "over_invested": {
+          "n": 292,
+          "tier_pct": {
+            "0": 63.7,
+            "1": 36.3,
+            "2": 0.0
+          },
+          "normalised_mean_tier": 0.182
+        },
+        "protection_first": {
+          "n": 292,
+          "tier_pct": {
+            "0": 26.7,
+            "1": 33.9,
+            "2": 39.4
+          },
+          "normalised_mean_tier": 0.563
+        },
+        "wealthy_exposed": {
+          "n": 292,
+          "tier_pct": {
+            "0": 26.4,
+            "1": 31.8,
+            "2": 41.8
+          },
+          "normalised_mean_tier": 0.577
+        },
+        "high_debt_investor": {
+          "n": 291,
+          "tier_pct": {
+            "0": 64.3,
+            "1": 35.7,
+            "2": 0.0
+          },
+          "normalised_mean_tier": 0.179
+        },
+        "underinsured_saver": {
+          "n": 291,
+          "tier_pct": {
+            "0": 26.1,
+            "1": 37.5,
+            "2": 36.4
+          },
+          "normalised_mean_tier": 0.552
+        },
+        "outlier": {
+          "n": 700,
+          "tier_pct": {
+            "0": 24.0,
+            "1": 30.1,
+            "2": 45.9
+          },
+          "normalised_mean_tier": 0.609
+        }
+      },
+      "tier_composition": {
+        "0": {
+          "n": 1854,
+          "pct_injected": 41.6
+        },
+        "1": {
+          "n": 2307,
+          "pct_injected": 32.3
+        },
+        "2": {
+          "n": 2839,
+          "pct_injected": 32.9
+        }
+      },
+      "tier_composition_max_injected_pct": 41.6
+    },
+    "B|fuzzy_cmeans|3": {
+      "approach": "B",
+      "k": 3,
+      "macro_silhouette": 0.2566,
+      "micro_silhouette": 0.2757,
+      "davies_bouldin": 1.3273,
+      "calinski_harabasz": 2743.7358,
+      "min_cluster_pct": 26.7,
+      "min_rho": 0.5,
+      "min_headroom_captured": 0.384,
+      "min_lift_pp": 11.2,
+      "passes_gate": true,
+      "normal_tier_share_pct": {
+        "0": 20.42,
+        "1": 40.95,
+        "2": 38.64
+      },
+      "normal_min_tier_pct": 20.42,
+      "per_band_normal_min_pct": 0.0,
+      "normal_ordering": {
+        "investment_rate": {
+          "mean_rho": 0.5,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            87.4,
+            28.4,
+            26.1
+          ]
+        },
+        "portfolio_concentration": {
+          "mean_rho": 0.5,
+          "density_rho": 0.5,
+          "pct_clearing_by_tier": [
+            66.6,
+            67.5,
+            15.9
+          ]
+        },
+        "has_investments": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            100.0,
+            84.4,
+            83.8
+          ]
+        }
+      },
+      "top_feature_share_of_separation_range": [
+        0.539,
+        0.539
+      ],
+      "rad_separation_iqr_units_range": [
+        0.565,
+        0.565
+      ],
+      "n_features_separating": [
+        3
+      ],
+      "archetype_placement": {
+        "normal": {
+          "n": 4550,
+          "tier_pct": {
+            "0": 20.4,
+            "1": 40.9,
+            "2": 38.6
+          },
+          "normalised_mean_tier": 0.591
+        },
+        "conservative_saver": {
+          "n": 292,
+          "tier_pct": {
+            "0": 0.0,
+            "1": 54.1,
+            "2": 45.9
+          },
+          "normalised_mean_tier": 0.729
+        },
+        "over_invested": {
+          "n": 292,
+          "tier_pct": {
+            "0": 98.6,
+            "1": 0.0,
+            "2": 1.4
+          },
+          "normalised_mean_tier": 0.014
+        },
+        "protection_first": {
+          "n": 292,
+          "tier_pct": {
+            "0": 22.6,
+            "1": 44.2,
+            "2": 33.2
+          },
+          "normalised_mean_tier": 0.553
+        },
+        "wealthy_exposed": {
+          "n": 292,
+          "tier_pct": {
+            "0": 21.9,
+            "1": 38.0,
+            "2": 40.1
+          },
+          "normalised_mean_tier": 0.591
+        },
+        "high_debt_investor": {
+          "n": 291,
+          "tier_pct": {
+            "0": 95.9,
+            "1": 0.7,
+            "2": 3.4
+          },
+          "normalised_mean_tier": 0.038
+        },
+        "underinsured_saver": {
+          "n": 291,
+          "tier_pct": {
+            "0": 22.0,
+            "1": 38.5,
+            "2": 39.5
+          },
+          "normalised_mean_tier": 0.588
+        },
+        "outlier": {
+          "n": 700,
+          "tier_pct": {
+            "0": 25.6,
+            "1": 32.9,
+            "2": 41.6
+          },
+          "normalised_mean_tier": 0.58
+        }
+      },
+      "tier_composition": {
+        "0": {
+          "n": 1869,
+          "pct_injected": 50.3
+        },
+        "1": {
+          "n": 2605,
+          "pct_injected": 28.5
+        },
+        "2": {
+          "n": 2526,
+          "pct_injected": 30.4
+        }
+      },
+      "tier_composition_max_injected_pct": 50.3
+    }
+  }
+}

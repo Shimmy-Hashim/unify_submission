@@ -1,0 +1,147 @@
+{
+  "test_users": [
+    {
+      "name": "Alice \u2014 Clear High Performer",
+      "expected_tier": "High Performer",
+      "features": {
+        "savings_rate": 0.3,
+        "emergency_fund_ratio": 6.0,
+        "debt_to_income": 1.5,
+        "expense_to_income": 0.7,
+        "healthy_debt_ratio": 0.8889
+      },
+      "predictions": {
+        "KMeans": "Stable",
+        "KMedoids": "Stable",
+        "FuzzyCMeans": "Stable",
+        "GMM": "High Performer",
+        "DBSCAN": "At Risk",
+        "Agglomerative": "Stable"
+      },
+      "correct": {
+        "KMeans": false,
+        "KMedoids": false,
+        "FuzzyCMeans": false,
+        "GMM": true,
+        "DBSCAN": false,
+        "Agglomerative": false
+      }
+    },
+    {
+      "name": "Bob \u2014 Clear At Risk",
+      "expected_tier": "At Risk",
+      "features": {
+        "savings_rate": 0.02,
+        "emergency_fund_ratio": 0.6,
+        "debt_to_income": 1.5,
+        "expense_to_income": 0.98,
+        "healthy_debt_ratio": 0.1111
+      },
+      "predictions": {
+        "KMeans": "At Risk",
+        "KMedoids": "At Risk",
+        "FuzzyCMeans": "Stable",
+        "GMM": "At Risk",
+        "DBSCAN": "At Risk",
+        "Agglomerative": "At Risk"
+      },
+      "correct": {
+        "KMeans": true,
+        "KMedoids": true,
+        "FuzzyCMeans": false,
+        "GMM": true,
+        "DBSCAN": true,
+        "Agglomerative": true
+      }
+    },
+    {
+      "name": "Charlie \u2014 Borderline Stable",
+      "expected_tier": "Stable",
+      "features": {
+        "savings_rate": 0.12,
+        "emergency_fund_ratio": 3.0,
+        "debt_to_income": 0.3333,
+        "expense_to_income": 0.88,
+        "healthy_debt_ratio": 0.75
+      },
+      "predictions": {
+        "KMeans": "Stable",
+        "KMedoids": "Stable",
+        "FuzzyCMeans": "At Risk",
+        "GMM": "At Risk",
+        "DBSCAN": "At Risk",
+        "Agglomerative": "Stable"
+      },
+      "correct": {
+        "KMeans": true,
+        "KMedoids": true,
+        "FuzzyCMeans": false,
+        "GMM": false,
+        "DBSCAN": false,
+        "Agglomerative": true
+      }
+    },
+    {
+      "name": "Diana \u2014 Borderline At Risk",
+      "expected_tier": "At Risk",
+      "features": {
+        "savings_rate": 0.05,
+        "emergency_fund_ratio": 1.4286,
+        "debt_to_income": 0.9048,
+        "expense_to_income": 0.95,
+        "healthy_debt_ratio": 0.2105
+      },
+      "predictions": {
+        "KMeans": "At Risk",
+        "KMedoids": "At Risk",
+        "FuzzyCMeans": "Stable",
+        "GMM": "At Risk",
+        "DBSCAN": "At Risk",
+        "Agglomerative": "At Risk"
+      },
+      "correct": {
+        "KMeans": true,
+        "KMedoids": true,
+        "FuzzyCMeans": false,
+        "GMM": true,
+        "DBSCAN": true,
+        "Agglomerative": true
+      }
+    },
+    {
+      "name": "Ethan \u2014 Edge Case: High Income, Poor Habits",
+      "expected_tier": "Stable",
+      "features": {
+        "savings_rate": 0.06,
+        "emergency_fund_ratio": 2.0,
+        "debt_to_income": 0.4,
+        "expense_to_income": 0.94,
+        "healthy_debt_ratio": 0.6667
+      },
+      "predictions": {
+        "KMeans": "Stable",
+        "KMedoids": "Stable",
+        "FuzzyCMeans": "Stable",
+        "GMM": "At Risk",
+        "DBSCAN": "At Risk",
+        "Agglomerative": "Stable"
+      },
+      "correct": {
+        "KMeans": true,
+        "KMedoids": true,
+        "FuzzyCMeans": true,
+        "GMM": false,
+        "DBSCAN": false,
+        "Agglomerative": true
+      }
+    }
+  ],
+  "accuracy_summary": {
+    "KMeans": "4/5",
+    "KMedoids": "4/5",
+    "FuzzyCMeans": "1/5",
+    "GMM": "3/5",
+    "DBSCAN": "2/5",
+    "Agglomerative": "4/5"
+  }
+}

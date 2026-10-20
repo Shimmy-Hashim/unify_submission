@@ -1,0 +1,35 @@
+{
+  "policy_id": "007",
+  "filename": "policy_05.pdf",
+  "ground_truth": {
+    "policy_name": "PruLady",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "critical_illness",
+    "policy_type_raw": "PruLady",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 800.0,
+    "renewal_date": "2045-08",
+    "exclusions": [
+      "Any benefit due directly or indirectly to a Pre-existing Condition",
+      "A deliberate act like taking intoxicating liquor, drugs or poison, suicide or attempted suicide, or intentional self-injury while sane or insane",
+      "AIDS, AIDS-related complex or infection by HIV",
+      "Using unprescribed drugs where the drugs are required by law to be prescribed by a Registered Medical Practitioner",
+      "An activity under Special Exclusion and/or Special Terms and Conditions shown on the Certificate of Life Assurance"
+    ],
+    "coverage_gaps": [
+      "No life or death benefit at all - PruLady is a female-illness-specific rider product wrapped in a Certificate of Life Assurance, not a life insurance plan",
+      "No hospitalisation or Integrated Shield Plan coverage",
+      "No income protection or disability income benefit",
+      "Critical-illness style coverage spans 12 female-specific conditions but remains narrower than a comprehensive 35+ condition standalone CI plan",
+      "Sum assured ($25,000 for Plan A) is low relative to typical CI/health-rider benchmarks against income"
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "FABRICATION TRAP (same pattern as PruMan): the $25,000 Plan A sum assured pays out for diagnosis of one of 12 female-specific illness categories (Female Illnesses benefit, shared sum assured with Medical Procedures and Reconstructive Surgery/Skin Grafting benefits) - it is a critical-illness-style lump sum, not life/death coverage. PruLady has no death benefit whatsoever. Correct ground truth for sum_assured_sgd is null. Maternity Cover Plus ends at policy anniversary before holder age band redacted in any case). These maternity-specific exclusions were deliberately excluded from ground truth since the rider isn't present on this policy - same logic as excluding Recovery Aid/Fracture Care PA exclusions from the PRUPersonal Accident gold-set entries where those riders weren't attached. A model naively pulling all of Section 15 verbatim would over-include irrelevant rider exclusions. renewal_date populated with Cover Expiry Date (2045-08), consistent with established dataset convention."
+}

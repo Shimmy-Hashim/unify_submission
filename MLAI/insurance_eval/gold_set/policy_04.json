@@ -1,0 +1,23 @@
+{
+  "policy_id": "006",
+  "filename": "policy_04.pdf",
+  "ground_truth": {
+    "policy_name": "PruExtra (Plus CoPay)",
+    "insurer": "Prudential Assurance Company Singapore (Pte) Limited",
+    "policy_type": "hospitalisation",
+    "policy_type_raw": "PruExtra (Plus CoPay)",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 500.0,
+    "renewal_date": "2026-10",
+    "exclusions": [],
+    "coverage_gaps": []
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": true,
+    "coverage_gaps": true
+  },
+  "notes": "DOCUMENT-INSUFFICIENCY TEST CASE - same situation as policy_03. CoPay rider attached to the corresponding PruShield (Plus) plan; only renewal certificate available. sum_assured_sgd null (no sum assured concept for a CoPay rider). exclusions and coverage_gaps null/empty because unavailable from source. annual_premium_sgd converted from monthly (43.10 x 12 = 517.20)."
+}

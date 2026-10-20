@@ -1,0 +1,61 @@
+{
+  "per_field": {
+    "policy_name": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "insurer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "policy_type": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "sum_assured_sgd": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "annual_premium_sgd": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "renewal_date": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "policy_type_confusion": {
+    "personal_accident": {
+      "personal_accident": 2
+    },
+    "critical_illness": {
+      "critical_illness": 3
+    },
+    "life": {
+      "life": 2
+    },
+    "hospitalisation": {
+      "hospitalisation": 4
+    }
+  },
+  "document_accuracy": 1.0,
+  "fabrication_rates": {
+    "sum_assured_sgd": 0.0,
+    "renewal_date": null,
+    "exclusions": 0.0
+  },
+  "geval_averages": {
+    "exclusions_faithfulness": 0.9899999999999999,
+    "coverage_gaps_accuracy": 1.0
+  },
+  "total_documents": 11,
+  "total_retries": 0,
+  "extraction_failures": 0
+}

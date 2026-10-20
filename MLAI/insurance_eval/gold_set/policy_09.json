@@ -1,0 +1,28 @@
+{
+  "policy_id": "011",
+  "filename": "policy_09.pdf",
+  "ground_truth": {
+    "policy_name": "PRUWealth Plus (SGD)",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "life",
+    "policy_type_raw": "PRUWealth Plus (SGD) - Endowment Plan",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 1800.0,
+    "renewal_date": "2129-07",
+    "exclusions": [],
+    "coverage_gaps": [
+      "No CI lump-sum payout - Crisis Waiver III and Early Stage Crisis Waiver only waive future premiums on diagnosis; they do not pay a critical illness benefit (CI Waiver != CI Cover).",
+      "No hospitalisation coverage present in this policy.",
+      "No income protection / disability income benefit - Disability Waiver only waives premiums, it does not replace income.",
+      "Death benefit is premium/surrender-value-based (101%/105% of premiums paid, or 101% of surrender value), not a fixed sum assured - provides limited life protection relative to income, especially in early policy years."
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "FABRICATION TRAP: document explicitly states Face Value ($35,300) is NOT the Sum Assured, and the actual death benefit is a formula (101%/105% of premiums paid, or 101% of surrender value) - no fixed sum_assured_sgd exists in this document. A model should output null here, not the Face Value or any waiver sum-assured figure ($200/$200 which belong to Disability/Crisis waivers, not death coverage). Endowment plan, not whole-life or term - renewal_date is populated with the Cover End Date/Maturity Date (2129-07), diverging from the term-plan precedent (where Cover End Date is NOT treated as renewal_date) since this is the policy's only end-date concept and holder opted to populate it here. Exclusions: only 'Special Exclusion: Not Applicable' is stated in this welcome-pack document (full Policy Document with standard exclusion clauses was not included in the uploaded PDF) - annotated as a confirmed true negative, exclusions: []. coverage_gaps are inferred against LIA/MAS norms, not extracted - treat as a starting draft for review, not a settled ground truth."
+}

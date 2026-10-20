@@ -1,0 +1,31 @@
+{
+  "source": "SCF 2022 full dataset (22778 rows)",
+  "sgd_scaling_factor": 0.85,
+  "thresholds": {
+    "savings_rate": {
+      "p33": 0.0,
+      "p66": 0.0345,
+      "sg_benchmark": 0.2
+    },
+    "emergency_fund_ratio": {
+      "p33": 0.6055,
+      "p66": 2.9825,
+      "sg_benchmark": 3.0
+    },
+    "debt_to_income": {
+      "p33": 0.0326,
+      "p66": 0.9471,
+      "sg_benchmark": 0.36
+    },
+    "expense_to_income": {
+      "p33": 0.9615,
+      "p66": 1.0,
+      "sg_benchmark": null
+    },
+    "healthy_debt_ratio": {
+      "p33": 0.0,
+      "p66": 0.1111,
+      "sg_benchmark": null
+    }
+  }
+}

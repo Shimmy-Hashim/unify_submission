@@ -1,0 +1,18 @@
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Secrets — mounted at runtime, never baked into the image.
+.env
+serviceAccountKey.json
+**/serviceAccountKey*.json
+*-firebase-adminsdk-*.json
+
+# Guard against stray evaluator output from a wrong-cwd run
+results/
+
+.git/
+.gitignore
+Dockerfile
+.dockerignore

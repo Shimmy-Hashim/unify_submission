@@ -1,0 +1,91 @@
+approach,k,algorithm,family,silhouette,davies_bouldin,calinski_harabasz,size_balance,composite_rank,is_k_winner
+A,2,kmeans,centroid,0.2698,1.6036,245.0625,0.0864,13,False
+A,2,kmedoids,centroid,0.1359,2.6189,158.7085,0.3563,23,False
+A,2,fuzzy_cmeans,centroid,0.1391,2.3475,204.1278,0.7228,19,False
+A,2,gmm_full,distribution,0.305,2.588,153.1584,0.1699,19,False
+A,2,gmm_diag,distribution,0.2883,2.7213,138.656,0.166,23,False
+A,2,spectral,graph,0.3262,1.2385,238.5224,0.0859,8,True
+A,2,agglomerative,hierarchical,0.3255,1.2431,238.4079,0.0861,11,False
+A,2,birch,hierarchical,0.3268,1.2357,238.1744,0.0857,8,False
+A,2,archetypal,bonus (outside taxonomy),0.5511,1.1621,73.6086,0.0035,11,False
+A,3,kmeans,centroid,0.2123,1.6793,253.9212,0.0588,13,False
+A,3,kmedoids,centroid,0.1123,2.2931,171.9958,0.1382,19,False
+A,3,fuzzy_cmeans,centroid,0.0717,2.5425,116.1835,0.0068,25,False
+A,3,gmm_full,distribution,0.2979,2.5813,170.5166,0.0745,20,False
+A,3,gmm_diag,distribution,0.2149,2.5163,143.7998,0.0912,20,False
+A,3,spectral,graph,0.3357,1.2143,233.3179,0.0472,5,True
+A,3,agglomerative,hierarchical,0.3031,1.3749,232.9243,0.049,11,False
+A,3,birch,hierarchical,0.3356,1.2332,231.9702,0.0462,9,False
+A,3,archetypal,bonus (outside taxonomy),0.4363,1.3293,73.3143,0.0007,13,False
+A,4,kmeans,centroid,0.227,1.5147,252.6629,0.0494,8,True
+A,4,kmedoids,centroid,0.0991,2.1412,178.658,0.1606,23,False
+A,4,fuzzy_cmeans,centroid,0.0508,2.5634,88.4226,0.0013,26,False
+A,4,gmm_full,distribution,0.2829,1.8176,203.5561,0.0541,13,False
+A,4,gmm_diag,distribution,0.1808,2.0463,179.1467,0.0914,20,False
+A,4,spectral,graph,0.3278,1.2875,197.1988,0.0431,9,False
+A,4,agglomerative,hierarchical,0.2041,1.6528,228.7969,0.0522,13,False
+A,4,birch,hierarchical,0.2146,1.5893,227.2873,0.0496,12,False
+A,4,archetypal,bonus (outside taxonomy),0.3757,1.2697,84.3707,0.0021,11,False
+A,5,kmeans,centroid,0.1698,1.5891,235.3496,0.0168,8,True
+A,5,kmedoids,centroid,0.0805,2.3425,150.8092,0.2187,23,False
+A,5,fuzzy_cmeans,centroid,-0.0508,2.8064,66.4422,0.0027,27,False
+A,5,gmm_full,distribution,0.2339,2.0309,178.5878,0.0088,15,False
+A,5,gmm_diag,distribution,0.1448,2.0091,173.8127,0.0947,19,False
+A,5,spectral,graph,0.3079,1.3641,180.5586,0.0452,8,False
+A,5,agglomerative,hierarchical,0.1609,1.7061,214.9324,0.0116,13,False
+A,5,birch,hierarchical,0.1684,1.6151,211.3189,0.0106,12,False
+A,5,archetypal,bonus (outside taxonomy),0.3527,1.1618,85.5929,0.0007,10,False
+A,6,kmeans,centroid,0.1572,1.5917,221.9693,0.0186,10,False
+A,6,kmedoids,centroid,0.0749,2.2591,146.1739,0.2012,23,False
+A,6,fuzzy_cmeans,centroid,-0.0882,2.674,56.253,0.0013,27,False
+A,6,gmm_full,distribution,0.2284,1.7605,159.6,0.0088,14,False
+A,6,gmm_diag,distribution,0.124,2.1255,170.8384,0.0724,19,False
+A,6,spectral,graph,0.2268,1.5119,188.2763,0.0455,10,False
+A,6,agglomerative,hierarchical,0.1329,1.6512,201.722,0.0132,13,False
+A,6,birch,hierarchical,0.172,1.4906,198.3963,0.0087,9,True
+A,6,archetypal,bonus (outside taxonomy),0.31,1.3532,80.5793,0.0014,10,False
+B,2,kmeans,centroid,0.1585,2.201,1204.4466,0.8163,11,False
+B,2,kmedoids,centroid,0.2275,1.8165,648.7223,0.0986,14,False
+B,2,fuzzy_cmeans,centroid,0.1545,2.2176,1188.2406,0.9926,14,False
+B,2,gmm_full,distribution,0.1372,2.4052,1011.5597,0.8325,19,False
+B,2,gmm_diag,distribution,0.1224,2.4459,948.5655,0.7885,23,False
+B,2,spectral,graph,0.5184,2.1469,289.7815,0.021,14,False
+B,2,agglomerative,hierarchical,0.1405,2.28,994.9401,0.4957,18,False
+B,2,birch,hierarchical,0.2609,1.4693,898.3919,0.1006,10,True
+B,2,archetypal,bonus (outside taxonomy),0.5199,1.6379,286.4371,0.0139,12,False
+B,3,kmeans,centroid,0.1836,1.8332,1155.7317,0.1748,6,True
+B,3,kmedoids,centroid,0.1444,2.0217,858.6106,0.111,18,False
+B,3,fuzzy_cmeans,centroid,0.0599,2.3205,600.6568,0.0057,26,False
+B,3,gmm_full,distribution,0.1268,2.2804,872.5018,0.4158,21,False
+B,3,gmm_diag,distribution,0.1339,2.1449,995.1759,0.7888,17,False
+B,3,spectral,graph,0.2754,1.9408,629.9905,0.0232,12,False
+B,3,agglomerative,hierarchical,0.1683,1.9453,1035.8117,0.1581,10,False
+B,3,birch,hierarchical,0.1577,1.9793,969.3682,0.1477,14,False
+B,3,archetypal,bonus (outside taxonomy),0.4604,1.6737,272.7719,0.0137,11,False
+B,4,kmeans,centroid,0.1802,1.6871,1184.1958,0.2645,6,True
+B,4,kmedoids,centroid,0.171,1.7818,989.9981,0.1182,9,False
+B,4,fuzzy_cmeans,centroid,-0.0183,3.4783,401.3282,0.0034,26,False
+B,4,gmm_full,distribution,0.1157,2.2821,748.4477,0.2313,21,False
+B,4,gmm_diag,distribution,0.1296,2.1545,815.8541,0.2504,18,False
+B,4,spectral,graph,0.2801,1.414,534.1325,0.0066,10,False
+B,4,agglomerative,hierarchical,0.1144,1.9715,932.1417,0.2138,18,False
+B,4,birch,hierarchical,0.1595,1.9379,966.1281,0.2135,13,False
+B,4,archetypal,bonus (outside taxonomy),0.4571,1.8235,185.0,0.0031,14,False
+B,5,kmeans,centroid,0.1912,1.5884,1125.4248,0.1201,6,True
+B,5,kmedoids,centroid,0.1599,1.7406,968.9874,0.1148,9,False
+B,5,fuzzy_cmeans,centroid,0.0022,3.8894,302.7644,0.0023,26,False
+B,5,gmm_full,distribution,0.1316,2.4548,642.4542,0.1292,20,False
+B,5,gmm_diag,distribution,0.1182,2.0589,828.1215,0.2206,20,False
+B,5,spectral,graph,0.2779,1.3684,444.2941,0.0066,10,False
+B,5,agglomerative,hierarchical,0.1264,1.8528,905.0895,0.1275,17,False
+B,5,birch,hierarchical,0.1584,1.8406,925.1499,0.1361,13,False
+B,5,archetypal,bonus (outside taxonomy),0.4439,1.7865,140.0889,0.0032,14,False
+B,6,kmeans,centroid,0.1908,1.4651,1036.3224,0.0268,6,True
+B,6,kmedoids,centroid,0.1035,2.0331,817.5342,0.1318,18,False
+B,6,fuzzy_cmeans,centroid,0.0057,3.5706,242.4556,0.0011,26,False
+B,6,gmm_full,distribution,0.1368,2.1179,599.8392,0.0102,18,False
+B,6,gmm_diag,distribution,0.1247,2.2411,719.4192,0.2106,20,False
+B,6,spectral,graph,0.2732,1.1322,530.7277,0.007,10,False
+B,6,agglomerative,hierarchical,0.1321,1.7875,889.4978,0.1465,13,False
+B,6,birch,hierarchical,0.1615,1.6723,845.2882,0.0173,10,False
+B,6,archetypal,bonus (outside taxonomy),0.2986,1.6949,179.1129,0.0039,14,False

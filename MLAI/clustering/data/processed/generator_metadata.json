@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-07-25T14:19:58.480287+00:00",
+  "config": {
+    "n_users": 7000,
+    "age_band_distribution": "equal",
+    "normal_pct": 0.65,
+    "mismatch_pct": 0.25,
+    "outlier_pct": 0.1,
+    "correlation_strength": "moderate",
+    "random_seed": 42,
+    "output_dir": "MLAI/clustering/data/processed"
+  },
+  "profile_type_counts": {
+    "normal": 4550,
+    "conservative_saver": 292,
+    "over_invested": 292,
+    "protection_first": 292,
+    "wealthy_exposed": 292,
+    "high_debt_investor": 291,
+    "underinsured_saver": 291,
+    "outlier": 700
+  },
+  "age_band_counts": {
+    "1": 1442,
+    "2": 1392,
+    "3": 1427,
+    "4": 1378,
+    "5": 1361
+  },
+  "feature_summary": {
+    "savings_rate": {
+      "mean": 0.2263,
+      "std": 0.1317,
+      "min": -0.0485,
+      "max": 0.68,
+      "source": "OCBC FWI 2024 (avg 25% nationally)"
+    },
+    "emergency_fund_months": {
+      "mean": 5.4421,
+      "std": 4.5404,
+      "min": 0.0,
+      "max": 40.0,
+      "source": "MoneySense 6-month benchmark; OCBC FWI 2024 (53% of SG adults lack 6-month fund)"
+    },
+    "dti": {
+      "mean": 0.1954,
+      "std": 0.13,
+      "min": 0.0,
+      "max": 0.58,
+      "source": "MAS TDSR regulatory cap 55% (mas.gov.sg/regulation/explainers/tdsr-for-property-loans, confirmed); DBS \"7 financial ratios to gauge your financial health\": \"Ideally, a ratio of 35% or below means you have ample income to fulfil your monthly debt repayments\" \u2014 a recommended ideal, not a compliance ceiling. Band means peak in the 30s (mortgage years), reasoned. An earlier \"mortgage loans ~82% of annual PDI\" claim was removed July 2026 \u2014 confirmed absent from MAS FSR 2025's actual data"
+    },
+    "net_worth_to_income": {
+      "mean": 5.8526,
+      "std": 6.7278,
+      "min": -2.0,
+      "max": 50.0,
+      "source": "Widely-cited personal-finance heuristic (~1x income by 30, rising with age) with NO official SG source \u2014 confirmed absent after directly checking MAS FSR, SingStat's Household Sector Balance Sheet Dashboard, and MOF's Feb 2026 Occasional Paper on wealth inequality (all break wealth down by quintile only, never by age). Earlier project values ran meaningfully higher than this convention; revised downward July 2026 (see commit for before/after)"
+    },
+    "investment_rate": {
+      "mean": 0.1019,
+      "std": 0.085,
+      "min": 0.0,
+      "max": 0.5,
+      "source": "MoneySense/MAS Basic Financial Planning Guide: \"invest at least 10% of income\" \u2014 an official MINIMUM, confirmed across three official documents (general, Fresh Entrant, and Streamlined guides); NO official upper bound exists \u2014 an earlier \"10-15%\" citation conflated this floor with the same Guide's separate 15% INSURANCE-spend ceiling, a different category entirely. Upper-range values used in this project are independently-chosen round numbers, not sourced. Mixture: OCBC FWI 2024 88% participation (INVESTOR_PROB)"
+    },
+    "portfolio_concentration": {
+      "mean": 0.3538,
+      "std": 0.1561,
+      "min": 0.05,
+      "max": 0.97,
+      "source": "Derived from retail investor behaviour literature; no direct SG data"
+    },
+    "equity_pct": {
+      "mean": 0.485,
+      "std": 0.1874,
+      "min": 0.0526,
+      "max": 0.9973,
+      "source": "Standard (100\u2212age) equity rule; OCBC FWI 2024; wide variance reflects SG retail deviation"
+    },
+    "life_coverage_ratio": {
+      "mean": 5.0095,
+      "std": 4.1555,
+      "min": 0.0,
+      "max": 28.0,
+      "source": "LIA PGS 2022 (21% mortality gap, 79% of needs met; recommends 9\u201310\u00d7; avg ~7.9\u00d7)"
+    },
+    "ci_coverage_ratio": {
+      "mean": 1.901,
+      "std": 1.7075,
+      "min": 0.0,
+      "max": 14.0,
+      "source": "LIA PGS 2022 (74% CI gap; avg CI coverage ~SGD 193,300 \u2248 2.1\u00d7 income; recommends ~3.9\u00d7). Precision caveat: MoneySense's public Guide rounds this to 4x; the more precise 3.9x traces to the underlying LIA Protection Gap Study 2022, which corroborates but was not independently re-verified at this exact decimal precision"
+    },
+    "healthy_debt_ratio": {
+      "mean": 0.6296,
+      "std": 0.2186,
+      "min": 0.0,
+      "max": 1.0,
+      "source": "SingStat Household Sector Balance Sheet Dashboard: \"Mortgage loans accounted for at least 70 per cent of household liabilities since 1999 Q1\" (2026 Q1: 71.4%) \u2014 aggregate, dollar-weighted, mortgage-only; person-level age gradient is a reasoned estimate, no SG debt-composition-by-age data published"
+    },
+    "insurance_spend_ratio": {
+      "mean": 0.0616,
+      "std": 0.0391,
+      "min": 0.0,
+      "max": 0.22,
+      "source": "MoneySense/MAS Basic Financial Planning Guide 2023 (premiums <=15% of take-home pay \u2014 a guideline MAXIMUM for term cover, not an average); typical-spend means are reasoned estimates under that cap, no official SG average-spend statistic found"
+    },
+    "has_investments": {
+      "mean": 0.8883,
+      "std": 0.315,
+      "min": 0.0,
+      "max": 1.0,
+      "source": "OCBC FWI 2024: 88% of SG adults hold investments \u2014 implemented as a hurdle/mixture (INVESTOR_PROB = 0.88 flat; non-investors have investment_rate exactly 0.0). The flag reads from the mixture draw, reconciled with mismatch/outlier overrides \u2014 not derived via a threshold on investment_rate"
+    },
+    "hospitalisation_coverage": {
+      "mean": 0.6417,
+      "std": 0.4795,
+      "min": 0.0,
+      "max": 1.0,
+      "source": "~71% of SG residents have Integrated Shield Plans (Prudential/MOH 2023); declines in older bands"
+    },
+    "income_protection_coverage": {
+      "mean": 0.3946,
+      "std": 0.4888,
+      "min": 0.0,
+      "max": 1.0,
+      "source": "AIA Disability Income Survey 2022 (April 2022, 1,000+ full-time working SG residents): 53% of SG workers lack disability income protection (~47% covered) \u2014 single-insurer self-reported survey, weak source, disclosed; band gradient reasoned (employment-linked take-up, DI cover typically ceases ~65)"
+    }
+  },
+  "correlation_strength_used": "moderate",
+  "notes": "Synthetic data generated for cross-domain ML benchmark. Distributions anchored to SG benchmarks. No archetypes pre-defined. profile_type column is for validation only \u2014 do not feed to clustering."
+}

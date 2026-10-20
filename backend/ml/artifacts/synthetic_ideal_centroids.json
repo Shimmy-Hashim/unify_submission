@@ -1,0 +1,99 @@
+{
+  "description": "Production artifacts for the Unify Financial Health Score. Per-age-band synthetic ideal centroids. Citation state is MIXED, not uniform - per feature: CITED to a named source - emergency_fund_months (MoneySense 6-month fund), investment_rate (MoneySense 10-15%-of-income), life_coverage_ratio (LIA PGS 2022, 9-10x income), ci_coverage_ratio (LIA PGS 2022, ~3.9x income), savings_rate 0.30 (above MoneySense's 20% minimum recommendation, aligned with SingStat's observed ~31-37% national personal savings rate), net_worth_to_income ladder 1/4/8/12/15 (a widely-cited age-based net-worth multiple planning heuristic - ~1x income by 30, rising with age - not an official SG wealth-by-age table, as none is published). REASONED, not cited - dti 0.15 (conservative vs MAS's 55% TDSR regulatory ceiling; no specific 'ideal DTI' benchmark exists, so this is a health target well below the compliance maximum, not a cited figure). UNCITED - portfolio_concentration 0.20 (no SG-specific benchmark exists for portfolio concentration; a reasoned estimate with no citable source). IDEAL BY CONSTRUCTION, for distinct reasons - risk_age_deviation 0.0 is the structural zero-point of a DERIVED quantity (equity_pct minus an age-equity target), i.e. what the subtraction equals when equity allocation exactly matches the target, not a benchmark number at all; hospitalisation_coverage 1.0 is the 'yes' endpoint of a directly-generated binary flag, whose generation probability is anchored to ~71% Integrated Shield Plan prevalence, not a derivation artifact. Locked decisions: K-Means++, k=3, age-stratified (Approach A), RobustScaler (fitted_scaler.pkl), synthetic centroid.",
+  "source": "Exported from SYNTHETIC_IDEALS in MLAI/clustering/comprehensive_benchmark.py",
+  "clustering_features": [
+    "savings_rate",
+    "emergency_fund_months",
+    "dti",
+    "net_worth_to_income",
+    "investment_rate",
+    "portfolio_concentration",
+    "risk_age_deviation",
+    "life_coverage_ratio",
+    "ci_coverage_ratio",
+    "hospitalisation_coverage"
+  ],
+  "age_band_labels": {
+    "1": "20-29",
+    "2": "30-39",
+    "3": "40-49",
+    "4": "50-59",
+    "5": "60-70"
+  },
+  "synthetic_ideal_centroids": {
+    "1": {
+      "savings_rate": 0.3,
+      "emergency_fund_months": 6.0,
+      "dti": 0.15,
+      "net_worth_to_income": 1.0,
+      "investment_rate": 0.15,
+      "portfolio_concentration": 0.2,
+      "risk_age_deviation": 0.0,
+      "life_coverage_ratio": 9.0,
+      "ci_coverage_ratio": 3.9,
+      "hospitalisation_coverage": 1.0
+    },
+    "2": {
+      "savings_rate": 0.3,
+      "emergency_fund_months": 6.0,
+      "dti": 0.15,
+      "net_worth_to_income": 4.0,
+      "investment_rate": 0.15,
+      "portfolio_concentration": 0.2,
+      "risk_age_deviation": 0.0,
+      "life_coverage_ratio": 9.0,
+      "ci_coverage_ratio": 3.9,
+      "hospitalisation_coverage": 1.0
+    },
+    "3": {
+      "savings_rate": 0.3,
+      "emergency_fund_months": 6.0,
+      "dti": 0.15,
+      "net_worth_to_income": 8.0,
+      "investment_rate": 0.15,
+      "portfolio_concentration": 0.2,
+      "risk_age_deviation": 0.0,
+      "life_coverage_ratio": 9.0,
+      "ci_coverage_ratio": 3.9,
+      "hospitalisation_coverage": 1.0
+    },
+    "4": {
+      "savings_rate": 0.3,
+      "emergency_fund_months": 6.0,
+      "dti": 0.1,
+      "net_worth_to_income": 12.0,
+      "investment_rate": 0.12,
+      "portfolio_concentration": 0.2,
+      "risk_age_deviation": 0.0,
+      "life_coverage_ratio": 9.0,
+      "ci_coverage_ratio": 3.9,
+      "hospitalisation_coverage": 1.0
+    },
+    "5": {
+      "savings_rate": 0.25,
+      "emergency_fund_months": 12.0,
+      "dti": 0.05,
+      "net_worth_to_income": 15.0,
+      "investment_rate": 0.08,
+      "portfolio_concentration": 0.2,
+      "risk_age_deviation": 0.0,
+      "life_coverage_ratio": 5.0,
+      "ci_coverage_ratio": 3.9,
+      "hospitalisation_coverage": 1.0
+    }
+  },
+  "tier_thresholds": {
+    "At Risk": [
+      0,
+      39
+    ],
+    "Building": [
+      40,
+      69
+    ],
+    "Stable": [
+      70,
+      100
+    ]
+  }
+}

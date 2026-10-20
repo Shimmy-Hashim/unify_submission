@@ -1,0 +1,23 @@
+{
+  "policy_id": "009",
+  "filename": "policy_07.pdf",
+  "ground_truth": {
+    "policy_name": "PruShield (Premier)",
+    "insurer": "Prudential Assurance Company Singapore (Pte) Limited",
+    "policy_type": "hospitalisation",
+    "policy_type_raw": "PruShield (Premier)",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 500.0,
+    "renewal_date": "2026-09",
+    "exclusions": [],
+    "coverage_gaps": []
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": true,
+    "coverage_gaps": true
+  },
+  "notes": "DOCUMENT-INSUFFICIENCY TEST CASE (distinct fabrication category from prior entries): only the 1-page renewal certificate is available, not the policy booklet referenced in the certificate's own text ('for the terms and conditions of your policy, please refer to your policy booklet'). No benefit table, panel-of-providers info, deductible/co-insurance structure, or exclusions clause exists in the source document. sum_assured_sgd is null for a structural reason independent of document completeness: PruShield is an Integrated Shield Plan (hospitalisation/medical), not a life product, so the field is categorically not applicable. exclusions and coverage_gaps are null/empty specifically because the source document lacks this information - this tests whether the extractor correctly outputs nothing rather than inventing standard ISP exclusions (pre-existing conditions, cosmetic procedures, outpatient-unless-rider, etc.) from general training knowledge of what Integrated Shield Plans typically exclude. annual_premium_sgd already stated as a yearly figure on the certificate, no conversion needed. Premium Level: Not Applicable; Special Terms & Conditions: Refer to CAL (Conditional Acceptance Letter, not included in source)."
+}

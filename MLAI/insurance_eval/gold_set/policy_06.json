@@ -1,0 +1,35 @@
+{
+  "policy_id": "008",
+  "filename": "policy_06.pdf",
+  "ground_truth": {
+    "policy_name": "PruMan",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "critical_illness",
+    "policy_type_raw": "PruMan",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 300.0,
+    "renewal_date": "2074-06",
+    "exclusions": [
+      "Any benefit due directly or indirectly to a Pre-existing Condition",
+      "Deliberate act such as taking intoxicating liquor, drugs or poison, suicide or attempted suicide, or intentional self-injury while sane or insane",
+      "AIDS, AIDS-related complex or infection by HIV",
+      "Using unprescribed drugs where the drugs are required by law to be prescribed by a Registered Medical Practitioner",
+      "An activity under Special Exclusion and/or Special Terms and Conditions shown in the Certificate of Life Assurance"
+    ],
+    "coverage_gaps": [
+      "No life or death benefit at all - PruMan is a male-illness-specific rider product wrapped in a Certificate of Life Assurance, not a life insurance plan",
+      "Critical illness coverage is extremely narrow - only 4 illness categories covered (certain prostate/testicle/scrotum cancers, muscular dystrophy, cardiomyopathy, and limited carcinoma in situ), versus the 35+ conditions in a standard Critical Illness plan",
+      "No hospitalisation or Integrated Shield Plan coverage",
+      "No income protection or disability income benefit",
+      "Sum assured ($25,000 for Plan A) is low relative to typical CI coverage benchmarks against income"
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "FABRICATION TRAP (new variant): the $25,000 Plan A sum assured pays out for diagnosis of one of only 4 illness categories (Male Illnesses benefit) - it is a critical-illness-style lump sum, not life/death coverage. PruMan has no death benefit whatsoever. A naive extractor will likely surface this $25,000 figure and mislabel it as sum_assured_sgd; correct ground truth is null. This is a different fabrication pattern than PRUWealth Plus (formula-based, no fixed figure) or PRUPersonal Accident (ADD payout != life coverage) - here a real CI-style payout exists but the product category itself has zero life/death component, so the field is correctly absent rather than just hard to extract. Certificate alone does not show the $25,000 figure - it only appears in the policy document's benefit table keyed to 'Plan A', so cross-referencing certificate + policy document is required to even attempt extraction. Exclusions pulled only from Section 13 consolidated 'What is not covered' list; embedded definitional carve-outs within each illness definition (e.g. excluded tumour classifications, excluded catheterisation causes) were treated as diagnostic scope language rather than policy-level exclusions, consistent with how the PA and WealthPlus gold-set entries handled similarly embedded clauses. renewal_date populated with Cover Expiry Date (2074-06), consistent with established convention for this dataset."
+}

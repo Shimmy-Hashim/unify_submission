@@ -1,0 +1,989 @@
+{
+  "run_timestamp": "2026-09-27T08:33:21.785221+00:00",
+  "dataset": {
+    "n_users": 7000,
+    "source": "synthetic_users.csv regenerated July 2026 with healthy_debt_ratio, insurance_spend_ratio, income_protection_coverage added; consolidated citation-fix regeneration (investment_rate hurdle/mixture, net_worth_to_income revision, 100-minus-age standardization)",
+    "has_investments_derivation": "generated column (hurdle/mixture, INVESTOR_PROB=0.88; no threshold)",
+    "binary_prevalences": {
+      "has_investments": 0.8883,
+      "hospitalisation_coverage": 0.6417,
+      "income_protection_coverage": 0.3946
+    }
+  },
+  "methodology": {
+    "algorithm": "KMeans(init='k-means++', n_init=20, random_state=42)",
+    "k_range": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "production_k": 3,
+    "scaling": "RobustScaler fitted in-memory per configuration (artifacts untouched)",
+    "metrics": "same compute_metrics/selection_score as comprehensive_benchmark.py"
+  },
+  "configs": {
+    "A_continuous_11": {
+      "features": [
+        "savings_rate",
+        "emergency_fund_months",
+        "dti",
+        "net_worth_to_income",
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation",
+        "life_coverage_ratio",
+        "ci_coverage_ratio",
+        "healthy_debt_ratio",
+        "insurance_spend_ratio"
+      ],
+      "approach_A": {
+        "2": {
+          "silhouette_score": 0.2698,
+          "davies_bouldin_index": 1.6036,
+          "calinski_harabasz_index": 245.0625,
+          "size_balance": 0.0864,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "3": {
+          "silhouette_score": 0.2123,
+          "davies_bouldin_index": 1.6793,
+          "calinski_harabasz_index": 253.9212,
+          "size_balance": 0.0588,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "4": {
+          "silhouette_score": 0.227,
+          "davies_bouldin_index": 1.5147,
+          "calinski_harabasz_index": 252.6629,
+          "size_balance": 0.0494,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "5": {
+          "silhouette_score": 0.1698,
+          "davies_bouldin_index": 1.5891,
+          "calinski_harabasz_index": 235.3496,
+          "size_balance": 0.0168,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "6": {
+          "silhouette_score": 0.1572,
+          "davies_bouldin_index": 1.5917,
+          "calinski_harabasz_index": 221.9693,
+          "size_balance": 0.0186,
+          "metric_basis": "mean of per-band within-band scores"
+        }
+      },
+      "approach_A_selection_scores": {
+        "2": 0.7957,
+        "3": 0.5232,
+        "4": 0.7622,
+        "5": 0.2697,
+        "6": 0.1395
+      },
+      "approach_B": {
+        "2": {
+          "silhouette_score": 0.1585,
+          "davies_bouldin_index": 2.201,
+          "calinski_harabasz_index": 1204.4466,
+          "cluster_sizes": [
+            3146,
+            3854
+          ],
+          "size_balance": 0.8163
+        },
+        "3": {
+          "silhouette_score": 0.1836,
+          "davies_bouldin_index": 1.8332,
+          "calinski_harabasz_index": 1155.7317,
+          "cluster_sizes": [
+            642,
+            3672,
+            2686
+          ],
+          "size_balance": 0.1748
+        },
+        "4": {
+          "silhouette_score": 0.1802,
+          "davies_bouldin_index": 1.6871,
+          "calinski_harabasz_index": 1184.1958,
+          "cluster_sizes": [
+            2242,
+            1727,
+            2397,
+            634
+          ],
+          "size_balance": 0.2645
+        },
+        "5": {
+          "silhouette_score": 0.1912,
+          "davies_bouldin_index": 1.5884,
+          "calinski_harabasz_index": 1125.4248,
+          "cluster_sizes": [
+            2299,
+            1686,
+            631,
+            276,
+            2108
+          ],
+          "size_balance": 0.1201
+        },
+        "6": {
+          "silhouette_score": 0.1908,
+          "davies_bouldin_index": 1.4651,
+          "calinski_harabasz_index": 1036.3224,
+          "cluster_sizes": [
+            2046,
+            2204,
+            1775,
+            285,
+            631,
+            59
+          ],
+          "size_balance": 0.0268
+        }
+      },
+      "approach_B_selection_scores": {
+        "2": 0.5,
+        "3": 0.5413,
+        "4": 0.6356,
+        "5": 0.6202,
+        "6": 0.4969
+      },
+      "composition_at_k3": {
+        "approach_B_k3": {
+          "cluster_sizes": [
+            642,
+            3672,
+            2686
+          ],
+          "cluster_feature_means": {
+            "0": {
+              "savings_rate": 0.0701,
+              "emergency_fund_months": 1.2063,
+              "dti": 0.3146,
+              "net_worth_to_income": 4.9797,
+              "investment_rate": 0.3121,
+              "portfolio_concentration": 0.3546,
+              "risk_age_deviation": -0.063,
+              "life_coverage_ratio": 4.9337,
+              "ci_coverage_ratio": 1.8448,
+              "healthy_debt_ratio": 0.4292,
+              "insurance_spend_ratio": 0.0634
+            },
+            "1": {
+              "savings_rate": 0.2319,
+              "emergency_fund_months": 4.1298,
+              "dti": 0.2221,
+              "net_worth_to_income": 2.6765,
+              "investment_rate": 0.08,
+              "portfolio_concentration": 0.4098,
+              "risk_age_deviation": -0.112,
+              "life_coverage_ratio": 5.6334,
+              "ci_coverage_ratio": 2.0733,
+              "healthy_debt_ratio": 0.6653,
+              "insurance_spend_ratio": 0.0612
+            },
+            "2": {
+              "savings_rate": 0.256,
+              "emergency_fund_months": 8.2486,
+              "dti": 0.1304,
+              "net_worth_to_income": 10.4033,
+              "investment_rate": 0.0817,
+              "portfolio_concentration": 0.2771,
+              "risk_age_deviation": -0.0077,
+              "life_coverage_ratio": 4.1747,
+              "ci_coverage_ratio": 1.6789,
+              "healthy_debt_ratio": 0.6287,
+              "insurance_spend_ratio": 0.0618
+            }
+          },
+          "profile_type_crosstab_pct": {
+            "conservative_saver": {
+              "0": 0.0,
+              "1": 47.9,
+              "2": 52.1
+            },
+            "high_debt_investor": {
+              "0": 100.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "normal": {
+              "0": 0.0,
+              "1": 60.3,
+              "2": 39.7
+            },
+            "outlier": {
+              "0": 8.3,
+              "1": 53.4,
+              "2": 38.3
+            },
+            "over_invested": {
+              "0": 100.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "protection_first": {
+              "0": 0.0,
+              "1": 79.8,
+              "2": 20.2
+            },
+            "underinsured_saver": {
+              "0": 0.0,
+              "1": 47.8,
+              "2": 52.2
+            },
+            "wealthy_exposed": {
+              "0": 0.0,
+              "1": 14.7,
+              "2": 85.3
+            }
+          },
+          "binary_purity": {
+            "has_investments": {
+              "population_prevalence": 0.888,
+              "cluster_means": {
+                "0": 1.0,
+                "1": 0.863,
+                "2": 0.896
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.642,
+              "cluster_means": {
+                "0": 0.699,
+                "1": 0.724,
+                "2": 0.515
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.395,
+              "cluster_means": {
+                "0": 0.405,
+                "1": 0.467,
+                "2": 0.294
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "nmi_labels_vs_binaries": {
+            "has_investments": 0.0197,
+            "hospitalisation_coverage": 0.0275,
+            "income_protection_coverage": 0.0177
+          }
+        },
+        "approach_A_k3_binary_purity_by_band": {
+          "1": {
+            "has_investments": {
+              "population_prevalence": 0.887,
+              "cluster_means": {
+                "0": 0.861,
+                "1": 1.0,
+                "2": 0.875
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.687,
+              "cluster_means": {
+                "0": 0.125,
+                "1": 0.752,
+                "2": 0.712
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.352,
+              "cluster_means": {
+                "0": 0.111,
+                "1": 0.352,
+                "2": 0.367
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "2": {
+            "has_investments": {
+              "population_prevalence": 0.889,
+              "cluster_means": {
+                "0": 1.0,
+                "1": 0.833,
+                "2": 0.956
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.706,
+              "cluster_means": {
+                "0": 0.772,
+                "1": 0.702,
+                "2": 0.693
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.478,
+              "cluster_means": {
+                "0": 0.478,
+                "1": 0.491,
+                "2": 0.455
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "3": {
+            "has_investments": {
+              "population_prevalence": 0.898,
+              "cluster_means": {
+                "0": 0.842,
+                "1": 1.0,
+                "2": 0.941
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.685,
+              "cluster_means": {
+                "0": 0.66,
+                "1": 0.734,
+                "2": 0.704
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.476,
+              "cluster_means": {
+                "0": 0.471,
+                "1": 0.444,
+                "2": 0.488
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "4": {
+            "has_investments": {
+              "population_prevalence": 0.876,
+              "cluster_means": {
+                "0": 0.829,
+                "1": 1.0,
+                "2": 0.923
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.611,
+              "cluster_means": {
+                "0": 0.593,
+                "1": 0.659,
+                "2": 0.63
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.443,
+              "cluster_means": {
+                "0": 0.442,
+                "1": 0.488,
+                "2": 0.433
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "5": {
+            "has_investments": {
+              "population_prevalence": 0.891,
+              "cluster_means": {
+                "0": 0.812,
+                "1": 1.0,
+                "2": 0.959
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.514,
+              "cluster_means": {
+                "0": 0.607,
+                "1": 0.545,
+                "2": 0.401
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.22,
+              "cluster_means": {
+                "0": 0.287,
+                "1": 0.25,
+                "2": 0.139
+              },
+              "near_pure_clusters": []
+            }
+          }
+        }
+      }
+    },
+    "B_mixed_14": {
+      "features": [
+        "savings_rate",
+        "emergency_fund_months",
+        "dti",
+        "net_worth_to_income",
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation",
+        "life_coverage_ratio",
+        "ci_coverage_ratio",
+        "healthy_debt_ratio",
+        "insurance_spend_ratio",
+        "has_investments",
+        "hospitalisation_coverage",
+        "income_protection_coverage"
+      ],
+      "approach_A": {
+        "2": {
+          "silhouette_score": 0.2131,
+          "davies_bouldin_index": 1.9093,
+          "calinski_harabasz_index": 221.1387,
+          "size_balance": 0.1049,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "3": {
+          "silhouette_score": 0.1956,
+          "davies_bouldin_index": 1.7793,
+          "calinski_harabasz_index": 232.0373,
+          "size_balance": 0.0614,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "4": {
+          "silhouette_score": 0.2078,
+          "davies_bouldin_index": 1.6042,
+          "calinski_harabasz_index": 230.4231,
+          "size_balance": 0.0504,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "5": {
+          "silhouette_score": 0.1574,
+          "davies_bouldin_index": 1.6615,
+          "calinski_harabasz_index": 213.7402,
+          "size_balance": 0.0175,
+          "metric_basis": "mean of per-band within-band scores"
+        },
+        "6": {
+          "silhouette_score": 0.1451,
+          "davies_bouldin_index": 1.6851,
+          "calinski_harabasz_index": 200.873,
+          "size_balance": 0.0205,
+          "metric_basis": "mean of per-band within-band scores"
+        }
+      },
+      "approach_A_selection_scores": {
+        "2": 0.6626,
+        "3": 0.6678,
+        "4": 0.8117,
+        "5": 0.3515,
+        "6": 0.1923
+      },
+      "approach_B": {
+        "2": {
+          "silhouette_score": 0.1503,
+          "davies_bouldin_index": 2.2754,
+          "calinski_harabasz_index": 1139.8012,
+          "cluster_sizes": [
+            2999,
+            4001
+          ],
+          "size_balance": 0.7496
+        },
+        "3": {
+          "silhouette_score": 0.1726,
+          "davies_bouldin_index": 1.9103,
+          "calinski_harabasz_index": 1080.3339,
+          "cluster_sizes": [
+            642,
+            2642,
+            3716
+          ],
+          "size_balance": 0.1728
+        },
+        "4": {
+          "silhouette_score": 0.1664,
+          "davies_bouldin_index": 1.7673,
+          "calinski_harabasz_index": 1094.2848,
+          "cluster_sizes": [
+            1738,
+            2398,
+            2229,
+            635
+          ],
+          "size_balance": 0.2648
+        },
+        "5": {
+          "silhouette_score": 0.1772,
+          "davies_bouldin_index": 1.6707,
+          "calinski_harabasz_index": 1034.8894,
+          "cluster_sizes": [
+            295,
+            2292,
+            2099,
+            1683,
+            631
+          ],
+          "size_balance": 0.1287
+        },
+        "6": {
+          "silhouette_score": 0.1763,
+          "davies_bouldin_index": 1.5408,
+          "calinski_harabasz_index": 947.9391,
+          "cluster_sizes": [
+            2033,
+            2186,
+            1800,
+            59,
+            291,
+            631
+          ],
+          "size_balance": 0.027
+        }
+      },
+      "approach_B_selection_scores": {
+        "2": 0.5,
+        "3": 0.5545,
+        "4": 0.5955,
+        "5": 0.6043,
+        "6": 0.4916
+      },
+      "composition_at_k3": {
+        "approach_B_k3": {
+          "cluster_sizes": [
+            642,
+            2642,
+            3716
+          ],
+          "cluster_feature_means": {
+            "0": {
+              "savings_rate": 0.0701,
+              "emergency_fund_months": 1.2063,
+              "dti": 0.3146,
+              "net_worth_to_income": 4.9797,
+              "investment_rate": 0.3121,
+              "portfolio_concentration": 0.3546,
+              "risk_age_deviation": -0.063,
+              "life_coverage_ratio": 4.9337,
+              "ci_coverage_ratio": 1.8448,
+              "healthy_debt_ratio": 0.4292,
+              "insurance_spend_ratio": 0.0634,
+              "has_investments": 1.0,
+              "hospitalisation_coverage": 0.6994,
+              "income_protection_coverage": 0.405
+            },
+            "1": {
+              "savings_rate": 0.2578,
+              "emergency_fund_months": 8.2924,
+              "dti": 0.1299,
+              "net_worth_to_income": 10.5376,
+              "investment_rate": 0.0819,
+              "portfolio_concentration": 0.278,
+              "risk_age_deviation": -0.008,
+              "life_coverage_ratio": 4.0588,
+              "ci_coverage_ratio": 1.6492,
+              "healthy_debt_ratio": 0.6275,
+              "insurance_spend_ratio": 0.0611,
+              "has_investments": 0.8978,
+              "hospitalisation_coverage": 0.4958,
+              "income_protection_coverage": 0.2744
+            },
+            "2": {
+              "savings_rate": 0.231,
+              "emergency_fund_months": 4.1474,
+              "dti": 0.2213,
+              "net_worth_to_income": 2.6725,
+              "investment_rate": 0.0799,
+              "portfolio_concentration": 0.4076,
+              "risk_age_deviation": -0.1106,
+              "life_coverage_ratio": 5.6986,
+              "ci_coverage_ratio": 2.0898,
+              "healthy_debt_ratio": 0.6657,
+              "insurance_spend_ratio": 0.0616,
+              "has_investments": 0.8622,
+              "hospitalisation_coverage": 0.7355,
+              "income_protection_coverage": 0.4782
+            }
+          },
+          "profile_type_crosstab_pct": {
+            "conservative_saver": {
+              "0": 0.0,
+              "1": 50.3,
+              "2": 49.7
+            },
+            "high_debt_investor": {
+              "0": 100.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "normal": {
+              "0": 0.0,
+              "1": 38.9,
+              "2": 61.0
+            },
+            "outlier": {
+              "0": 8.3,
+              "1": 38.0,
+              "2": 53.7
+            },
+            "over_invested": {
+              "0": 100.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "protection_first": {
+              "0": 0.0,
+              "1": 14.7,
+              "2": 85.3
+            },
+            "underinsured_saver": {
+              "0": 0.0,
+              "1": 54.3,
+              "2": 45.7
+            },
+            "wealthy_exposed": {
+              "0": 0.0,
+              "1": 87.7,
+              "2": 12.3
+            }
+          },
+          "binary_purity": {
+            "has_investments": {
+              "population_prevalence": 0.888,
+              "cluster_means": {
+                "0": 1.0,
+                "1": 0.898,
+                "2": 0.862
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.642,
+              "cluster_means": {
+                "0": 0.699,
+                "1": 0.496,
+                "2": 0.735
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.395,
+              "cluster_means": {
+                "0": 0.405,
+                "1": 0.274,
+                "2": 0.478
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "nmi_labels_vs_binaries": {
+            "has_investments": 0.02,
+            "hospitalisation_coverage": 0.0356,
+            "income_protection_coverage": 0.0246
+          }
+        },
+        "approach_A_k3_binary_purity_by_band": {
+          "1": {
+            "has_investments": {
+              "population_prevalence": 0.887,
+              "cluster_means": {
+                "0": 0.876,
+                "1": 0.853,
+                "2": 1.0
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.687,
+              "cluster_means": {
+                "0": 0.714,
+                "1": 0.12,
+                "2": 0.752
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.352,
+              "cluster_means": {
+                "0": 0.367,
+                "1": 0.107,
+                "2": 0.352
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "2": {
+            "has_investments": {
+              "population_prevalence": 0.889,
+              "cluster_means": {
+                "0": 1.0,
+                "1": 0.829,
+                "2": 0.963
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.706,
+              "cluster_means": {
+                "0": 0.772,
+                "1": 0.703,
+                "2": 0.691
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.478,
+              "cluster_means": {
+                "0": 0.478,
+                "1": 0.494,
+                "2": 0.449
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "3": {
+            "has_investments": {
+              "population_prevalence": 0.898,
+              "cluster_means": {
+                "0": 0.945,
+                "1": 1.0,
+                "2": 0.838
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.685,
+              "cluster_means": {
+                "0": 0.705,
+                "1": 0.734,
+                "2": 0.659
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.476,
+              "cluster_means": {
+                "0": 0.487,
+                "1": 0.444,
+                "2": 0.472
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "4": {
+            "has_investments": {
+              "population_prevalence": 0.876,
+              "cluster_means": {
+                "0": 0.936,
+                "1": 0.821,
+                "2": 1.0
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.611,
+              "cluster_means": {
+                "0": 0.636,
+                "1": 0.589,
+                "2": 0.659
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.443,
+              "cluster_means": {
+                "0": 0.43,
+                "1": 0.443,
+                "2": 0.488
+              },
+              "near_pure_clusters": []
+            }
+          },
+          "5": {
+            "has_investments": {
+              "population_prevalence": 0.891,
+              "cluster_means": {
+                "0": 0.966,
+                "1": 1.0,
+                "2": 0.803
+              },
+              "near_pure_clusters": []
+            },
+            "hospitalisation_coverage": {
+              "population_prevalence": 0.514,
+              "cluster_means": {
+                "0": 0.369,
+                "1": 0.545,
+                "2": 0.639
+              },
+              "near_pure_clusters": []
+            },
+            "income_protection_coverage": {
+              "population_prevalence": 0.22,
+              "cluster_means": {
+                "0": 0.121,
+                "1": 0.25,
+                "2": 0.305
+              },
+              "near_pure_clusters": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "partition_ari_configA_vs_configB_at_k3": 0.9438,
+  "scaler_degeneracy_check": {
+    "per_feature": {
+      "savings_rate": {
+        "q25": 0.1281,
+        "q75": 0.3051,
+        "iqr": 0.177,
+        "iqr_is_zero": false,
+        "robust_center": 0.2201,
+        "robust_scale_used": 0.177,
+        "scaled_variance": 0.5533,
+        "pct_of_total_scaled_variance": 6.33
+      },
+      "emergency_fund_months": {
+        "q25": 2.4034,
+        "q75": 7.3477,
+        "iqr": 4.9443,
+        "iqr_is_zero": false,
+        "robust_center": 4.6189,
+        "robust_scale_used": 4.9443,
+        "scaled_variance": 0.8432,
+        "pct_of_total_scaled_variance": 9.64
+      },
+      "dti": {
+        "q25": 0.0929,
+        "q75": 0.2788,
+        "iqr": 0.1859,
+        "iqr_is_zero": false,
+        "robust_center": 0.1689,
+        "robust_scale_used": 0.1859,
+        "scaled_variance": 0.4888,
+        "pct_of_total_scaled_variance": 5.59
+      },
+      "net_worth_to_income": {
+        "q25": 1.6216,
+        "q75": 7.9404,
+        "iqr": 6.3188,
+        "iqr_is_zero": false,
+        "robust_center": 4.0554,
+        "robust_scale_used": 6.3188,
+        "scaled_variance": 1.1335,
+        "pct_of_total_scaled_variance": 12.96
+      },
+      "investment_rate": {
+        "q25": 0.0525,
+        "q75": 0.1268,
+        "iqr": 0.0743,
+        "iqr_is_zero": false,
+        "robust_center": 0.0915,
+        "robust_scale_used": 0.0743,
+        "scaled_variance": 1.3075,
+        "pct_of_total_scaled_variance": 14.95
+      },
+      "portfolio_concentration": {
+        "q25": 0.2422,
+        "q75": 0.4463,
+        "iqr": 0.2041,
+        "iqr_is_zero": false,
+        "robust_center": 0.3415,
+        "robust_scale_used": 0.2041,
+        "scaled_variance": 0.5844,
+        "pct_of_total_scaled_variance": 6.68
+      },
+      "risk_age_deviation": {
+        "q25": -0.189,
+        "q75": 0.058,
+        "iqr": 0.247,
+        "iqr_is_zero": false,
+        "robust_center": -0.0658,
+        "robust_scale_used": 0.247,
+        "scaled_variance": 0.5165,
+        "pct_of_total_scaled_variance": 5.91
+      },
+      "life_coverage_ratio": {
+        "q25": 1.9983,
+        "q75": 7.0328,
+        "iqr": 5.0345,
+        "iqr_is_zero": false,
+        "robust_center": 4.183,
+        "robust_scale_used": 5.0345,
+        "scaled_variance": 0.6812,
+        "pct_of_total_scaled_variance": 7.79
+      },
+      "ci_coverage_ratio": {
+        "q25": 0.7902,
+        "q75": 2.5437,
+        "iqr": 1.7535,
+        "iqr_is_zero": false,
+        "robust_center": 1.6071,
+        "robust_scale_used": 1.7535,
+        "scaled_variance": 0.9481,
+        "pct_of_total_scaled_variance": 10.84
+      },
+      "healthy_debt_ratio": {
+        "q25": 0.503,
+        "q75": 0.7905,
+        "iqr": 0.2875,
+        "iqr_is_zero": false,
+        "robust_center": 0.661,
+        "robust_scale_used": 0.2875,
+        "scaled_variance": 0.5784,
+        "pct_of_total_scaled_variance": 6.61
+      },
+      "insurance_spend_ratio": {
+        "q25": 0.0325,
+        "q75": 0.0856,
+        "iqr": 0.0531,
+        "iqr_is_zero": false,
+        "robust_center": 0.0594,
+        "robust_scale_used": 0.0531,
+        "scaled_variance": 0.5414,
+        "pct_of_total_scaled_variance": 6.19
+      },
+      "has_investments": {
+        "q25": 1.0,
+        "q75": 1.0,
+        "iqr": 0.0,
+        "iqr_is_zero": true,
+        "robust_center": 1.0,
+        "robust_scale_used": 1.0,
+        "scaled_variance": 0.0992,
+        "pct_of_total_scaled_variance": 1.13
+      },
+      "hospitalisation_coverage": {
+        "q25": 0.0,
+        "q75": 1.0,
+        "iqr": 1.0,
+        "iqr_is_zero": false,
+        "robust_center": 1.0,
+        "robust_scale_used": 1.0,
+        "scaled_variance": 0.2299,
+        "pct_of_total_scaled_variance": 2.63
+      },
+      "income_protection_coverage": {
+        "q25": 0.0,
+        "q75": 1.0,
+        "iqr": 1.0,
+        "iqr_is_zero": false,
+        "robust_center": 0.0,
+        "robust_scale_used": 1.0,
+        "scaled_variance": 0.2389,
+        "pct_of_total_scaled_variance": 2.73
+      }
+    },
+    "binary_combined_pct_of_scaled_variance": 6.49,
+    "proportionate_share_pct": 21.43
+  }
+}

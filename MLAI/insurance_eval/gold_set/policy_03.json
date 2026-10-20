@@ -1,0 +1,23 @@
+{
+  "policy_id": "005",
+  "filename": "policy_03.pdf",
+  "ground_truth": {
+    "policy_name": "PruExtra (Premier CoPay)",
+    "insurer": "Prudential Assurance Company Singapore (Pte) Limited",
+    "policy_type": "hospitalisation",
+    "policy_type_raw": "PruExtra (Premier CoPay)",
+    "sum_assured_sgd": null,
+    "annual_premium_sgd": 800.0,
+    "renewal_date": "2026-09",
+    "exclusions": [],
+    "coverage_gaps": []
+  },
+  "absent_fields": {
+    "sum_assured_sgd": true,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": true,
+    "coverage_gaps": true
+  },
+  "notes": "DOCUMENT-INSUFFICIENCY TEST CASE - same situation as the PruShield pair. PruExtra is a CoPay rider attached to the corresponding PruShield plan (reduces the policyholder's co-payment share on hospital bills); only the renewal certificate is available, no policy booklet. sum_assured_sgd is null - CoPay riders have no sum assured concept at all, not even a notional one (unlike PruShield's main hospitalisation benefit, which at least has panel limits in its booklet). exclusions and coverage_gaps null/empty because unavailable from source, not assessed as zero. annual_premium_sgd converted from the certificate's monthly figure (68.00 x 12 = 816.00)."
+}

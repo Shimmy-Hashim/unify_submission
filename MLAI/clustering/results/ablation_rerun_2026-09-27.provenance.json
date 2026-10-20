@@ -1,0 +1,20 @@
+{
+  "result_file": "MLAI/clustering/results/ablation_rerun_2026-09-27.json",
+  "result_file_sha256": "09d5e1d442bb313c76eda3069206b4adab47d85c46233cc002d6686bf17b3683",
+  "produced_by": "MLAI/clustering/ablation_binary_features.py main(), unmodified, invoked with only DATA_PATH/OUT_PATH/RESULTS_DIR redirected (same pattern as run_correlation_retest.py)",
+  "script_git_blob": "b57b1a097225d88bb1c49ba08806b075cb59b752",
+  "repo_head": "abc1d4a23b9a45dea70f5673a4a5774eb72911f9",
+  "input_csv": "MLAI/clustering/data/processed/synthetic_users.csv",
+  "input_csv_sha256_before": "843758a99de5d98de485f5cfb9f0a81b4ea0a8741c2266e0eb5ea5883b4ae6d5",
+  "input_csv_sha256_after": "843758a99de5d98de485f5cfb9f0a81b4ea0a8741c2266e0eb5ea5883b4ae6d5",
+  "input_dataset": "correlation-fixed generation (generator commit 6d99f7f, file written 2026-07-25 22:19:58 +0800)",
+  "note_on_dataset_source_field": "The result file's dataset.source string is a hard-coded literal in ablation_binary_features.py (lines 291-294) and still describes the 19-20 July citation-fix regeneration; it does not reflect the 25 July correlation fix this run actually used. The sha256 above is authoritative.",
+  "supersedes_for_current_data": "results/ablation_binary_features.json (run 2026-07-19, pre-correlation-fix dataset sha256 5eaa54ee..., left untouched)",
+  "environment": {
+    "python": "3.14.2",
+    "sklearn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "run_started_utc": "2026-09-27T08:33:10.992379+00:00"
+}

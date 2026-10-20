@@ -1,0 +1,200 @@
+{
+  "run_timestamp": "2026-05-30T13:11:48.615215+00:00",
+  "dataset": {
+    "n_users": 7000,
+    "n_features": 10,
+    "scaler_used": "RobustScaler"
+  },
+  "hopkins_statistic": {
+    "value": 0.8118,
+    "interpretation": "Strong clustering tendency (H far from 0.5)."
+  },
+  "k_search": {
+    "approach_a": {
+      "band_1": {
+        "optimal_k": 2,
+        "silhouette": 0.4439
+      },
+      "band_2": {
+        "optimal_k": 5,
+        "silhouette": 0.1824
+      },
+      "band_3": {
+        "optimal_k": 2,
+        "silhouette": 0.15
+      },
+      "band_4": {
+        "optimal_k": 6,
+        "silhouette": 0.1442
+      },
+      "band_5": {
+        "optimal_k": 6,
+        "silhouette": 0.1921
+      }
+    },
+    "approach_a_k_used": 2,
+    "approach_b": {
+      "optimal_k": 2,
+      "silhouette": 0.1881
+    },
+    "dendrogram_suggested_k": 6
+  },
+  "algorithm_comparison": {
+    "approach_a": {
+      "k_used": 2,
+      "results": {
+        "kmeans": {
+          "silhouette_score": 0.2037,
+          "davies_bouldin_index": 2.0289,
+          "calinski_harabasz_index": 234.0978,
+          "cluster_sizes": [
+            1343,
+            99,
+            858,
+            534,
+            768,
+            659,
+            664,
+            714,
+            656,
+            705
+          ],
+          "size_balance": 0.6829,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 4
+        },
+        "kmedoids": {
+          "silhouette_score": 0.155,
+          "davies_bouldin_index": 2.388,
+          "calinski_harabasz_index": 184.5177,
+          "cluster_sizes": [
+            1187,
+            255,
+            944,
+            448,
+            651,
+            776,
+            844,
+            534,
+            541,
+            820
+          ],
+          "size_balance": 0.5642,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 9
+        },
+        "gmm": {
+          "silhouette_score": 0.3101,
+          "davies_bouldin_index": 2.6972,
+          "calinski_harabasz_index": 129.0786,
+          "cluster_sizes": [
+            298,
+            1144,
+            169,
+            1223,
+            170,
+            1257,
+            1231,
+            147,
+            250,
+            1111
+          ],
+          "size_balance": 0.1757,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 9
+        },
+        "fuzzy_cmeans": {
+          "silhouette_score": 0.1312,
+          "davies_bouldin_index": 2.3847,
+          "calinski_harabasz_index": 202.7934,
+          "cluster_sizes": [
+            707,
+            735,
+            737,
+            655,
+            732,
+            695,
+            711,
+            667,
+            693,
+            668
+          ],
+          "size_balance": 0.9404,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 8
+        }
+      },
+      "winner": "kmeans",
+      "stability_jaccard": 0.8703,
+      "ideal_cluster_id": 31
+    },
+    "approach_b": {
+      "k_used": 2,
+      "results": {
+        "kmeans": {
+          "silhouette_score": 0.1881,
+          "davies_bouldin_index": 1.9628,
+          "calinski_harabasz_index": 1514.0697,
+          "cluster_sizes": [
+            3904,
+            3096
+          ],
+          "size_balance": 0.793,
+          "runtime_seconds": 0.415,
+          "composite_rank": 3
+        },
+        "kmedoids": {
+          "silhouette_score": 0.1788,
+          "davies_bouldin_index": 2.021,
+          "calinski_harabasz_index": 1444.0522,
+          "cluster_sizes": [
+            3367,
+            3633
+          ],
+          "size_balance": 0.9268,
+          "runtime_seconds": 1.34,
+          "composite_rank": 9
+        },
+        "gmm": {
+          "silhouette_score": 0.1534,
+          "davies_bouldin_index": 2.3939,
+          "calinski_harabasz_index": 1042.6484,
+          "cluster_sizes": [
+            3827,
+            3173
+          ],
+          "size_balance": 0.8291,
+          "bic": 154604.8477,
+          "aic": 153542.5296,
+          "runtime_seconds": 0.668,
+          "composite_rank": 12
+        },
+        "fuzzy_cmeans": {
+          "silhouette_score": 0.1838,
+          "davies_bouldin_index": 1.9812,
+          "calinski_harabasz_index": 1491.5278,
+          "cluster_sizes": [
+            3200,
+            3800
+          ],
+          "size_balance": 0.8421,
+          "fuzzy_partition_coefficient": 0.5,
+          "runtime_seconds": 0.371,
+          "composite_rank": 6
+        }
+      },
+      "winner": "kmeans",
+      "stability_jaccard": 0.9869,
+      "ideal_cluster_id": 0
+    }
+  },
+  "diagnostic": {
+    "hdbscan_clusters_found": 3,
+    "hdbscan_noise_users": 9,
+    "hdbscan_noise_pct": 0.13,
+    "agglomerative_silhouette": 0.1315
+  },
+  "recommended_approach": "A",
+  "recommended_algorithm": "kmeans",
+  "recommendation_reasoning": "Approach A (kmeans) achieves silhouette 0.2037 with stability 0.8703, exceeding Approach B (kmeans: silhouette 0.1881, stability 0.9869). Age-stratified models capture band-specific structure better here."
+}

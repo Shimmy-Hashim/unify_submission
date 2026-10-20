@@ -1,0 +1,207 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    // The four Notifications & Alerts toggles, and nothing else. Settings
+    // writes one key at a time with merge, so request.resource.data is the
+    // whole post-merge document — checking it here bounds what the document
+    // can ever contain, not just what this one write touched.
+    function isTogglesOnly() {
+      return request.resource.data.keys().hasOnly(
+               ['push_notifications', 'risk_alerts',
+                'premium_due_reminders', 'monthly_score_update'])
+             && request.resource.data.values().hasOnly([true, false]);
+    }
+
+    // financialProfile — Section 8 allows an income of 0 (students / NS) and
+    // rejects negatives and anything above $1M. Same bounds the onboarding
+    // form already validates client-side, now enforced where it counts.
+    function isValidIncome(v) {
+      return v is number && v >= 0 && v <= 1000000;
+    }
+
+    // The document onboarding creates, and nothing more. createUserProfile()
+    // does a full set() of UserFinancialProfile.createMap(), so the whole
+    // eight-field shape is pinned here: the income the user typed,
+    // income_source fixed, the two derived fields seeded at 0, and every
+    // Phase 3 output left null. A client cannot arrive already holding a
+    // score. Reads use get(key, default) so a missing key denies rather than
+    // erroring out mid-evaluation.
+    function isOnboardingCreate() {
+      return request.resource.data.keys().hasOnly(
+               ['monthly_income_sgd', 'income_source', 'monthly_expenses_sgd',
+                'net_worth_sgd', 'overall_score', 'checklist_flags',
+                'checklist_last_updated', 'ml_profile'])
+             && isValidIncome(request.resource.data.get('monthly_income_sgd', -1))
+             && request.resource.data.get('income_source', '') == 'user_entered'
+             && request.resource.data.get('monthly_expenses_sgd', 0) == 0
+             && request.resource.data.get('net_worth_sgd', 0) == 0
+             && request.resource.data.get('overall_score', null) == null
+             && request.resource.data.get('checklist_flags', null) == null
+             && request.resource.data.get('checklist_last_updated', null) == null
+             && request.resource.data.get('ml_profile', null) == null;
+    }
+
+    // Settings > Edit Profile calls updateMonthlyIncome(), an update() of
+    // exactly one field. affectedKeys() covers keys added, removed AND
+    // changed, so this equally blocks deleting a backend field and smuggling
+    // one in alongside the income.
+    function isIncomeOnlyUpdate() {
+      return request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['monthly_income_sgd'])
+             && isValidIncome(request.resource.data.get('monthly_income_sgd', -1));
+    }
+
+    // ---- READ THIS BEFORE EDITING ----------------------------------------
+    // Firestore rules are ADDITIVE (OR'd), never sequential. A narrow
+    // `allow ...: if false` block placed before a broader allow does NOT
+    // override it — the broader allow still wins wherever its condition
+    // matches. So every restriction below works by NOT granting the thing in
+    // the first place: the backend-owned collections are matched explicitly
+    // with a read-only grant, and the catch-all at the bottom excludes each
+    // of them by name. Adding a collection to the schema means adding it here
+    // too; the catch-all's exclusion list is the enforcement point.
+    // ----------------------------------------------------------------------
+
+    // The seven-field profile document. Written by onboarding, by Settings >
+    // Edit Profile, and by touchLastActive.
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // plaidItems holds the Plaid access_token — backend-only via the Admin
+    // SDK, which bypasses rules entirely. Not even the owning user's client
+    // may read it. Kept as documentation of intent; the real exclusion is in
+    // the catch-all's list at the bottom (see the note above).
+    match /users/{uid}/plaidItems/{document=**} {
+      allow read, write: if false;
+    }
+
+    // ---- Backend-owned collections: the owner reads, no client writes -----
+    // Every document in these is produced by a verified server-side pipeline
+    // (Plaid sync, the Gemini insurance parser, the notification sender) and
+    // feeds the Financial Health Score. A client write here would put
+    // fabricated data straight into the scoring inputs, past every validation
+    // the pipeline performs. No Flutter code writes to any of them — the only
+    // Firestore writes the client makes are users/{uid}, financialProfile,
+    // notificationSettings/preferences and notificationTokens/{token}.
+    // Backend writes are unaffected: the Admin SDK bypasses rules.
+
+    // Accounts, balances, liabilities and their transactions — Plaid sync.
+    match /users/{uid}/plaidAccounts/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // Holdings, allocation, concentration and their transactions — Plaid
+    // investments sync.
+    match /users/{uid}/investmentAccounts/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // Manually-entered accounts and the transactions parsed out of an
+    // uploaded bank statement. Schema'd in Section 8 but never built: there
+    // is no client write path today and none is expected, so it takes the
+    // same read-only posture as the other account collections rather than
+    // waiting for a feature that would have shipped with the gap already
+    // open. Not sealed like plaidItems — nothing here is a secret, it is the
+    // user's own account data, so the owner keeps read access.
+    match /users/{uid}/manualAccounts/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // Written only by POST /insurance/parse after Gemini extraction. A client
+    // write path here would be a route around the parser entirely.
+    match /users/{uid}/insurancePolicies/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // One document per day of the user's Financial Health Score, keyed by
+    // date. Written only by the score pipeline through the Admin SDK, which
+    // bypasses these rules entirely — there is no client write path and none
+    // is expected. A client that could write here would be forging its own
+    // score history: the same fabricated-scoring-input hole already closed on
+    // plaidAccounts, insurancePolicies and financialProfile, one collection
+    // further along. Read stays open to the owner — it is the user's own
+    // history and the app shows it back to them — so this is the read-only
+    // posture, NOT plaidItems' fully-sealed one.
+    match /users/{uid}/scoreHistory/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // The already-sent ledger that makes notification delivery idempotent.
+    // A client that could write it could suppress its own risk alerts.
+    match /users/{uid}/notificationEvents/{document=**} {
+      allow read: if isOwner(uid);
+    }
+
+    // ---- notificationSettings: two documents, two owners -----------------
+    // `preferences` — the four toggles, written by Settings.
+    // `state`       — the backend's known_coverage_gaps memory, which decides
+    //                 whether a coverage gap counts as NEW. Backend-only.
+    // The wildcard grants read to both and write to neither; the tighter
+    // `preferences` rule below OR's the one narrow write back in.
+    match /users/{uid}/notificationSettings/{settingsDoc} {
+      allow read: if isOwner(uid);
+    }
+    match /users/{uid}/notificationSettings/preferences {
+      allow create, update: if isOwner(uid) && isTogglesOnly();
+    }
+
+    // ---- notificationTokens: one document per device, keyed BY the token --
+    // The client legitimately registers its own FCM token and deletes it on
+    // sign-out. Scoped to exactly that: the three fields _writeToken sends,
+    // and a document ID that must equal the token it claims to be.
+    match /users/{uid}/notificationTokens/{token} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+                            && request.resource.data.keys().hasOnly(
+                                 ['token', 'platform', 'last_seen_at'])
+                            && request.resource.data.token == token;
+    }
+
+
+    // ---- financialProfile: exactly one client-writable field --------------
+    // Everything on this document except monthly_income_sgd is computed
+    // server-side — net_worth_sgd and monthly_expenses_sgd on every Plaid
+    // sync, overall_score / checklist_flags / checklist_last_updated /
+    // ml_profile by the score pipeline. A client write to any of them would
+    // cache a fabricated score as though the pipeline had produced it: the
+    // same hole just closed on plaidAccounts and insurancePolicies.
+    //
+    // The two legitimate client writes both live here and nowhere else:
+    //   createUserProfile()   — full set() of createMap(), at onboarding
+    //   updateMonthlyIncome() — update() of one field, from Edit Profile
+    // No delete grant: the client never removes this document, and account
+    // deletion runs through the Admin SDK.
+    match /users/{uid}/financialProfile/{document=**} {
+      allow read: if isOwner(uid);
+    }
+    match /users/{uid}/financialProfile/profile {
+      allow create: if isOwner(uid) && isOnboardingCreate();
+      allow update: if isOwner(uid) && isIncomeOnlyUpdate();
+    }
+
+    // ---- Everything else under users/{uid} -------------------------------
+    // Any collection not named above. Owner-only read+write, which is why
+    // every backend-owned collection must be listed. The exclusion list
+    // is what actually keeps the collections above restricted — see the note
+    // at the top of this file.
+    match /users/{uid}/{collection}/{document=**} {
+      allow read, write: if isOwner(uid)
+                         && !(collection in ['plaidItems',
+                                             'financialProfile',
+                                             'plaidAccounts',
+                                             'investmentAccounts',
+                                             'manualAccounts',
+                                             'insurancePolicies',
+                                             'scoreHistory',
+                                             'notificationEvents',
+                                             'notificationSettings',
+                                             'notificationTokens']);
+    }
+  }
+}

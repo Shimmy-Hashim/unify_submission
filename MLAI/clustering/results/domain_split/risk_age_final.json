@@ -1,0 +1,7007 @@
+{
+  "variants": {
+    "V0_baseline": {
+      "features": [
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation"
+      ],
+      "rad_in_benchmarks": true,
+      "gate_passers": [
+        "B|agglomerative|5",
+        "B|fuzzy_cmeans|5",
+        "B|fuzzy_cmeans|6",
+        "B|kmedoids|4"
+      ],
+      "per_band_screen": {
+        "B|agglomerative|5": {
+          "macro_sil": 0.1976,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            0.33,
+            44.57,
+            11.3,
+            34.95,
+            8.86
+          ],
+          "pooled_min_pct": 0.33,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                0.0,
+                0.32,
+                95.86,
+                3.61
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.68,
+                0.23,
+                7.61,
+                77.84,
+                13.64
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.65,
+                46.76,
+                37.9,
+                0.32,
+                14.36
+              ],
+              "min_pct": 0.32
+            },
+            "4": {
+              "shares_pct": [
+                0.11,
+                76.3,
+                10.5,
+                0.0,
+                13.09
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|5": {
+          "macro_sil": 0.1822,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            23.34,
+            0.15,
+            23.36,
+            28.88,
+            24.26
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                18.7,
+                0.0,
+                81.3
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.34,
+                0.11,
+                67.16,
+                0.0,
+                32.39
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                57.45,
+                0.43,
+                31.97,
+                4.32,
+                5.83
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                54.97,
+                0.23,
+                0.0,
+                44.81,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                4.36,
+                0.0,
+                0.0,
+                95.64,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|6": {
+          "macro_sil": 0.1826,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            19.93,
+            21.05,
+            0.07,
+            18.18,
+            19.93,
+            20.84
+          ],
+          "pooled_min_pct": 0.07,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                0.0,
+                0.0,
+                28.8,
+                0.0,
+                70.99
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                18.18,
+                0.0,
+                0.0,
+                54.43,
+                0.0,
+                27.39
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                75.38,
+                1.51,
+                0.11,
+                8.32,
+                10.48,
+                4.21
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                5.3,
+                49.77,
+                0.23,
+                0.0,
+                44.7,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                54.85,
+                0.0,
+                0.0,
+                45.15,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|4": {
+          "macro_sil": 0.2454,
+          "k_found": 4,
+          "pooled_shares_pct": [
+            34.13,
+            0.15,
+            20.57,
+            45.14
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                3.18,
+                0.11,
+                0.34,
+                96.36
+              ],
+              "min_pct": 0.11
+            },
+            "3": {
+              "shares_pct": [
+                51.3,
+                0.43,
+                19.65,
+                28.62
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                58.58,
+                0.23,
+                41.2,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                57.91,
+                0.0,
+                42.09,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        }
+      },
+      "passing_gate_and_per_band_floor": []
+    },
+    "V1_formula_fix_only": {
+      "features": [
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation"
+      ],
+      "rad_in_benchmarks": true,
+      "gate_passers": [
+        "B|kmedoids|5"
+      ],
+      "per_band_screen": {
+        "B|kmedoids|5": {
+          "macro_sil": 0.2088,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            24.88,
+            18.55,
+            0.04,
+            37.21,
+            19.32
+          ],
+          "pooled_min_pct": 0.04,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                4.36,
+                0.0,
+                0.0,
+                95.64,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                28.86,
+                0.0,
+                0.0,
+                68.98,
+                2.16
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                61.34,
+                0.0,
+                0.0,
+                18.68,
+                19.98
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                30.36,
+                20.43,
+                0.23,
+                1.47,
+                47.52
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                72.3,
+                0.0,
+                0.0,
+                27.7
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        }
+      },
+      "passing_gate_and_per_band_floor": []
+    },
+    "V2_bench_drop_only": {
+      "features": [
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation"
+      ],
+      "rad_in_benchmarks": false,
+      "gate_passers": [
+        "A|fuzzy_cmeans|2",
+        "A|fuzzy_cmeans|6",
+        "A|kmeans|3",
+        "B|agglomerative|3",
+        "B|agglomerative|5",
+        "B|agglomerative|6",
+        "B|birch|3",
+        "B|fuzzy_cmeans|3",
+        "B|fuzzy_cmeans|5",
+        "B|fuzzy_cmeans|6",
+        "B|gmm_diag|3",
+        "B|gmm_full|3",
+        "B|kmeans|3",
+        "B|kmeans|5",
+        "B|kmedoids|3"
+      ],
+      "per_band_screen": {
+        "A|fuzzy_cmeans|2": {
+          "macro_sil": 0.2481,
+          "k_found": 2,
+          "pooled_shares_pct": [
+            33.6,
+            66.4
+          ],
+          "pooled_min_pct": 33.6,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                29.76,
+                70.24
+              ],
+              "min_pct": 29.76
+            },
+            "2": {
+              "shares_pct": [
+                33.52,
+                66.48
+              ],
+              "min_pct": 33.52
+            },
+            "3": {
+              "shares_pct": [
+                40.6,
+                59.4
+              ],
+              "min_pct": 40.6
+            },
+            "4": {
+              "shares_pct": [
+                32.62,
+                67.38
+              ],
+              "min_pct": 32.62
+            },
+            "5": {
+              "shares_pct": [
+                31.52,
+                68.48
+              ],
+              "min_pct": 31.52
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 29.76,
+          "passes_pooled": true,
+          "passes_per_band": true
+        },
+        "A|fuzzy_cmeans|6": {
+          "macro_sil": 0.2476,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            17.03,
+            15.69,
+            8.92,
+            20.84,
+            19.8,
+            17.71
+          ],
+          "pooled_min_pct": 8.92,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                17.32,
+                22.42,
+                20.62,
+                21.79,
+                17.85
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                22.73,
+                21.48,
+                0.0,
+                19.2,
+                18.64,
+                17.95
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                20.52,
+                21.17,
+                0.0,
+                23.54,
+                20.41,
+                14.36
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                16.37,
+                0.23,
+                22.01,
+                21.78,
+                19.98,
+                19.64
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                26.17,
+                17.88,
+                0.0,
+                18.97,
+                18.1,
+                18.87
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmeans|3": {
+          "macro_sil": 0.3079,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            23.78,
+            34.33,
+            41.89
+          ],
+          "pooled_min_pct": 23.78,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                58.87,
+                41.13
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                59.43,
+                40.57
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                64.47,
+                0.0,
+                35.53
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                54.63,
+                0.23,
+                45.15
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.11,
+                52.67,
+                47.22
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|agglomerative|3": {
+          "macro_sil": 0.2993,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.33,
+            64.73,
+            34.95
+          ],
+          "pooled_min_pct": 0.33,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                3.93,
+                95.86
+              ],
+              "min_pct": 0.21
+            },
+            "2": {
+              "shares_pct": [
+                0.68,
+                21.48,
+                77.84
+              ],
+              "min_pct": 0.68
+            },
+            "3": {
+              "shares_pct": [
+                0.65,
+                99.03,
+                0.32
+              ],
+              "min_pct": 0.32
+            },
+            "4": {
+              "shares_pct": [
+                0.11,
+                99.89,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 4,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|5": {
+          "macro_sil": 0.1976,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            0.33,
+            11.3,
+            44.57,
+            34.95,
+            8.86
+          ],
+          "pooled_min_pct": 0.33,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                0.32,
+                0.0,
+                95.86,
+                3.61
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.68,
+                7.61,
+                0.23,
+                77.84,
+                13.64
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.65,
+                37.9,
+                46.76,
+                0.32,
+                14.36
+              ],
+              "min_pct": 0.32
+            },
+            "4": {
+              "shares_pct": [
+                0.11,
+                10.5,
+                76.3,
+                0.0,
+                13.09
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|6": {
+          "macro_sil": 0.1852,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            0.33,
+            11.3,
+            44.57,
+            22.57,
+            12.37,
+            8.86
+          ],
+          "pooled_min_pct": 0.33,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                0.32,
+                0.0,
+                57.28,
+                38.58,
+                3.61
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.68,
+                7.61,
+                0.23,
+                55.11,
+                22.73,
+                13.64
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.65,
+                37.9,
+                46.76,
+                0.32,
+                0.0,
+                14.36
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.11,
+                10.5,
+                76.3,
+                0.0,
+                0.0,
+                13.09
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|birch|3": {
+          "macro_sil": 0.2373,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            1.03,
+            61.32,
+            37.65
+          ],
+          "pooled_min_pct": 1.03,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.11,
+                9.67,
+                90.22
+              ],
+              "min_pct": 0.11
+            },
+            "2": {
+              "shares_pct": [
+                0.57,
+                36.82,
+                62.61
+              ],
+              "min_pct": 0.57
+            },
+            "3": {
+              "shares_pct": [
+                0.11,
+                75.38,
+                24.51
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                2.37,
+                87.92,
+                9.71
+              ],
+              "min_pct": 2.37
+            },
+            "5": {
+              "shares_pct": [
+                2.07,
+                97.93,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 5,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|3": {
+          "macro_sil": 0.2566,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            20.42,
+            40.95,
+            38.64
+          ],
+          "pooled_min_pct": 20.42,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                2.34,
+                0.0,
+                97.66
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                25.11,
+                0.11,
+                74.77
+              ],
+              "min_pct": 0.11
+            },
+            "3": {
+              "shares_pct": [
+                62.1,
+                18.36,
+                19.55
+              ],
+              "min_pct": 18.36
+            },
+            "4": {
+              "shares_pct": [
+                12.3,
+                87.7,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.22,
+                99.78,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|5": {
+          "macro_sil": 0.1822,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            23.34,
+            0.15,
+            23.36,
+            28.88,
+            24.26
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                18.7,
+                0.0,
+                81.3
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.34,
+                0.11,
+                67.16,
+                0.0,
+                32.39
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                57.45,
+                0.43,
+                31.97,
+                4.32,
+                5.83
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                54.97,
+                0.23,
+                0.0,
+                44.81,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                4.36,
+                0.0,
+                0.0,
+                95.64,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|6": {
+          "macro_sil": 0.1826,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            21.05,
+            0.07,
+            19.93,
+            18.18,
+            19.93,
+            20.84
+          ],
+          "pooled_min_pct": 0.07,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                0.21,
+                28.8,
+                0.0,
+                70.99
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                18.18,
+                54.43,
+                0.0,
+                27.39
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                1.51,
+                0.11,
+                75.38,
+                8.32,
+                10.48,
+                4.21
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                49.77,
+                0.23,
+                5.3,
+                0.0,
+                44.7,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                54.85,
+                0.0,
+                0.0,
+                0.0,
+                45.15,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_diag|3": {
+          "macro_sil": 0.319,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.2,
+            56.33,
+            43.47
+          ],
+          "pooled_min_pct": 0.2,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                0.0,
+                99.77
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.54,
+                82.29,
+                17.17
+              ],
+              "min_pct": 0.54
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.77,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_full|3": {
+          "macro_sil": 0.3153,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.13,
+            57.87,
+            42.0
+          ],
+          "pooled_min_pct": 0.13,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                0.0,
+                99.89
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.32,
+                89.85,
+                9.83
+              ],
+              "min_pct": 0.32
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.77,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|3": {
+          "macro_sil": 0.3162,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.35,
+            53.87,
+            45.78
+          ],
+          "pooled_min_pct": 0.35,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                1.02,
+                98.75
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                1.3,
+                69.22,
+                29.48
+              ],
+              "min_pct": 1.3
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.77,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|5": {
+          "macro_sil": 0.2215,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            25.43,
+            0.04,
+            30.46,
+            23.58,
+            20.48
+          ],
+          "pooled_min_pct": 0.04,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                26.46,
+                73.54,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                63.52,
+                36.25,
+                0.23
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                17.71,
+                0.0,
+                61.77,
+                6.7,
+                13.82
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                54.74,
+                0.23,
+                0.68,
+                0.0,
+                44.36
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                55.4,
+                0.0,
+                0.0,
+                0.0,
+                44.6
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|3": {
+          "macro_sil": 0.3156,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.29,
+            51.78,
+            47.93
+          ],
+          "pooled_min_pct": 0.29,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                1.48,
+                98.3
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.97,
+                59.18,
+                39.85
+              ],
+              "min_pct": 0.97
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.1,
+                0.68
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        }
+      },
+      "passing_gate_and_per_band_floor": [
+        "A|fuzzy_cmeans|2"
+      ]
+    },
+    "V3_drop_entirely": {
+      "features": [
+        "investment_rate",
+        "portfolio_concentration"
+      ],
+      "rad_in_benchmarks": false,
+      "gate_passers": [
+        "A|agglomerative|3",
+        "A|fuzzy_cmeans|3",
+        "A|kmeans|3",
+        "A|kmeans|5",
+        "A|kmedoids|3",
+        "A|kmedoids|4",
+        "A|spectral|2",
+        "A|spectral|3",
+        "A|spectral|5",
+        "B|agglomerative|3",
+        "B|agglomerative|5",
+        "B|agglomerative|6",
+        "B|birch|2",
+        "B|birch|3",
+        "B|fuzzy_cmeans|3",
+        "B|fuzzy_cmeans|5",
+        "B|gmm_diag|3",
+        "B|gmm_full|3",
+        "B|kmeans|3",
+        "B|kmeans|6",
+        "B|kmedoids|3",
+        "B|kmedoids|4",
+        "B|kmedoids|5",
+        "B|kmedoids|6"
+      ],
+      "per_band_screen": {
+        "A|agglomerative|3": {
+          "macro_sil": 0.4102,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            17.1,
+            33.38,
+            49.52
+          ],
+          "pooled_min_pct": 17.1,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.64,
+                25.82,
+                73.54
+              ],
+              "min_pct": 0.64
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                59.77,
+                40.11
+              ],
+              "min_pct": 0.11
+            },
+            "3": {
+              "shares_pct": [
+                83.05,
+                0.0,
+                16.95
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                42.21,
+                57.56
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                41.0,
+                59.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 3,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|fuzzy_cmeans|3": {
+          "macro_sil": 0.4069,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            24.09,
+            34.59,
+            41.32
+          ],
+          "pooled_min_pct": 24.09,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                56.32,
+                43.68
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                59.55,
+                40.45
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                64.36,
+                0.0,
+                35.64
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                56.32,
+                0.23,
+                43.45
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.11,
+                56.49,
+                43.4
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmeans|3": {
+          "macro_sil": 0.4104,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            21.58,
+            36.33,
+            42.09
+          ],
+          "pooled_min_pct": 21.58,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                56.75,
+                43.25
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                58.86,
+                41.14
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.0,
+                64.58,
+                35.42
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                52.82,
+                0.23,
+                46.95
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                56.05,
+                0.11,
+                43.84
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmeans|5": {
+          "macro_sil": 0.3609,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            13.21,
+            16.73,
+            33.67,
+            20.33,
+            16.07
+          ],
+          "pooled_min_pct": 13.21,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                25.61,
+                36.45,
+                20.3,
+                17.64
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                31.48,
+                36.36,
+                20.8,
+                11.36
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                36.83,
+                0.0,
+                37.26,
+                7.02,
+                18.9
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                27.43,
+                33.86,
+                24.27,
+                14.22
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                28.14,
+                0.0,
+                24.43,
+                29.55,
+                17.88
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmedoids|3": {
+          "macro_sil": 0.3704,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            18.51,
+            38.04,
+            43.45
+          ],
+          "pooled_min_pct": 18.51,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                46.44,
+                53.56
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                61.59,
+                38.41
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                35.53,
+                31.53,
+                32.94
+              ],
+              "min_pct": 31.53
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                51.81,
+                47.97
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                55.73,
+                0.11,
+                44.17
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmedoids|4": {
+          "macro_sil": 0.3863,
+          "k_found": 4,
+          "pooled_shares_pct": [
+            7.14,
+            32.84,
+            36.22,
+            23.8
+          ],
+          "pooled_min_pct": 7.14,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                31.88,
+                43.15,
+                24.97
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                45.8,
+                33.07,
+                21.14
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.0,
+                45.68,
+                36.61,
+                17.71
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                41.42,
+                33.97,
+                24.38
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                35.22,
+                0.11,
+                33.91,
+                30.75
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|spectral|2": {
+          "macro_sil": 0.3299,
+          "k_found": 2,
+          "pooled_shares_pct": [
+            31.91,
+            68.09
+          ],
+          "pooled_min_pct": 31.91,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                30.61,
+                69.39
+              ],
+              "min_pct": 30.61
+            },
+            "2": {
+              "shares_pct": [
+                16.02,
+                83.98
+              ],
+              "min_pct": 16.02
+            },
+            "3": {
+              "shares_pct": [
+                41.79,
+                58.21
+              ],
+              "min_pct": 41.79
+            },
+            "4": {
+              "shares_pct": [
+                39.73,
+                60.27
+              ],
+              "min_pct": 39.73
+            },
+            "5": {
+              "shares_pct": [
+                30.97,
+                69.03
+              ],
+              "min_pct": 30.97
+            }
+          },
+          "worst_band": 2,
+          "worst_band_min_pct": 16.02,
+          "passes_pooled": true,
+          "passes_per_band": true
+        },
+        "A|spectral|3": {
+          "macro_sil": 0.3594,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            15.96,
+            46.81,
+            37.23
+          ],
+          "pooled_min_pct": 15.96,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.32,
+                61.11,
+                38.58
+              ],
+              "min_pct": 0.32
+            },
+            "2": {
+              "shares_pct": [
+                0.45,
+                60.34,
+                39.2
+              ],
+              "min_pct": 0.45
+            },
+            "3": {
+              "shares_pct": [
+                57.99,
+                0.11,
+                41.9
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                18.96,
+                53.5,
+                27.54
+              ],
+              "min_pct": 18.96
+            },
+            "5": {
+              "shares_pct": [
+                1.53,
+                59.87,
+                38.6
+              ],
+              "min_pct": 1.53
+            }
+          },
+          "worst_band": 3,
+          "worst_band_min_pct": 0.11,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|spectral|5": {
+          "macro_sil": 0.372,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            23.03,
+            6.62,
+            37.27,
+            20.88,
+            12.2
+          ],
+          "pooled_min_pct": 6.62,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                27.74,
+                0.0,
+                39.53,
+                14.98,
+                17.75
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                27.73,
+                0.23,
+                46.48,
+                12.84,
+                12.73
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                29.91,
+                0.0,
+                38.01,
+                23.0,
+                9.07
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                33.75,
+                43.68,
+                14.22,
+                8.13
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                28.79,
+                0.0,
+                19.19,
+                38.93,
+                13.09
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|agglomerative|3": {
+          "macro_sil": 0.3429,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            1.34,
+            32.53,
+            66.13
+          ],
+          "pooled_min_pct": 1.34,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.64,
+                0.0,
+                99.36
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.91,
+                0.0,
+                99.09
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                1.73,
+                0.0,
+                98.27
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                2.71,
+                64.33,
+                32.96
+              ],
+              "min_pct": 2.71
+            },
+            "5": {
+              "shares_pct": [
+                0.76,
+                99.24,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|5": {
+          "macro_sil": 0.2682,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            1.34,
+            35.65,
+            32.53,
+            22.53,
+            7.96
+          ],
+          "pooled_min_pct": 1.34,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.64,
+                8.5,
+                0.0,
+                86.93,
+                3.93
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.91,
+                58.98,
+                0.0,
+                23.52,
+                16.59
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                1.73,
+                84.88,
+                0.0,
+                0.0,
+                13.39
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                2.71,
+                26.75,
+                64.33,
+                0.0,
+                6.21
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.76,
+                0.0,
+                99.24,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|6": {
+          "macro_sil": 0.2415,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            15.85,
+            1.34,
+            35.65,
+            16.68,
+            22.53,
+            7.96
+          ],
+          "pooled_min_pct": 1.34,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.64,
+                8.5,
+                0.0,
+                86.93,
+                3.93
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.91,
+                58.98,
+                0.0,
+                23.52,
+                16.59
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.0,
+                1.73,
+                84.88,
+                0.0,
+                0.0,
+                13.39
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                39.73,
+                2.71,
+                26.75,
+                24.6,
+                0.0,
+                6.21
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                40.24,
+                0.76,
+                0.0,
+                59.0,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|birch|2": {
+          "macro_sil": 0.3691,
+          "k_found": 2,
+          "pooled_shares_pct": [
+            2.37,
+            97.63
+          ],
+          "pooled_min_pct": 2.37,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.43,
+                99.57
+              ],
+              "min_pct": 0.43
+            },
+            "2": {
+              "shares_pct": [
+                0.91,
+                99.09
+              ],
+              "min_pct": 0.91
+            },
+            "3": {
+              "shares_pct": [
+                1.94,
+                98.06
+              ],
+              "min_pct": 1.94
+            },
+            "4": {
+              "shares_pct": [
+                7.9,
+                92.1
+              ],
+              "min_pct": 7.9
+            },
+            "5": {
+              "shares_pct": [
+                0.87,
+                99.13
+              ],
+              "min_pct": 0.87
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.43,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|birch|3": {
+          "macro_sil": 0.2927,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            2.37,
+            82.62,
+            15.01
+          ],
+          "pooled_min_pct": 2.37,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.43,
+                53.77,
+                45.8
+              ],
+              "min_pct": 0.43
+            },
+            "2": {
+              "shares_pct": [
+                0.91,
+                80.8,
+                18.3
+              ],
+              "min_pct": 0.91
+            },
+            "3": {
+              "shares_pct": [
+                1.94,
+                88.23,
+                9.83
+              ],
+              "min_pct": 1.94
+            },
+            "4": {
+              "shares_pct": [
+                7.9,
+                92.1,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.87,
+                99.13,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 4,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|3": {
+          "macro_sil": 0.3446,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            2.11,
+            51.49,
+            46.4
+          ],
+          "pooled_min_pct": 2.11,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                2.27,
+                0.0,
+                97.73
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                6.7,
+                59.83,
+                33.48
+              ],
+              "min_pct": 6.7
+            },
+            "4": {
+              "shares_pct": [
+                1.35,
+                98.65,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.22,
+                99.78,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|5": {
+          "macro_sil": 0.2727,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            24.7,
+            0.09,
+            28.88,
+            23.49,
+            22.84
+          ],
+          "pooled_min_pct": 0.09,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                25.72,
+                0.0,
+                74.28
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                66.93,
+                0.0,
+                33.07
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                30.78,
+                0.22,
+                52.16,
+                11.56,
+                5.29
+              ],
+              "min_pct": 0.22
+            },
+            "4": {
+              "shares_pct": [
+                55.76,
+                0.23,
+                0.0,
+                44.02,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                37.62,
+                0.0,
+                0.0,
+                62.38,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_diag|3": {
+          "macro_sil": 0.3774,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.15,
+            56.09,
+            43.76
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                0.0,
+                99.89
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.43,
+                81.21,
+                18.36
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.66,
+                0.11
+              ],
+              "min_pct": 0.11
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_full|3": {
+          "macro_sil": 0.374,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.13,
+            57.58,
+            42.29
+          ],
+          "pooled_min_pct": 0.13,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.43,
+                88.44,
+                11.12
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.77,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|3": {
+          "macro_sil": 0.3732,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.29,
+            53.36,
+            46.35
+          ],
+          "pooled_min_pct": 0.29,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                0.34,
+                99.43
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.97,
+                67.71,
+                31.32
+              ],
+              "min_pct": 0.97
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.44,
+                0.34
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|6": {
+          "macro_sil": 0.2738,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            0.02,
+            23.56,
+            23.41,
+            21.43,
+            16.53,
+            15.05
+          ],
+          "pooled_min_pct": 0.02,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                0.0,
+                42.93,
+                57.07,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.23,
+                0.0,
+                64.89,
+                22.39,
+                12.5
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.0,
+                62.63,
+                0.0,
+                0.0,
+                1.94,
+                35.42
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                0.11,
+                48.98,
+                24.04,
+                0.0,
+                0.0,
+                26.86
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                6.11,
+                92.91,
+                0.0,
+                0.0,
+                0.98
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|3": {
+          "macro_sil": 0.3039,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            25.38,
+            42.22,
+            32.4
+          ],
+          "pooled_min_pct": 25.38,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                2.98,
+                0.0,
+                97.02
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                37.27,
+                1.82,
+                60.91
+              ],
+              "min_pct": 1.82
+            },
+            "3": {
+              "shares_pct": [
+                61.02,
+                36.29,
+                2.7
+              ],
+              "min_pct": 2.7
+            },
+            "4": {
+              "shares_pct": [
+                22.91,
+                77.09,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                3.38,
+                96.62,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|kmedoids|4": {
+          "macro_sil": 0.3003,
+          "k_found": 4,
+          "pooled_shares_pct": [
+            31.14,
+            0.04,
+            37.85,
+            30.97
+          ],
+          "pooled_min_pct": 0.04,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                2.76,
+                0.0,
+                0.0,
+                97.24
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                44.43,
+                0.0,
+                1.7,
+                53.86
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                74.73,
+                0.0,
+                23.11,
+                2.16
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                31.04,
+                0.23,
+                68.74,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                3.6,
+                0.0,
+                96.4,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|5": {
+          "macro_sil": 0.2673,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            27.76,
+            0.04,
+            35.91,
+            21.47,
+            14.81
+          ],
+          "pooled_min_pct": 0.04,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                1.49,
+                0.0,
+                0.0,
+                79.28,
+                19.23
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                36.93,
+                0.0,
+                0.0,
+                26.14,
+                36.93
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                70.95,
+                0.0,
+                11.66,
+                0.11,
+                17.28
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                27.31,
+                0.23,
+                71.56,
+                0.0,
+                0.9
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                2.73,
+                0.0,
+                97.27,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|6": {
+          "macro_sil": 0.2547,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            28.35,
+            0.04,
+            17.69,
+            22.53,
+            19.3,
+            12.09
+          ],
+          "pooled_min_pct": 0.04,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                1.49,
+                0.0,
+                0.0,
+                80.77,
+                0.0,
+                17.75
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                38.75,
+                0.0,
+                0.0,
+                30.0,
+                0.0,
+                31.25
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                73.65,
+                0.0,
+                0.0,
+                0.11,
+                14.58,
+                11.66
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                28.56,
+                0.23,
+                16.48,
+                0.0,
+                54.74,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                71.86,
+                0.0,
+                28.14,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        }
+      },
+      "passing_gate_and_per_band_floor": [
+        "A|spectral|2"
+      ]
+    },
+    "V4_both_fixes": {
+      "features": [
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation"
+      ],
+      "rad_in_benchmarks": false,
+      "gate_passers": [
+        "A|fuzzy_cmeans|2",
+        "A|fuzzy_cmeans|6",
+        "A|kmeans|3",
+        "A|kmeans|5",
+        "B|agglomerative|3",
+        "B|agglomerative|5",
+        "B|agglomerative|6",
+        "B|birch|2",
+        "B|birch|3",
+        "B|fuzzy_cmeans|3",
+        "B|fuzzy_cmeans|5",
+        "B|fuzzy_cmeans|6",
+        "B|gmm_diag|3",
+        "B|gmm_diag|5",
+        "B|gmm_full|3",
+        "B|kmeans|3",
+        "B|kmeans|6",
+        "B|kmedoids|3",
+        "B|kmedoids|6"
+      ],
+      "per_band_screen": {
+        "A|fuzzy_cmeans|2": {
+          "macro_sil": 0.2463,
+          "k_found": 2,
+          "pooled_shares_pct": [
+            34.0,
+            66.0
+          ],
+          "pooled_min_pct": 34.0,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                31.03,
+                68.97
+              ],
+              "min_pct": 31.03
+            },
+            "2": {
+              "shares_pct": [
+                34.2,
+                65.8
+              ],
+              "min_pct": 34.2
+            },
+            "3": {
+              "shares_pct": [
+                40.6,
+                59.4
+              ],
+              "min_pct": 40.6
+            },
+            "4": {
+              "shares_pct": [
+                32.39,
+                67.61
+              ],
+              "min_pct": 32.39
+            },
+            "5": {
+              "shares_pct": [
+                31.73,
+                68.27
+              ],
+              "min_pct": 31.73
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 31.03,
+          "passes_pooled": true,
+          "passes_per_band": true
+        },
+        "A|fuzzy_cmeans|6": {
+          "macro_sil": 0.2472,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            17.41,
+            15.8,
+            8.84,
+            20.9,
+            19.19,
+            17.87
+          ],
+          "pooled_min_pct": 8.84,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                17.85,
+                22.32,
+                20.4,
+                21.15,
+                18.28
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                23.18,
+                21.59,
+                0.0,
+                19.09,
+                17.5,
+                18.64
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                20.84,
+                20.95,
+                0.0,
+                23.54,
+                20.52,
+                14.15
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                17.16,
+                0.23,
+                21.67,
+                21.78,
+                19.64,
+                19.53
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                26.5,
+                17.99,
+                0.0,
+                19.63,
+                17.01,
+                18.87
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmeans|3": {
+          "macro_sil": 0.3117,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            10.73,
+            45.32,
+            43.96
+          ],
+          "pooled_min_pct": 10.73,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                55.26,
+                44.74
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                52.73,
+                47.05
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.0,
+                64.9,
+                35.1
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                54.74,
+                0.23,
+                45.03
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.11,
+                51.8,
+                48.09
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "A|kmeans|5": {
+          "macro_sil": 0.2722,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            29.25,
+            16.62,
+            12.15,
+            22.2,
+            19.78
+          ],
+          "pooled_min_pct": 12.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                26.99,
+                0.0,
+                27.95,
+                25.29,
+                19.77
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                32.39,
+                27.95,
+                0.0,
+                19.2,
+                20.45
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                32.61,
+                0.0,
+                30.99,
+                18.03,
+                18.36
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                26.64,
+                27.09,
+                0.23,
+                24.6,
+                21.44
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                27.7,
+                29.44,
+                0.11,
+                23.77,
+                18.97
+              ],
+              "min_pct": 0.11
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|agglomerative|3": {
+          "macro_sil": 0.2782,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.35,
+            56.42,
+            43.23
+          ],
+          "pooled_min_pct": 0.35,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                5.84,
+                93.94
+              ],
+              "min_pct": 0.21
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                21.36,
+                78.41
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                0.54,
+                63.71,
+                35.75
+              ],
+              "min_pct": 0.54
+            },
+            "4": {
+              "shares_pct": [
+                0.68,
+                92.33,
+                7.0
+              ],
+              "min_pct": 0.68
+            },
+            "5": {
+              "shares_pct": [
+                0.11,
+                99.89,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 5,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|5": {
+          "macro_sil": 0.1789,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            30.46,
+            0.35,
+            25.96,
+            26.79,
+            16.44
+          ],
+          "pooled_min_pct": 0.35,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                5.84,
+                0.21,
+                0.0,
+                75.98,
+                17.96
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                21.36,
+                0.23,
+                0.0,
+                49.43,
+                28.98
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                63.28,
+                0.54,
+                0.43,
+                7.45,
+                28.29
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                43.68,
+                0.68,
+                48.65,
+                0.0,
+                7.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                18.54,
+                0.11,
+                81.35,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|agglomerative|6": {
+          "macro_sil": 0.1563,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            0.35,
+            16.44,
+            14.02,
+            25.96,
+            26.79,
+            16.44
+          ],
+          "pooled_min_pct": 0.35,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.21,
+                5.84,
+                0.0,
+                0.0,
+                75.98,
+                17.96
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                17.27,
+                4.09,
+                0.0,
+                49.43,
+                28.98
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.54,
+                38.44,
+                24.84,
+                0.43,
+                7.45,
+                28.29
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                0.68,
+                20.54,
+                23.14,
+                48.65,
+                0.0,
+                7.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.11,
+                0.33,
+                18.21,
+                81.35,
+                0.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|birch|2": {
+          "macro_sil": 0.2969,
+          "k_found": 2,
+          "pooled_shares_pct": [
+            3.76,
+            96.24
+          ],
+          "pooled_min_pct": 3.76,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.43,
+                99.57
+              ],
+              "min_pct": 0.43
+            },
+            "2": {
+              "shares_pct": [
+                1.02,
+                98.98
+              ],
+              "min_pct": 1.02
+            },
+            "3": {
+              "shares_pct": [
+                10.15,
+                89.85
+              ],
+              "min_pct": 10.15
+            },
+            "4": {
+              "shares_pct": [
+                3.84,
+                96.16
+              ],
+              "min_pct": 3.84
+            },
+            "5": {
+              "shares_pct": [
+                3.27,
+                96.73
+              ],
+              "min_pct": 3.27
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.43,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|birch|3": {
+          "macro_sil": 0.2387,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            3.76,
+            44.57,
+            51.67
+          ],
+          "pooled_min_pct": 3.76,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.43,
+                0.0,
+                99.57
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                1.02,
+                0.57,
+                98.41
+              ],
+              "min_pct": 0.57
+            },
+            "3": {
+              "shares_pct": [
+                10.15,
+                42.44,
+                47.41
+              ],
+              "min_pct": 10.15
+            },
+            "4": {
+              "shares_pct": [
+                3.84,
+                84.99,
+                11.17
+              ],
+              "min_pct": 3.84
+            },
+            "5": {
+              "shares_pct": [
+                3.27,
+                95.64,
+                1.09
+              ],
+              "min_pct": 1.09
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|3": {
+          "macro_sil": 0.2515,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            19.85,
+            41.6,
+            38.55
+          ],
+          "pooled_min_pct": 19.85,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                2.34,
+                0.0,
+                97.66
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                24.2,
+                0.0,
+                75.8
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                58.1,
+                23.76,
+                18.14
+              ],
+              "min_pct": 18.14
+            },
+            "4": {
+              "shares_pct": [
+                14.0,
+                86.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.65,
+                99.35,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": true,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|5": {
+          "macro_sil": 0.1838,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            24.22,
+            0.15,
+            23.32,
+            27.93,
+            24.37
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                19.98,
+                0.0,
+                80.02
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.11,
+                65.8,
+                0.0,
+                34.09
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                53.13,
+                0.43,
+                31.75,
+                8.75,
+                5.94
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                53.61,
+                0.23,
+                0.0,
+                46.05,
+                0.11
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                14.72,
+                0.0,
+                0.0,
+                85.28,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|fuzzy_cmeans|6": {
+          "macro_sil": 0.1861,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            0.07,
+            19.98,
+            20.22,
+            17.82,
+            21.43,
+            20.48
+          ],
+          "pooled_min_pct": 0.07,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                0.74,
+                30.39,
+                0.0,
+                68.86
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                22.84,
+                49.43,
+                0.0,
+                27.73
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.11,
+                0.32,
+                74.62,
+                9.72,
+                10.91,
+                4.32
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                55.53,
+                2.37,
+                0.0,
+                41.87,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                45.15,
+                0.0,
+                0.0,
+                54.85,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_diag|3": {
+          "macro_sil": 0.3157,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.18,
+            56.26,
+            43.56
+          ],
+          "pooled_min_pct": 0.18,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                0.0,
+                99.89
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.54,
+                82.07,
+                17.39
+              ],
+              "min_pct": 0.54
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.66,
+                0.11
+              ],
+              "min_pct": 0.11
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_diag|5": {
+          "macro_sil": 0.1662,
+          "k_found": 5,
+          "pooled_shares_pct": [
+            0.57,
+            34.68,
+            34.09,
+            20.68,
+            9.98
+          ],
+          "pooled_min_pct": 0.57,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                86.7,
+                0.0,
+                0.0,
+                13.18
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                1.19,
+                88.01,
+                0.0,
+                0.0,
+                10.8
+              ],
+              "min_pct": 0.0
+            },
+            "4": {
+              "shares_pct": [
+                1.35,
+                0.0,
+                84.76,
+                0.0,
+                13.88
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.22,
+                0.0,
+                87.24,
+                0.0,
+                12.54
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|gmm_full|3": {
+          "macro_sil": 0.3107,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.15,
+            57.3,
+            42.55
+          ],
+          "pooled_min_pct": 0.15,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                0.0,
+                99.89
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                0.43,
+                87.04,
+                12.53
+              ],
+              "min_pct": 0.43
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.77,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|3": {
+          "macro_sil": 0.3123,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.31,
+            53.41,
+            46.29
+          ],
+          "pooled_min_pct": 0.31,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.23,
+                0.68,
+                99.09
+              ],
+              "min_pct": 0.23
+            },
+            "3": {
+              "shares_pct": [
+                1.08,
+                67.6,
+                31.32
+              ],
+              "min_pct": 1.08
+            },
+            "4": {
+              "shares_pct": [
+                0.23,
+                99.44,
+                0.34
+              ],
+              "min_pct": 0.23
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmeans|6": {
+          "macro_sil": 0.2162,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            23.16,
+            0.07,
+            21.98,
+            18.9,
+            19.89,
+            16.0
+          ],
+          "pooled_min_pct": 0.07,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                13.5,
+                35.92,
+                0.0,
+                50.58
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                39.77,
+                36.59,
+                0.0,
+                23.64
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                9.18,
+                0.11,
+                54.75,
+                21.06,
+                10.15,
+                4.75
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                54.18,
+                0.23,
+                1.81,
+                0.56,
+                43.23,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                53.33,
+                0.0,
+                0.0,
+                0.0,
+                46.67,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|3": {
+          "macro_sil": 0.3101,
+          "k_found": 3,
+          "pooled_shares_pct": [
+            0.33,
+            51.67,
+            48.0
+          ],
+          "pooled_min_pct": 0.33,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                100.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                0.11,
+                0.8,
+                99.09
+              ],
+              "min_pct": 0.11
+            },
+            "3": {
+              "shares_pct": [
+                1.19,
+                59.29,
+                39.52
+              ],
+              "min_pct": 1.19
+            },
+            "4": {
+              "shares_pct": [
+                0.34,
+                99.1,
+                0.56
+              ],
+              "min_pct": 0.34
+            },
+            "5": {
+              "shares_pct": [
+                0.0,
+                100.0,
+                0.0
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        },
+        "B|kmedoids|6": {
+          "macro_sil": 0.1835,
+          "k_found": 6,
+          "pooled_shares_pct": [
+            18.51,
+            0.09,
+            15.25,
+            12.09,
+            37.52,
+            16.55
+          ],
+          "pooled_min_pct": 0.09,
+          "by_band": {
+            "1": {
+              "shares_pct": [
+                0.0,
+                0.0,
+                2.87,
+                0.0,
+                97.13,
+                0.0
+              ],
+              "min_pct": 0.0
+            },
+            "2": {
+              "shares_pct": [
+                1.48,
+                0.11,
+                21.93,
+                0.0,
+                76.25,
+                0.23
+              ],
+              "min_pct": 0.0
+            },
+            "3": {
+              "shares_pct": [
+                23.0,
+                0.11,
+                38.12,
+                0.11,
+                13.17,
+                25.49
+              ],
+              "min_pct": 0.11
+            },
+            "4": {
+              "shares_pct": [
+                38.26,
+                0.23,
+                12.19,
+                7.67,
+                0.0,
+                41.65
+              ],
+              "min_pct": 0.0
+            },
+            "5": {
+              "shares_pct": [
+                30.21,
+                0.0,
+                1.42,
+                52.45,
+                0.0,
+                15.92
+              ],
+              "min_pct": 0.0
+            }
+          },
+          "worst_band": 1,
+          "worst_band_min_pct": 0.0,
+          "passes_pooled": false,
+          "passes_per_band": false
+        }
+      },
+      "passing_gate_and_per_band_floor": [
+        "A|fuzzy_cmeans|2"
+      ]
+    }
+  },
+  "detail": {
+    "V2_bench_drop_only|A|fuzzy_cmeans|2": {
+      "metrics": {
+        "silhouette_macro": 0.2481,
+        "silhouette_micro": 0.2771,
+        "davies_bouldin": 1.3556,
+        "calinski_harabasz": 597.0478,
+        "min_cluster_pct": 34.53,
+        "k": 2
+      },
+      "per_band_normal": {
+        "macro_sil": 0.2481,
+        "k_found": 2,
+        "pooled_shares_pct": [
+          33.6,
+          66.4
+        ],
+        "pooled_min_pct": 33.6,
+        "by_band": {
+          "1": {
+            "shares_pct": [
+              29.76,
+              70.24
+            ],
+            "min_pct": 29.76
+          },
+          "2": {
+            "shares_pct": [
+              33.52,
+              66.48
+            ],
+            "min_pct": 33.52
+          },
+          "3": {
+            "shares_pct": [
+              40.6,
+              59.4
+            ],
+            "min_pct": 40.6
+          },
+          "4": {
+            "shares_pct": [
+              32.62,
+              67.38
+            ],
+            "min_pct": 32.62
+          },
+          "5": {
+            "shares_pct": [
+              31.52,
+              68.48
+            ],
+            "min_pct": 31.52
+          }
+        },
+        "worst_band": 1,
+        "worst_band_min_pct": 29.76,
+        "passes_pooled": true,
+        "passes_per_band": true
+      },
+      "usability": {
+        "worst_group_min_spearman_rho": 1.0,
+        "min_headroom_captured": 0.177,
+        "min_lift_pp": 10.2,
+        "passes_monotonicity_gate": true,
+        "passes_materiality_gate_headroom": true,
+        "passes_gate2_headroom": true
+      },
+      "lift": {
+        "investment_rate": {
+          "worst_group": "band3",
+          "best_tier_pct_clearing": 99.7,
+          "base_rate_pct": 55.2,
+          "lift_pp": 44.5,
+          "mean_lift_pp_across_groups": 50.7,
+          "material": true,
+          "max_possible_lift_pp": 44.8,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.791,
+          "worst_headroom_base_rate_pct": 37.1,
+          "worst_headroom_best_tier_pct": 86.8,
+          "material_headroom": true
+        },
+        "portfolio_concentration": {
+          "worst_group": "band5",
+          "best_tier_pct_clearing": 83.4,
+          "base_rate_pct": 72.7,
+          "lift_pp": 10.7,
+          "mean_lift_pp_across_groups": 14.3,
+          "material": true,
+          "max_possible_lift_pp": 27.3,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.177,
+          "worst_headroom_base_rate_pct": 15.7,
+          "worst_headroom_best_tier_pct": 30.6,
+          "material_headroom": true
+        },
+        "has_investments": {
+          "worst_group": "band3",
+          "best_tier_pct_clearing": 100.0,
+          "base_rate_pct": 89.8,
+          "lift_pp": 10.2,
+          "mean_lift_pp_across_groups": 11.2,
+          "material": true,
+          "max_possible_lift_pp": 10.2,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 1.0,
+          "worst_headroom_base_rate_pct": 88.7,
+          "worst_headroom_best_tier_pct": 100.0,
+          "material_headroom": true
+        }
+      },
+      "per_group": {
+        "band1": {
+          "n_group": 1442,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 509,
+              "share_pct": 35.3,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1773,
+                  "median": 0.1321,
+                  "q25": 0.111,
+                  "q75": 0.2294,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 86.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7158,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.405,
+                  "median": 0.4014,
+                  "q25": 0.3085,
+                  "q75": 0.5048,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 30.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3347,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 933,
+              "share_pct": 64.7,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0569,
+                  "median": 0.065,
+                  "q25": 0.0241,
+                  "q75": 0.085,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 10.0,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5525,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.5168,
+                  "median": 0.5079,
+                  "q25": 0.4225,
+                  "q75": 0.6104,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 7.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2689,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 0.8253,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.5,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.997,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band2": {
+          "n_group": 1392,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 537,
+              "share_pct": 38.58,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1771,
+                  "median": 0.1383,
+                  "q25": 0.1232,
+                  "q75": 0.2003,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 96.3,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7095,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3494,
+                  "median": 0.3417,
+                  "q25": 0.2566,
+                  "q75": 0.4317,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 45.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3836,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 855,
+              "share_pct": 61.42,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0611,
+                  "median": 0.0715,
+                  "q25": 0.0254,
+                  "q75": 0.0922,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 15.8,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6072,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.4188,
+                  "median": 0.4062,
+                  "q25": 0.3281,
+                  "q75": 0.5023,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 25.3,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3104,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8199,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9967,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band3": {
+          "n_group": 1427,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 621,
+              "share_pct": 43.52,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1763,
+                  "median": 0.1466,
+                  "q25": 0.1278,
+                  "q75": 0.1803,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 99.7,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7346,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2766,
+                  "median": 0.2729,
+                  "q25": 0.2011,
+                  "q75": 0.3465,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 69.9,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3755,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 806,
+              "share_pct": 56.48,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0635,
+                  "median": 0.0745,
+                  "q25": 0.0224,
+                  "q75": 0.0967,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 20.8,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6017,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3766,
+                  "median": 0.3679,
+                  "q25": 0.287,
+                  "q75": 0.4492,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 38.2,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3401,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8201,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9965,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band4": {
+          "n_group": 1378,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 530,
+              "share_pct": 38.46,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1758,
+                  "median": 0.1435,
+                  "q25": 0.122,
+                  "q75": 0.191,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 97.9,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7138,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2464,
+                  "median": 0.2442,
+                  "q25": 0.1659,
+                  "q75": 0.3136,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 78.7,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.252,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 848,
+              "share_pct": 61.54,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0555,
+                  "median": 0.0624,
+                  "q25": 0.0161,
+                  "q75": 0.0885,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 12.0,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6158,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.329,
+                  "median": 0.3192,
+                  "q25": 0.2443,
+                  "q75": 0.4053,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 53.3,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3365,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.7983,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 79.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9965,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band5": {
+          "n_group": 1361,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 470,
+              "share_pct": 34.53,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1682,
+                  "median": 0.1276,
+                  "q25": 0.1098,
+                  "q75": 0.1847,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 91.1,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7463,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2292,
+                  "median": 0.2246,
+                  "q25": 0.15,
+                  "q75": 0.3022,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 83.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2831,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 891,
+              "share_pct": 65.47,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0481,
+                  "median": 0.0514,
+                  "q25": 0.0167,
+                  "q75": 0.0761,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 3.8,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5797,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2808,
+                  "median": 0.2728,
+                  "q25": 0.1923,
+                  "q75": 0.3568,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 67.1,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2963,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8328,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 83.3,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.997,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        }
+      },
+      "separation": {
+        "band1": {
+          "spread_iqr_units": {
+            "investment_rate": 1.621,
+            "portfolio_concentration": 0.548,
+            "risk_age_deviation": 0.41
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.629
+        },
+        "band2": {
+          "spread_iqr_units": {
+            "investment_rate": 1.56,
+            "portfolio_concentration": 0.34,
+            "risk_age_deviation": 0.409
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.676
+        },
+        "band3": {
+          "spread_iqr_units": {
+            "investment_rate": 1.518,
+            "portfolio_concentration": 0.489,
+            "risk_age_deviation": 0.188
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.691
+        },
+        "band4": {
+          "spread_iqr_units": {
+            "investment_rate": 1.618,
+            "portfolio_concentration": 0.405,
+            "risk_age_deviation": 0.248
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.712
+        },
+        "band5": {
+          "spread_iqr_units": {
+            "investment_rate": 1.616,
+            "portfolio_concentration": 0.253,
+            "risk_age_deviation": 0.298
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.746
+        }
+      },
+      "normal_ordering": {
+        "investment_rate": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            92.3,
+            12.8
+          ]
+        },
+        "portfolio_concentration": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            65.4,
+            38.2
+          ]
+        },
+        "has_investments": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            100.0,
+            81.0
+          ]
+        }
+      },
+      "archetype_placement": {
+        "normal": {
+          "n": 4550,
+          "tier_pct": {
+            "0": 33.6,
+            "1": 66.4
+          },
+          "normalised_mean_tier": 0.664
+        },
+        "conservative_saver": {
+          "n": 292,
+          "tier_pct": {
+            "0": 0.0,
+            "1": 100.0
+          },
+          "normalised_mean_tier": 1.0
+        },
+        "over_invested": {
+          "n": 292,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "protection_first": {
+          "n": 292,
+          "tier_pct": {
+            "0": 33.9,
+            "1": 66.1
+          },
+          "normalised_mean_tier": 0.661
+        },
+        "wealthy_exposed": {
+          "n": 292,
+          "tier_pct": {
+            "0": 33.2,
+            "1": 66.8
+          },
+          "normalised_mean_tier": 0.668
+        },
+        "high_debt_investor": {
+          "n": 291,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "underinsured_saver": {
+          "n": 291,
+          "tier_pct": {
+            "0": 37.5,
+            "1": 62.5
+          },
+          "normalised_mean_tier": 0.625
+        },
+        "outlier": {
+          "n": 700,
+          "tier_pct": {
+            "0": 35.7,
+            "1": 64.3
+          },
+          "normalised_mean_tier": 0.643
+        }
+      },
+      "tier_composition": {
+        "0": {
+          "n": 2667,
+          "pct_injected": 42.7,
+          "pct_of_normals": 33.6
+        },
+        "1": {
+          "n": 4333,
+          "pct_injected": 30.3,
+          "pct_of_normals": 66.4
+        }
+      }
+    },
+    "V3_drop_entirely|A|spectral|2": {
+      "metrics": {
+        "silhouette_macro": 0.3299,
+        "silhouette_micro": 0.3708,
+        "davies_bouldin": 1.0747,
+        "calinski_harabasz": 842.2698,
+        "min_cluster_pct": 24.21,
+        "k": 2
+      },
+      "per_band_normal": {
+        "macro_sil": 0.3299,
+        "k_found": 2,
+        "pooled_shares_pct": [
+          31.91,
+          68.09
+        ],
+        "pooled_min_pct": 31.91,
+        "by_band": {
+          "1": {
+            "shares_pct": [
+              30.61,
+              69.39
+            ],
+            "min_pct": 30.61
+          },
+          "2": {
+            "shares_pct": [
+              16.02,
+              83.98
+            ],
+            "min_pct": 16.02
+          },
+          "3": {
+            "shares_pct": [
+              41.79,
+              58.21
+            ],
+            "min_pct": 41.79
+          },
+          "4": {
+            "shares_pct": [
+              39.73,
+              60.27
+            ],
+            "min_pct": 39.73
+          },
+          "5": {
+            "shares_pct": [
+              30.97,
+              69.03
+            ],
+            "min_pct": 30.97
+          }
+        },
+        "worst_band": 2,
+        "worst_band_min_pct": 16.02,
+        "passes_pooled": true,
+        "passes_per_band": true
+      },
+      "usability": {
+        "worst_group_min_spearman_rho": 1.0,
+        "min_headroom_captured": 0.289,
+        "min_lift_pp": 10.2,
+        "passes_monotonicity_gate": true,
+        "passes_materiality_gate_headroom": true,
+        "passes_gate2_headroom": true
+      },
+      "lift": {
+        "investment_rate": {
+          "worst_group": "band1",
+          "best_tier_pct_clearing": 76.9,
+          "base_rate_pct": 37.1,
+          "lift_pp": 39.8,
+          "mean_lift_pp_across_groups": 47.3,
+          "material": true,
+          "max_possible_lift_pp": 62.9,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.632,
+          "worst_headroom_base_rate_pct": 37.1,
+          "worst_headroom_best_tier_pct": 76.9,
+          "material_headroom": true
+        },
+        "portfolio_concentration": {
+          "worst_group": "band5",
+          "best_tier_pct_clearing": 88.8,
+          "base_rate_pct": 72.7,
+          "lift_pp": 16.1,
+          "mean_lift_pp_across_groups": 20.0,
+          "material": true,
+          "max_possible_lift_pp": 27.3,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.289,
+          "worst_headroom_base_rate_pct": 15.7,
+          "worst_headroom_best_tier_pct": 40.1,
+          "material_headroom": true
+        },
+        "has_investments": {
+          "worst_group": "band3",
+          "best_tier_pct_clearing": 100.0,
+          "base_rate_pct": 89.8,
+          "lift_pp": 10.2,
+          "mean_lift_pp_across_groups": 11.1,
+          "material": true,
+          "max_possible_lift_pp": 10.2,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.983,
+          "worst_headroom_base_rate_pct": 88.7,
+          "worst_headroom_best_tier_pct": 99.8,
+          "material_headroom": true
+        }
+      },
+      "per_group": {
+        "band1": {
+          "n_group": 1442,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 519,
+              "share_pct": 35.99,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1705,
+                  "median": 0.1294,
+                  "q25": 0.1014,
+                  "q75": 0.2235,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 76.9,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6851,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3665,
+                  "median": 0.3515,
+                  "q25": 0.2862,
+                  "q75": 0.4439,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 40.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3137,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 0.9981,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 99.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9961,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            },
+            "1": {
+              "n": 923,
+              "share_pct": 64.01,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0594,
+                  "median": 0.0663,
+                  "q25": 0.0239,
+                  "q75": 0.0887,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 14.7,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5134,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.5397,
+                  "median": 0.5267,
+                  "q25": 0.4527,
+                  "q75": 0.6173,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 2.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3684,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8245,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.997,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band2": {
+          "n_group": 1392,
+          "health_order_best_to_worst": [
+            1,
+            0
+          ],
+          "clusters": {
+            "1": {
+              "n": 337,
+              "share_pct": 24.21,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.2128,
+                  "median": 0.169,
+                  "q25": 0.14,
+                  "q75": 0.2771,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.641,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3325,
+                  "median": 0.322,
+                  "q25": 0.2425,
+                  "q75": 0.3999,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 53.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": true,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3938,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "0": {
+              "n": 1055,
+              "share_pct": 75.79,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0717,
+                  "median": 0.0831,
+                  "q25": 0.0398,
+                  "q75": 0.1045,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 29.9,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6004,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.411,
+                  "median": 0.4009,
+                  "q25": 0.3239,
+                  "q75": 0.4918,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 26.7,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2939,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.854,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 85.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9975,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band3": {
+          "n_group": 1427,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 637,
+              "share_pct": 44.64,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1739,
+                  "median": 0.1456,
+                  "q25": 0.1261,
+                  "q75": 0.1784,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 97.3,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7238,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2694,
+                  "median": 0.2654,
+                  "q25": 0.1974,
+                  "q75": 0.3364,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 72.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3709,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 790,
+              "share_pct": 55.36,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0631,
+                  "median": 0.0729,
+                  "q25": 0.0205,
+                  "q75": 0.0968,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 21.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5841,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3844,
+                  "median": 0.3737,
+                  "q25": 0.2984,
+                  "q75": 0.4526,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 35.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3561,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8165,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 81.6,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9964,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band4": {
+          "n_group": 1378,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 619,
+              "share_pct": 44.92,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.164,
+                  "median": 0.1329,
+                  "q25": 0.1126,
+                  "q75": 0.1743,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 88.5,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7064,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2348,
+                  "median": 0.2355,
+                  "q25": 0.1618,
+                  "q75": 0.3016,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 82.2,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.395,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 759,
+              "share_pct": 55.08,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.051,
+                  "median": 0.0571,
+                  "q25": 0.0105,
+                  "q75": 0.0819,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 9.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5522,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3482,
+                  "median": 0.3363,
+                  "q25": 0.2659,
+                  "q75": 0.4173,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 47.4,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3755,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.7747,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 77.5,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9959,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band5": {
+          "n_group": 1361,
+          "health_order_best_to_worst": [
+            1,
+            0
+          ],
+          "clusters": {
+            "1": {
+              "n": 463,
+              "share_pct": 34.02,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.169,
+                  "median": 0.1278,
+                  "q25": 0.1097,
+                  "q75": 0.186,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 91.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7475,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2147,
+                  "median": 0.2083,
+                  "q25": 0.1463,
+                  "q75": 0.2777,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 88.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3956,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "0": {
+              "n": 898,
+              "share_pct": 65.98,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0486,
+                  "median": 0.0517,
+                  "q25": 0.0169,
+                  "q75": 0.0764,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 4.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5283,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2879,
+                  "median": 0.2836,
+                  "q25": 0.1983,
+                  "q75": 0.3638,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 64.5,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2898,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 0.8341,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 83.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.997,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        }
+      },
+      "separation": {
+        "band1": {
+          "spread_iqr_units": {
+            "investment_rate": 1.496,
+            "portfolio_concentration": 0.849
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 2,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.638
+        },
+        "band2": {
+          "spread_iqr_units": {
+            "investment_rate": 1.899,
+            "portfolio_concentration": 0.385
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 2,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.832
+        },
+        "band3": {
+          "spread_iqr_units": {
+            "investment_rate": 1.49,
+            "portfolio_concentration": 0.563
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 2,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.726
+        },
+        "band4": {
+          "spread_iqr_units": {
+            "investment_rate": 1.52,
+            "portfolio_concentration": 0.555
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 2,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.732
+        },
+        "band5": {
+          "spread_iqr_units": {
+            "investment_rate": 1.62,
+            "portfolio_concentration": 0.358
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 2,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.819
+        }
+      },
+      "normal_ordering": {
+        "investment_rate": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            87.2,
+            17.2
+          ]
+        },
+        "portfolio_concentration": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            74.9,
+            34.4
+          ]
+        },
+        "has_investments": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            100.0,
+            81.4
+          ]
+        }
+      },
+      "archetype_placement": {
+        "normal": {
+          "n": 4550,
+          "tier_pct": {
+            "0": 31.9,
+            "1": 68.1
+          },
+          "normalised_mean_tier": 0.681
+        },
+        "conservative_saver": {
+          "n": 292,
+          "tier_pct": {
+            "0": 0.0,
+            "1": 100.0
+          },
+          "normalised_mean_tier": 1.0
+        },
+        "over_invested": {
+          "n": 292,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "protection_first": {
+          "n": 292,
+          "tier_pct": {
+            "0": 33.6,
+            "1": 66.4
+          },
+          "normalised_mean_tier": 0.664
+        },
+        "wealthy_exposed": {
+          "n": 292,
+          "tier_pct": {
+            "0": 33.6,
+            "1": 66.4
+          },
+          "normalised_mean_tier": 0.664
+        },
+        "high_debt_investor": {
+          "n": 291,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "underinsured_saver": {
+          "n": 291,
+          "tier_pct": {
+            "0": 35.7,
+            "1": 64.3
+          },
+          "normalised_mean_tier": 0.643
+        },
+        "outlier": {
+          "n": 700,
+          "tier_pct": {
+            "0": 34.3,
+            "1": 65.7
+          },
+          "normalised_mean_tier": 0.657
+        }
+      },
+      "tier_composition": {
+        "0": {
+          "n": 2575,
+          "pct_injected": 43.6,
+          "pct_of_normals": 31.91
+        },
+        "1": {
+          "n": 4425,
+          "pct_injected": 30.0,
+          "pct_of_normals": 68.09
+        }
+      }
+    },
+    "V4_both_fixes|A|fuzzy_cmeans|2": {
+      "metrics": {
+        "silhouette_macro": 0.2463,
+        "silhouette_micro": 0.274,
+        "davies_bouldin": 1.3696,
+        "calinski_harabasz": 585.4417,
+        "min_cluster_pct": 34.68,
+        "k": 2
+      },
+      "per_band_normal": {
+        "macro_sil": 0.2463,
+        "k_found": 2,
+        "pooled_shares_pct": [
+          34.0,
+          66.0
+        ],
+        "pooled_min_pct": 34.0,
+        "by_band": {
+          "1": {
+            "shares_pct": [
+              31.03,
+              68.97
+            ],
+            "min_pct": 31.03
+          },
+          "2": {
+            "shares_pct": [
+              34.2,
+              65.8
+            ],
+            "min_pct": 34.2
+          },
+          "3": {
+            "shares_pct": [
+              40.6,
+              59.4
+            ],
+            "min_pct": 40.6
+          },
+          "4": {
+            "shares_pct": [
+              32.39,
+              67.61
+            ],
+            "min_pct": 32.39
+          },
+          "5": {
+            "shares_pct": [
+              31.73,
+              68.27
+            ],
+            "min_pct": 31.73
+          }
+        },
+        "worst_band": 1,
+        "worst_band_min_pct": 31.03,
+        "passes_pooled": true,
+        "passes_per_band": true
+      },
+      "usability": {
+        "worst_group_min_spearman_rho": 1.0,
+        "min_headroom_captured": 0.164,
+        "min_lift_pp": 10.1,
+        "passes_monotonicity_gate": true,
+        "passes_materiality_gate_headroom": true,
+        "passes_gate2_headroom": true
+      },
+      "lift": {
+        "investment_rate": {
+          "worst_group": "band3",
+          "best_tier_pct_clearing": 99.7,
+          "base_rate_pct": 55.2,
+          "lift_pp": 44.5,
+          "mean_lift_pp_across_groups": 49.6,
+          "material": true,
+          "max_possible_lift_pp": 44.8,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.758,
+          "worst_headroom_base_rate_pct": 37.1,
+          "worst_headroom_best_tier_pct": 84.8,
+          "material_headroom": true
+        },
+        "portfolio_concentration": {
+          "worst_group": "band5",
+          "best_tier_pct_clearing": 82.8,
+          "base_rate_pct": 72.7,
+          "lift_pp": 10.1,
+          "mean_lift_pp_across_groups": 13.6,
+          "material": true,
+          "max_possible_lift_pp": 27.3,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 0.164,
+          "worst_headroom_base_rate_pct": 15.7,
+          "worst_headroom_best_tier_pct": 29.5,
+          "material_headroom": true
+        },
+        "has_investments": {
+          "worst_group": "band3",
+          "best_tier_pct_clearing": 100.0,
+          "base_rate_pct": 89.8,
+          "lift_pp": 10.2,
+          "mean_lift_pp_across_groups": 11.2,
+          "material": true,
+          "max_possible_lift_pp": 10.2,
+          "worst_group_headroom": "band1",
+          "worst_headroom_captured": 1.0,
+          "worst_headroom_base_rate_pct": 88.7,
+          "worst_headroom_best_tier_pct": 100.0,
+          "material_headroom": true
+        }
+      },
+      "per_group": {
+        "band1": {
+          "n_group": 1442,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 525,
+              "share_pct": 36.41,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1746,
+                  "median": 0.1303,
+                  "q25": 0.1086,
+                  "q75": 0.2213,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 84.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7183,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.4098,
+                  "median": 0.409,
+                  "q25": 0.3121,
+                  "q75": 0.5123,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 29.5,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.337,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 917,
+              "share_pct": 63.59,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0563,
+                  "median": 0.0643,
+                  "q25": 0.0233,
+                  "q75": 0.0848,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 9.8,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5447,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.5161,
+                  "median": 0.507,
+                  "q25": 0.4211,
+                  "q75": 0.6104,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 7.9,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2713,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 0.8222,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.2,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.997,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band2": {
+          "n_group": 1392,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 547,
+              "share_pct": 39.3,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1749,
+                  "median": 0.1379,
+                  "q25": 0.1187,
+                  "q75": 0.1954,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 94.3,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7049,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3531,
+                  "median": 0.3438,
+                  "q25": 0.2596,
+                  "q75": 0.437,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 44.6,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3912,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 845,
+              "share_pct": 60.7,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0611,
+                  "median": 0.0711,
+                  "q25": 0.024,
+                  "q75": 0.0921,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 16.1,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.5793,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.4172,
+                  "median": 0.4039,
+                  "q25": 0.3262,
+                  "q75": 0.4957,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 25.7,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3138,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8178,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 81.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9967,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band3": {
+          "n_group": 1427,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 621,
+              "share_pct": 43.52,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1763,
+                  "median": 0.1466,
+                  "q25": 0.1278,
+                  "q75": 0.1803,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 99.7,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7345,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2771,
+                  "median": 0.2729,
+                  "q25": 0.2011,
+                  "q75": 0.3473,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 69.6,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3781,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 806,
+              "share_pct": 56.48,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0635,
+                  "median": 0.0745,
+                  "q25": 0.0224,
+                  "q75": 0.0967,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 20.8,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.602,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3762,
+                  "median": 0.3671,
+                  "q25": 0.2863,
+                  "q75": 0.4492,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 38.5,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3418,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8201,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 82.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9965,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band4": {
+          "n_group": 1378,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 528,
+              "share_pct": 38.32,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.176,
+                  "median": 0.144,
+                  "q25": 0.1223,
+                  "q75": 0.192,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 97.7,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7126,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2475,
+                  "median": 0.2452,
+                  "q25": 0.166,
+                  "q75": 0.3153,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 78.2,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2496,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 850,
+              "share_pct": 61.68,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0557,
+                  "median": 0.0625,
+                  "q25": 0.0164,
+                  "q75": 0.0887,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 12.4,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.6149,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.3281,
+                  "median": 0.3176,
+                  "q25": 0.2427,
+                  "q75": 0.405,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 53.6,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.3379,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.7988,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 79.9,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9966,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        },
+        "band5": {
+          "n_group": 1361,
+          "health_order_best_to_worst": [
+            0,
+            1
+          ],
+          "clusters": {
+            "0": {
+              "n": 472,
+              "share_pct": 34.68,
+              "health_rank": 0,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.1676,
+                  "median": 0.1275,
+                  "q25": 0.1097,
+                  "q75": 0.183,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 89.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.7439,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2303,
+                  "median": 0.2259,
+                  "q25": 0.1529,
+                  "q75": 0.3025,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 82.8,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2809,
+                  "gmm_prefers_2": false,
+                  "distribution_flag": "unimodal"
+                },
+                "has_investments": {
+                  "mean": 1.0,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 100.0,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": null,
+                  "gmm_prefers_2": null,
+                  "distribution_flag": "unimodal"
+                }
+              }
+            },
+            "1": {
+              "n": 889,
+              "share_pct": 65.32,
+              "health_rank": 1,
+              "variables": {
+                "investment_rate": {
+                  "mean": 0.0482,
+                  "median": 0.0513,
+                  "q25": 0.0166,
+                  "q75": 0.0763,
+                  "benchmark": 0.1,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 4.5,
+                  "mean_clears_benchmark": false,
+                  "majority_clears_benchmark": false,
+                  "usable": false,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.569,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                },
+                "portfolio_concentration": {
+                  "mean": 0.2803,
+                  "median": 0.2727,
+                  "q25": 0.1912,
+                  "q75": 0.3569,
+                  "benchmark": 0.33,
+                  "strictly_out_of_model": false,
+                  "pct_meeting_benchmark": 67.4,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.2965,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "two-component fit preferred"
+                },
+                "has_investments": {
+                  "mean": 0.8324,
+                  "median": 1.0,
+                  "q25": 1.0,
+                  "q75": 1.0,
+                  "benchmark": 1.0,
+                  "strictly_out_of_model": true,
+                  "pct_meeting_benchmark": 83.2,
+                  "mean_clears_benchmark": true,
+                  "majority_clears_benchmark": true,
+                  "usable": true,
+                  "mean_masks_split": false,
+                  "bimodality_coefficient": 0.9969,
+                  "gmm_prefers_2": true,
+                  "distribution_flag": "bimodal/split"
+                }
+              }
+            }
+          },
+          "spearman_rho_vs_health_order": {
+            "investment_rate": 1.0,
+            "portfolio_concentration": 1.0,
+            "has_investments": 1.0
+          },
+          "min_spearman_rho": 1.0,
+          "mean_spearman_rho": 1.0,
+          "any_variable_inverts": false
+        }
+      },
+      "separation": {
+        "band1": {
+          "spread_iqr_units": {
+            "investment_rate": 1.591,
+            "portfolio_concentration": 0.521,
+            "risk_age_deviation": 0.488
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.612
+        },
+        "band2": {
+          "spread_iqr_units": {
+            "investment_rate": 1.531,
+            "portfolio_concentration": 0.314,
+            "risk_age_deviation": 0.503
+          },
+          "n_features_separating_ge_0.5": 2,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.652
+        },
+        "band3": {
+          "spread_iqr_units": {
+            "investment_rate": 1.518,
+            "portfolio_concentration": 0.485,
+            "risk_age_deviation": 0.204
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.688
+        },
+        "band4": {
+          "spread_iqr_units": {
+            "investment_rate": 1.618,
+            "portfolio_concentration": 0.395,
+            "risk_age_deviation": 0.28
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.706
+        },
+        "band5": {
+          "spread_iqr_units": {
+            "investment_rate": 1.606,
+            "portfolio_concentration": 0.245,
+            "risk_age_deviation": 0.342
+          },
+          "n_features_separating_ge_0.5": 1,
+          "n_features": 3,
+          "top_feature": "investment_rate",
+          "top_feature_share_of_total_separation": 0.732
+        }
+      },
+      "normal_ordering": {
+        "investment_rate": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            91.0,
+            13.1
+          ]
+        },
+        "portfolio_concentration": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            64.3,
+            38.6
+          ]
+        },
+        "has_investments": {
+          "mean_rho": 1.0,
+          "density_rho": 1.0,
+          "pct_clearing_by_tier": [
+            100.0,
+            80.9
+          ]
+        }
+      },
+      "archetype_placement": {
+        "normal": {
+          "n": 4550,
+          "tier_pct": {
+            "0": 34.0,
+            "1": 66.0
+          },
+          "normalised_mean_tier": 0.66
+        },
+        "conservative_saver": {
+          "n": 292,
+          "tier_pct": {
+            "0": 0.0,
+            "1": 100.0
+          },
+          "normalised_mean_tier": 1.0
+        },
+        "over_invested": {
+          "n": 292,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "protection_first": {
+          "n": 292,
+          "tier_pct": {
+            "0": 33.2,
+            "1": 66.8
+          },
+          "normalised_mean_tier": 0.668
+        },
+        "wealthy_exposed": {
+          "n": 292,
+          "tier_pct": {
+            "0": 34.2,
+            "1": 65.8
+          },
+          "normalised_mean_tier": 0.658
+        },
+        "high_debt_investor": {
+          "n": 291,
+          "tier_pct": {
+            "0": 100.0,
+            "1": 0.0
+          },
+          "normalised_mean_tier": 0.0
+        },
+        "underinsured_saver": {
+          "n": 291,
+          "tier_pct": {
+            "0": 39.2,
+            "1": 60.8
+          },
+          "normalised_mean_tier": 0.608
+        },
+        "outlier": {
+          "n": 700,
+          "tier_pct": {
+            "0": 36.0,
+            "1": 64.0
+          },
+          "normalised_mean_tier": 0.64
+        }
+      },
+      "tier_composition": {
+        "0": {
+          "n": 2693,
+          "pct_injected": 42.6,
+          "pct_of_normals": 34.0
+        },
+        "1": {
+          "n": 4307,
+          "pct_injected": 30.3,
+          "pct_of_normals": 66.0
+        }
+      }
+    }
+  },
+  "already_validated_domains_under_per_band_floor": {
+    "banking": {
+      "winner": "A|kmeans|2",
+      "k_found": 2,
+      "pooled_shares_pct": [
+        47.6,
+        52.4
+      ],
+      "pooled_min_pct": 47.6,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            40.17,
+            59.83
+          ],
+          "min_pct": 40.17
+        },
+        "2": {
+          "shares_pct": [
+            45.45,
+            54.55
+          ],
+          "min_pct": 45.45
+        },
+        "3": {
+          "shares_pct": [
+            49.68,
+            50.32
+          ],
+          "min_pct": 49.68
+        },
+        "4": {
+          "shares_pct": [
+            51.69,
+            48.31
+          ],
+          "min_pct": 48.31
+        },
+        "5": {
+          "shares_pct": [
+            51.25,
+            48.75
+          ],
+          "min_pct": 48.75
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 40.17,
+      "passes_pooled": true,
+      "passes_per_band": true
+    },
+    "insurance": {
+      "winner": "B|kmedoids|3",
+      "k_found": 3,
+      "pooled_shares_pct": [
+        31.87,
+        37.58,
+        30.55
+      ],
+      "pooled_min_pct": 30.55,
+      "by_band": {
+        "1": {
+          "shares_pct": [
+            2.87,
+            97.13,
+            0.0
+          ],
+          "min_pct": 0.0
+        },
+        "2": {
+          "shares_pct": [
+            40.8,
+            59.2,
+            0.0
+          ],
+          "min_pct": 0.0
+        },
+        "3": {
+          "shares_pct": [
+            70.3,
+            29.7,
+            0.0
+          ],
+          "min_pct": 0.0
+        },
+        "4": {
+          "shares_pct": [
+            44.24,
+            0.0,
+            55.76
+          ],
+          "min_pct": 0.0
+        },
+        "5": {
+          "shares_pct": [
+            2.29,
+            0.0,
+            97.71
+          ],
+          "min_pct": 0.0
+        }
+      },
+      "worst_band": 1,
+      "worst_band_min_pct": 0.0,
+      "passes_pooled": true,
+      "passes_per_band": false
+    }
+  },
+  "tier_by_age_band_crosstabs": {
+    "investment_chosen_A|fuzzy_cmeans|2": {
+      "crosstab_row_normalised": {
+        "0": {
+          "1": 0.298,
+          "2": 0.335,
+          "3": 0.406,
+          "4": 0.326,
+          "5": 0.315
+        },
+        "1": {
+          "1": 0.702,
+          "2": 0.665,
+          "3": 0.594,
+          "4": 0.674,
+          "5": 0.685
+        }
+      },
+      "cells_below_5pct": 0,
+      "n_cells": 10
+    },
+    "investment_runnerup_B|fuzzy_cmeans|3": {
+      "crosstab_row_normalised": {
+        "0": {
+          "1": 0.023,
+          "2": 0.251,
+          "3": 0.621,
+          "4": 0.123,
+          "5": 0.002
+        },
+        "1": {
+          "1": 0.0,
+          "2": 0.001,
+          "3": 0.184,
+          "4": 0.877,
+          "5": 0.998
+        },
+        "2": {
+          "1": 0.977,
+          "2": 0.748,
+          "3": 0.195,
+          "4": 0.0,
+          "5": 0.0
+        }
+      },
+      "cells_below_5pct": 6,
+      "n_cells": 15
+    },
+    "investment_higher_sil_A|kmeans|3": {
+      "crosstab_row_normalised": {
+        "0": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.645,
+          "4": 0.546,
+          "5": 0.001
+        },
+        "1": {
+          "1": 0.589,
+          "2": 0.594,
+          "3": 0.0,
+          "4": 0.002,
+          "5": 0.527
+        },
+        "2": {
+          "1": 0.411,
+          "2": 0.406,
+          "3": 0.355,
+          "4": 0.451,
+          "5": 0.472
+        }
+      },
+      "cells_below_5pct": 5,
+      "n_cells": 15
+    },
+    "banking_validated_A|kmeans|2": {
+      "crosstab_row_normalised": {
+        "0": {
+          "1": 0.402,
+          "2": 0.455,
+          "3": 0.497,
+          "4": 0.517,
+          "5": 0.513
+        },
+        "1": {
+          "1": 0.598,
+          "2": 0.545,
+          "3": 0.503,
+          "4": 0.483,
+          "5": 0.487
+        }
+      },
+      "cells_below_5pct": 0,
+      "n_cells": 10
+    },
+    "insurance_validated_B|kmedoids|3": {
+      "crosstab_row_normalised": {
+        "0": {
+          "1": 0.029,
+          "2": 0.408,
+          "3": 0.703,
+          "4": 0.442,
+          "5": 0.023
+        },
+        "1": {
+          "1": 0.971,
+          "2": 0.592,
+          "3": 0.297,
+          "4": 0.0,
+          "5": 0.0
+        },
+        "2": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.558,
+          "5": 0.977
+        }
+      },
+      "cells_below_5pct": 7,
+      "n_cells": 15
+    }
+  }
+}

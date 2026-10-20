@@ -1,0 +1,636 @@
+{
+  "dataset": {
+    "path": "MLAI/clustering/data/processed/synthetic_users.csv",
+    "n_users": 7000
+  },
+  "nw_thresholds_by_band": {
+    "1": 1.0,
+    "2": 3.0,
+    "3": 6.0,
+    "4": 8.0,
+    "5": 10.0
+  },
+  "tier_replay": {
+    "banking": {
+      "tier_labels": [
+        "Stable",
+        "Building"
+      ],
+      "population_shares_pct": [
+        47.9,
+        52.1
+      ]
+    },
+    "investment": {
+      "tier_labels": [
+        "On Track",
+        "Getting Started"
+      ],
+      "population_shares_pct": [
+        38.1,
+        61.9
+      ]
+    },
+    "insurance": {
+      "tier_labels": [
+        "Covered",
+        "Not Covered"
+      ],
+      "population_shares_pct": [
+        33.7,
+        66.3
+      ]
+    }
+  },
+  "tier_crosstab_pct": {
+    "Building / Covered": 17.5,
+    "Building / Not Covered": 34.6,
+    "Stable / Covered": 16.3,
+    "Stable / Not Covered": 31.7
+  },
+  "step2_bimodality": {
+    "subpopulation": "banking_tier == Stable AND insurance_tier == Not Covered",
+    "n": 2217,
+    "pct_of_population": 31.7,
+    "profile_mix_pct": {
+      "normal": 59.5,
+      "underinsured_saver": 12.6,
+      "wealthy_exposed": 12.3,
+      "conservative_saver": 8.1,
+      "outlier": 7.5
+    },
+    "overall": {
+      "n": 2217,
+      "mean": 8.143,
+      "median": 5.828,
+      "std": 7.953,
+      "min": -2.0,
+      "q25": 2.271,
+      "q75": 11.468,
+      "q90": 18.51,
+      "max": 50.0,
+      "bimodality": {
+        "n": 2217,
+        "bimodality_coefficient": 0.5652,
+        "gmm_prefers_2": true,
+        "gmm_bic_1": 15500.1,
+        "gmm_bic_2": 14622.0,
+        "skewness": 1.794,
+        "excess_kurtosis": 4.46
+      },
+      "kde": {
+        "n_modes": 2,
+        "mode_positions": [
+          2.38,
+          29.34
+        ],
+        "primary_mode": 2.38,
+        "valley_position": 27.0,
+        "valley_depth_ratio": 0.071
+      },
+      "unimodal_null": {
+        "observed_bc": 0.5652,
+        "null_family": "gamma (unimodal by construction)",
+        "n_sims": 300,
+        "null_bc_median": 0.5091,
+        "pct_null_draws_exceeding_flag": 0.0,
+        "pct_null_draws_exceeding_observed": 0.0
+      },
+      "bc_exceeds_flag": true
+    },
+    "by_band": {
+      "1": {
+        "age_range": "20-29",
+        "n": 570,
+        "mean": 3.668,
+        "median": 1.614,
+        "std": 6.951,
+        "min": -2.0,
+        "q25": 0.89,
+        "q75": 2.613,
+        "q90": 11.449,
+        "max": 50.0,
+        "bimodality": {
+          "n": 570,
+          "bimodality_coefficient": 0.805,
+          "gmm_prefers_2": true,
+          "gmm_bic_1": 3839.5,
+          "gmm_bic_2": 2410.4,
+          "skewness": 3.38,
+          "excess_kurtosis": 12.422
+        },
+        "kde": {
+          "n_modes": 5,
+          "mode_positions": [
+            1.56,
+            13.77,
+            19.78,
+            24.15,
+            31.99
+          ],
+          "primary_mode": 1.56,
+          "valley_position": 8.99,
+          "valley_depth_ratio": 0.603
+        },
+        "unimodal_null": {
+          "observed_bc": 0.805,
+          "null_family": "gamma (unimodal by construction)",
+          "n_sims": 300,
+          "null_bc_median": 0.7015,
+          "pct_null_draws_exceeding_flag": 100.0,
+          "pct_null_draws_exceeding_observed": 0.0
+        },
+        "split": {
+          "threshold": 1.0,
+          "pct_above": 71.6,
+          "pct_below": 28.4,
+          "mean_above": 5.02,
+          "mean_below": 0.26,
+          "wealthy_exposed_n": 59,
+          "wealthy_exposed_pct_above_threshold": 100.0,
+          "wealthy_exposed_median_nw": 19.7,
+          "underinsured_saver_n": 62,
+          "underinsured_saver_pct_above_threshold": 54.8,
+          "underinsured_saver_median_nw": 1.36
+        },
+        "empirical_best_separator": {
+          "n_wealthy_exposed": 59,
+          "best_cut": 5.18,
+          "youden_j": 0.992,
+          "sensitivity_pct": 100.0,
+          "precision_pct": 93.7,
+          "note": "in-sample, fitted on a synthetic-only label \u2014 a diagnostic ceiling, not a proposed threshold"
+        },
+        "bc_exceeds_flag": true,
+        "threshold_percentile_within_subpop": 28.4,
+        "threshold_minus_primary_mode": -0.56,
+        "threshold_distance_from_mode_in_iqr": 0.33,
+        "threshold_in_valley": false
+      },
+      "2": {
+        "age_range": "30-39",
+        "n": 364,
+        "mean": 5.383,
+        "median": 3.257,
+        "std": 7.026,
+        "min": -2.0,
+        "q25": 2.115,
+        "q75": 4.861,
+        "q90": 14.347,
+        "max": 50.0,
+        "bimodality": {
+          "n": 364,
+          "bimodality_coefficient": 0.7578,
+          "gmm_prefers_2": true,
+          "gmm_bic_1": 2463.1,
+          "gmm_bic_2": 1862.3,
+          "skewness": 2.837,
+          "excess_kurtosis": 8.912
+        },
+        "kde": {
+          "n_modes": 4,
+          "mode_positions": [
+            2.99,
+            14.59,
+            21.81,
+            28.83
+          ],
+          "primary_mode": 2.99,
+          "valley_position": 11.33,
+          "valley_depth_ratio": 0.323
+        },
+        "unimodal_null": {
+          "observed_bc": 0.7578,
+          "null_family": "gamma (unimodal by construction)",
+          "n_sims": 300,
+          "null_bc_median": 0.6909,
+          "pct_null_draws_exceeding_flag": 99.7,
+          "pct_null_draws_exceeding_observed": 4.0
+        },
+        "split": {
+          "threshold": 3.0,
+          "pct_above": 54.7,
+          "pct_below": 45.3,
+          "mean_above": 8.43,
+          "mean_below": 1.71,
+          "wealthy_exposed_n": 45,
+          "wealthy_exposed_pct_above_threshold": 100.0,
+          "wealthy_exposed_median_nw": 21.21,
+          "underinsured_saver_n": 58,
+          "underinsured_saver_pct_above_threshold": 43.1,
+          "underinsured_saver_median_nw": 2.73
+        },
+        "empirical_best_separator": {
+          "n_wealthy_exposed": 45,
+          "best_cut": 7.94,
+          "youden_j": 0.991,
+          "sensitivity_pct": 100.0,
+          "precision_pct": 93.8,
+          "note": "in-sample, fitted on a synthetic-only label \u2014 a diagnostic ceiling, not a proposed threshold"
+        },
+        "bc_exceeds_flag": true,
+        "threshold_percentile_within_subpop": 45.3,
+        "threshold_minus_primary_mode": 0.01,
+        "threshold_distance_from_mode_in_iqr": 0.0,
+        "threshold_in_valley": false
+      },
+      "3": {
+        "age_range": "40-49",
+        "n": 249,
+        "mean": 9.49,
+        "median": 6.219,
+        "std": 8.922,
+        "min": 0.068,
+        "q25": 3.997,
+        "q75": 10.667,
+        "q90": 23.049,
+        "max": 50.0,
+        "bimodality": {
+          "n": 249,
+          "bimodality_coefficient": 0.6879,
+          "gmm_prefers_2": true,
+          "gmm_bic_1": 1806.6,
+          "gmm_bic_2": 1570.5,
+          "skewness": 1.874,
+          "excess_kurtosis": 3.521
+        },
+        "kde": {
+          "n_modes": 2,
+          "mode_positions": [
+            5.15,
+            29.77
+          ],
+          "primary_mode": 5.15,
+          "valley_position": 25.86,
+          "valley_depth_ratio": 0.097
+        },
+        "unimodal_null": {
+          "observed_bc": 0.6879,
+          "null_family": "gamma (unimodal by construction)",
+          "n_sims": 300,
+          "null_bc_median": 0.5624,
+          "pct_null_draws_exceeding_flag": 55.3,
+          "pct_null_draws_exceeding_observed": 0.0
+        },
+        "split": {
+          "threshold": 6.0,
+          "pct_above": 52.6,
+          "pct_below": 47.4,
+          "mean_above": 14.69,
+          "mean_below": 3.72,
+          "wealthy_exposed_n": 61,
+          "wealthy_exposed_pct_above_threshold": 100.0,
+          "wealthy_exposed_median_nw": 20.87,
+          "underinsured_saver_n": 60,
+          "underinsured_saver_pct_above_threshold": 40.0,
+          "underinsured_saver_median_nw": 4.97
+        },
+        "empirical_best_separator": {
+          "n_wealthy_exposed": 61,
+          "best_cut": 9.57,
+          "youden_j": 0.968,
+          "sensitivity_pct": 100.0,
+          "precision_pct": 91.0,
+          "note": "in-sample, fitted on a synthetic-only label \u2014 a diagnostic ceiling, not a proposed threshold"
+        },
+        "bc_exceeds_flag": true,
+        "threshold_percentile_within_subpop": 47.4,
+        "threshold_minus_primary_mode": 0.85,
+        "threshold_distance_from_mode_in_iqr": 0.13,
+        "threshold_in_valley": false
+      },
+      "4": {
+        "age_range": "50-59",
+        "n": 374,
+        "mean": 10.324,
+        "median": 8.382,
+        "std": 8.091,
+        "min": -2.0,
+        "q25": 5.623,
+        "q75": 11.448,
+        "q90": 22.377,
+        "max": 50.0,
+        "bimodality": {
+          "n": 374,
+          "bimodality_coefficient": 0.6314,
+          "gmm_prefers_2": true,
+          "gmm_bic_1": 2636.1,
+          "gmm_bic_2": 2380.4,
+          "skewness": 2.186,
+          "excess_kurtosis": 6.127
+        },
+        "kde": {
+          "n_modes": 2,
+          "mode_positions": [
+            7.67,
+            23.85
+          ],
+          "primary_mode": 7.67,
+          "valley_position": 20.49,
+          "valley_depth_ratio": 0.056
+        },
+        "unimodal_null": {
+          "observed_bc": 0.6314,
+          "null_family": "gamma (unimodal by construction)",
+          "n_sims": 300,
+          "null_bc_median": 0.4662,
+          "pct_null_draws_exceeding_flag": 0.3,
+          "pct_null_draws_exceeding_observed": 0.0
+        },
+        "split": {
+          "threshold": 8.0,
+          "pct_above": 53.5,
+          "pct_below": 46.5,
+          "mean_above": 14.89,
+          "mean_below": 5.08,
+          "wealthy_exposed_n": 59,
+          "wealthy_exposed_pct_above_threshold": 100.0,
+          "wealthy_exposed_median_nw": 23.57,
+          "underinsured_saver_n": 51,
+          "underinsured_saver_pct_above_threshold": 52.9,
+          "underinsured_saver_median_nw": 8.27
+        },
+        "empirical_best_separator": {
+          "n_wealthy_exposed": 59,
+          "best_cut": 12.08,
+          "youden_j": 0.803,
+          "sensitivity_pct": 89.8,
+          "precision_pct": 63.9,
+          "note": "in-sample, fitted on a synthetic-only label \u2014 a diagnostic ceiling, not a proposed threshold"
+        },
+        "bc_exceeds_flag": true,
+        "threshold_percentile_within_subpop": 46.5,
+        "threshold_minus_primary_mode": 0.33,
+        "threshold_distance_from_mode_in_iqr": 0.06,
+        "threshold_in_valley": false
+      },
+      "5": {
+        "age_range": "60-70",
+        "n": 660,
+        "mean": 11.786,
+        "median": 10.918,
+        "std": 6.21,
+        "min": -2.0,
+        "q25": 7.86,
+        "q75": 14.722,
+        "q90": 18.837,
+        "max": 50.0,
+        "bimodality": {
+          "n": 660,
+          "bimodality_coefficient": 0.3918,
+          "gmm_prefers_2": true,
+          "gmm_bic_1": 4295.5,
+          "gmm_bic_2": 4179.9,
+          "skewness": 1.683,
+          "excess_kurtosis": 6.77
+        },
+        "kde": {
+          "n_modes": 2,
+          "mode_positions": [
+            10.11,
+            29.34
+          ],
+          "primary_mode": 10.11,
+          "valley_position": 27.31,
+          "valley_depth_ratio": 0.066
+        },
+        "unimodal_null": {
+          "observed_bc": 0.3918,
+          "null_family": "gamma (unimodal by construction)",
+          "n_sims": 300,
+          "null_bc_median": 0.4008,
+          "pct_null_draws_exceeding_flag": 0.0,
+          "pct_null_draws_exceeding_observed": 66.7
+        },
+        "split": {
+          "threshold": 10.0,
+          "pct_above": 58.8,
+          "pct_below": 41.2,
+          "mean_above": 15.33,
+          "mean_below": 6.73,
+          "wealthy_exposed_n": 48,
+          "wealthy_exposed_pct_above_threshold": 100.0,
+          "wealthy_exposed_median_nw": 19.84,
+          "underinsured_saver_n": 49,
+          "underinsured_saver_pct_above_threshold": 44.9,
+          "underinsured_saver_median_nw": 9.09
+        },
+        "empirical_best_separator": {
+          "n_wealthy_exposed": 48,
+          "best_cut": 15.0,
+          "youden_j": 0.661,
+          "sensitivity_pct": 85.4,
+          "precision_pct": 25.8,
+          "note": "in-sample, fitted on a synthetic-only label \u2014 a diagnostic ceiling, not a proposed threshold"
+        },
+        "bc_exceeds_flag": false,
+        "threshold_percentile_within_subpop": 41.2,
+        "threshold_minus_primary_mode": -0.11,
+        "threshold_distance_from_mode_in_iqr": 0.02,
+        "threshold_in_valley": false
+      }
+    },
+    "expected_modes_actual": {
+      "wealthy_exposed": {
+        "n": 272,
+        "mean": 21.592,
+        "median": 21.149,
+        "std": 7.06,
+        "min": 10.053,
+        "q25": 15.623,
+        "q75": 27.363,
+        "q90": 31.84,
+        "max": 34.986
+      },
+      "underinsured_saver": {
+        "n": 280,
+        "mean": 5.125,
+        "median": 4.309,
+        "std": 4.269,
+        "min": -0.842,
+        "q25": 1.743,
+        "q75": 7.59,
+        "q90": 10.798,
+        "max": 21.524
+      }
+    }
+  },
+  "step3_base_rates": {
+    "populations": {
+      "full": 7000,
+      "normal_only": 4550
+    },
+    "high_base_rate_threshold_pct": 25.0,
+    "rules": {
+      "1. Significant Assets, No Protection": {
+        "full_population_pct": 18.9,
+        "full_population_n": 1326,
+        "normal_only_pct": 17.2,
+        "normal_only_n": 782,
+        "by_band_full_pct": {
+          "1": 28.3,
+          "2": 14.3,
+          "3": 9.2,
+          "4": 14.5,
+          "5": 28.5
+        },
+        "by_band_normal_pct": {
+          "1": 28.6,
+          "2": 12.3,
+          "3": 4.1,
+          "4": 10.6,
+          "5": 29.8
+        },
+        "profile_mix_pct": {
+          "normal": 59.0,
+          "wealthy_exposed": 20.5,
+          "underinsured_saver": 10.0,
+          "outlier": 6.0,
+          "conservative_saver": 4.5
+        },
+        "exceeds_high_base_rate": false,
+        "bands_exceeding_high_base_rate": [
+          1,
+          5
+        ]
+      },
+      "2. Building Wealth, No Safety Net": {
+        "full_population_pct": 12.7,
+        "full_population_n": 891,
+        "normal_only_pct": 11.8,
+        "normal_only_n": 538,
+        "by_band_full_pct": {
+          "1": 11.2,
+          "2": 11.9,
+          "3": 8.3,
+          "4": 12.6,
+          "5": 20.0
+        },
+        "by_band_normal_pct": {
+          "1": 9.6,
+          "2": 10.1,
+          "3": 6.5,
+          "4": 13.5,
+          "5": 19.5
+        },
+        "profile_mix_pct": {
+          "normal": 60.4,
+          "underinsured_saver": 16.6,
+          "conservative_saver": 13.4,
+          "outlier": 9.7
+        },
+        "exceeds_high_base_rate": false,
+        "bands_exceeding_high_base_rate": []
+      },
+      "3. Protection First": {
+        "full_population_pct": 17.5,
+        "full_population_n": 1223,
+        "normal_only_pct": 13.3,
+        "normal_only_n": 604,
+        "by_band_full_pct": {
+          "1": 5.7,
+          "2": 20.9,
+          "3": 33.8,
+          "4": 22.2,
+          "5": 4.5
+        },
+        "by_band_normal_pct": {
+          "1": 0.9,
+          "2": 17.7,
+          "3": 31.2,
+          "4": 16.7,
+          "5": 0.3
+        },
+        "profile_mix_pct": {
+          "normal": 49.4,
+          "protection_first": 20.8,
+          "outlier": 13.8,
+          "over_invested": 8.0,
+          "high_debt_investor": 8.0
+        },
+        "exceeds_high_base_rate": false,
+        "bands_exceeding_high_base_rate": [
+          3
+        ]
+      },
+      "4. Strong Foundation, Room to Grow": {
+        "full_population_pct": 28.5,
+        "full_population_n": 1998,
+        "normal_only_pct": 25.5,
+        "normal_only_n": 1159,
+        "by_band_full_pct": {
+          "1": 26.6,
+          "2": 26.4,
+          "3": 27.0,
+          "4": 30.1,
+          "5": 32.8
+        },
+        "by_band_normal_pct": {
+          "1": 22.8,
+          "2": 22.5,
+          "3": 23.7,
+          "4": 29.5,
+          "5": 29.0
+        },
+        "profile_mix_pct": {
+          "normal": 58.0,
+          "conservative_saver": 14.6,
+          "wealthy_exposed": 9.0,
+          "underinsured_saver": 8.7,
+          "outlier": 8.7,
+          "protection_first": 1.1
+        },
+        "exceeds_high_base_rate": true,
+        "bands_exceeding_high_base_rate": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "5. Investing Fast, Foundation Still Building": {
+        "full_population_pct": 18.7,
+        "full_population_n": 1309,
+        "normal_only_pct": 11.5,
+        "normal_only_n": 522,
+        "by_band_full_pct": {
+          "1": 19.9,
+          "2": 18.9,
+          "3": 21.2,
+          "4": 17.9,
+          "5": 15.4
+        },
+        "by_band_normal_pct": {
+          "1": 12.4,
+          "2": 10.6,
+          "3": 14.6,
+          "4": 10.4,
+          "5": 9.3
+        },
+        "profile_mix_pct": {
+          "normal": 39.9,
+          "over_invested": 22.3,
+          "high_debt_investor": 22.2,
+          "outlier": 8.8,
+          "protection_first": 6.3,
+          "wealthy_exposed": 0.3,
+          "underinsured_saver": 0.2
+        },
+        "exceeds_high_base_rate": false,
+        "bands_exceeding_high_base_rate": []
+      }
+    },
+    "coverage": {
+      "pct_triggering_at_least_one_rule": 68.7,
+      "pct_triggering_2_or_more": 27.7,
+      "max_rules_triggered_by_one_user": 2
+    }
+  },
+  "plots": [
+    "MLAI/clustering/results/layer3_validation/plots/nw_stable_notcovered_overall.png",
+    "MLAI/clustering/results/layer3_validation/plots/nw_stable_notcovered_by_band.png",
+    "MLAI/clustering/results/layer3_validation/plots/nw_stable_notcovered_by_profile.png",
+    "MLAI/clustering/results/layer3_validation/plots/layer3_rule_base_rates.png"
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "purpose": "Machine verification of NET_WORTH_REMOVAL_COMPARISON.md against the committed domain_split_results.json and the run's cached labels. Refits nothing.",
+  "evidence_sources": {
+    "results_json": "MLAI/clustering/results/domain_split/domain_split_results.json",
+    "label_cache": "MLAI/clustering/results/domain_split/.domain_split_labels_v2.pkl",
+    "dataset": "MLAI/clustering/data/processed/synthetic_users.csv"
+  },
+  "claims_checked": 86,
+  "claims_failed": 0,
+  "by_section": {
+    "\u00a72 before/after table": {
+      "n": 24,
+      "failed": 0
+    },
+    "\u00a72 dominant feature": {
+      "n": 7,
+      "failed": 0
+    },
+    "\u00a72 dominant feature (per band)": {
+      "n": 20,
+      "failed": 0
+    },
+    "\u00a73 archetype placement": {
+      "n": 10,
+      "failed": 0
+    },
+    "\u00a74 controlled comparison": {
+      "n": 18,
+      "failed": 0
+    },
+    "\u00a75 binding benchmark": {
+      "n": 7,
+      "failed": 0
+    }
+  },
+  "rederived_archetype_tables": {
+    "banking_plus_nw": {
+      "B|gmm_diag|3": {
+        "over_invested": {
+          "tier_shares_pct": [
+            26.7,
+            50.3,
+            22.9
+          ],
+          "n": 292
+        },
+        "normal": {
+          "tier_shares_pct": [
+            32.5,
+            46.8,
+            20.7
+          ],
+          "n": 4550
+        },
+        "high_debt_investor": {
+          "tier_shares_pct": [
+            7.6,
+            70.8,
+            21.6
+          ],
+          "n": 291
+        },
+        "wealthy_exposed": {
+          "tier_shares_pct": [
+            98.6,
+            1.4,
+            0.0
+          ],
+          "n": 292
+        }
+      }
+    },
+    "banking_core4": {
+      "A|kmeans|2": {
+        "over_invested": {
+          "tier_shares_pct": [
+            0.0,
+            100.0
+          ],
+          "n": 292
+        },
+        "normal": {
+          "tier_shares_pct": [
+            47.6,
+            52.4
+          ],
+          "n": 4550
+        },
+        "high_debt_investor": {
+          "tier_shares_pct": [
+            0.0,
+            100.0
+          ],
+          "n": 291
+        },
+        "wealthy_exposed": {
+          "tier_shares_pct": [
+            93.2,
+            6.8
+          ],
+          "n": 292
+        }
+      }
+    }
+  },
+  "claims": [
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: grid size",
+      "expected": 80,
+      "actual": 80,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: passed 5% floor",
+      "expected": 25,
+      "actual": 25,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: passed both usability gates",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: winning combination",
+      "expected": "B|gmm_diag|3",
+      "actual": "B|gmm_diag|3",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: winner macro-silhouette",
+      "expected": 0.2099,
+      "actual": 0.2099,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_plus_nw: winner smallest cluster %",
+      "expected": 19.06,
+      "actual": 19.06,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: grid size",
+      "expected": 80,
+      "actual": 80,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: passed 5% floor",
+      "expected": 28,
+      "actual": 28,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: passed both usability gates",
+      "expected": 9,
+      "actual": 9,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: winning combination",
+      "expected": "A|kmeans|2",
+      "actual": "A|kmeans|2",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: winner macro-silhouette",
+      "expected": 0.2588,
+      "actual": 0.2588,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "banking_core4: winner smallest cluster %",
+      "expected": 42.02,
+      "actual": 42.02,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: grid size",
+      "expected": 80,
+      "actual": 80,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: passed 5% floor",
+      "expected": 23,
+      "actual": 23,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: passed both usability gates",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: winning combination",
+      "expected": "A|spectral|2",
+      "actual": "A|spectral|2",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: winner macro-silhouette",
+      "expected": 0.4633,
+      "actual": 0.4633,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_plus_nw: winner smallest cluster %",
+      "expected": 5.2,
+      "actual": 5.2,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: grid size",
+      "expected": 80,
+      "actual": 80,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: passed 5% floor",
+      "expected": 60,
+      "actual": 60,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: passed both usability gates",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: winning combination",
+      "expected": "B|agglomerative|5",
+      "actual": "B|agglomerative|5",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: winner macro-silhouette",
+      "expected": 0.1976,
+      "actual": 0.1976,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 before/after table",
+      "claim": "investment_core3: winner smallest cluster %",
+      "expected": 8.51,
+      "actual": 8.51,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "banking_plus_nw: top feature",
+      "expected": "net_worth_to_income",
+      "actual": "net_worth_to_income",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "banking_plus_nw: top feature share ~35%",
+      "expected": 0.347,
+      "actual": 0.347,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "banking_plus_nw: features separating >=0.5 IQR",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "banking_plus_nw: n_features",
+      "expected": 5,
+      "actual": 5,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "investment_core3: top feature",
+      "expected": "investment_rate",
+      "actual": "investment_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "investment_core3: top feature share ~68%",
+      "expected": 0.68,
+      "actual": 0.677,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature",
+      "claim": "investment_core3: features separating >=0.5 IQR (3 of 3)",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band1: exactly 1 of 4 features separating >=0.5 IQR",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band1: dominant feature",
+      "expected": "net_worth_to_income",
+      "actual": "net_worth_to_income",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band1: dominant share within 0.87-0.88",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band2: exactly 1 of 4 features separating >=0.5 IQR",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band2: dominant feature",
+      "expected": "investment_rate",
+      "actual": "investment_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band2: dominant share within 0.90-0.96",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band3: exactly 1 of 4 features separating >=0.5 IQR",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band3: dominant feature",
+      "expected": "investment_rate",
+      "actual": "investment_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band3: dominant share within 0.90-0.96",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band4: exactly 1 of 4 features separating >=0.5 IQR",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band4: dominant feature",
+      "expected": "investment_rate",
+      "actual": "investment_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band4: dominant share within 0.90-0.96",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band5: exactly 1 of 4 features separating >=0.5 IQR",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band5: dominant feature",
+      "expected": "investment_rate",
+      "actual": "investment_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "investment_plus_nw band5: dominant share within 0.90-0.96",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "banking_core4 band1: dominant feature",
+      "expected": "savings_rate",
+      "actual": "savings_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "banking_core4 band2: dominant feature",
+      "expected": "savings_rate",
+      "actual": "savings_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "banking_core4 band3: dominant feature",
+      "expected": "savings_rate",
+      "actual": "savings_rate",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "banking_core4 band4: dominant feature",
+      "expected": "emergency_fund_months",
+      "actual": "emergency_fund_months",
+      "pass": true
+    },
+    {
+      "section": "\u00a72 dominant feature (per band)",
+      "claim": "banking_core4 band5: dominant feature",
+      "expected": "emergency_fund_months",
+      "actual": "emergency_fund_months",
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_plus_nw / B|gmm_diag|3 / over_invested: tier shares",
+      "expected": [
+        26.7,
+        50.3,
+        22.9
+      ],
+      "actual": [
+        26.7,
+        50.3,
+        22.9
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_plus_nw / B|gmm_diag|3: over_invested n",
+      "expected": 292,
+      "actual": 292,
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_plus_nw / B|gmm_diag|3 / normal: tier shares",
+      "expected": [
+        32.5,
+        46.8,
+        20.7
+      ],
+      "actual": [
+        32.5,
+        46.8,
+        20.7
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_plus_nw / B|gmm_diag|3 / high_debt_investor: tier shares",
+      "expected": [
+        7.6,
+        70.8,
+        21.6
+      ],
+      "actual": [
+        7.6,
+        70.8,
+        21.6
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_core4 / A|kmeans|2 / over_invested: tier shares",
+      "expected": [
+        0.0,
+        100.0
+      ],
+      "actual": [
+        0.0,
+        100.0
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_core4 / A|kmeans|2: over_invested n",
+      "expected": 292,
+      "actual": 292,
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_core4 / A|kmeans|2 / normal: tier shares",
+      "expected": [
+        47.6,
+        52.4
+      ],
+      "actual": [
+        47.6,
+        52.4
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_core4 / A|kmeans|2 / high_debt_investor: tier shares",
+      "expected": [
+        0.0,
+        100.0
+      ],
+      "actual": [
+        0.0,
+        100.0
+      ],
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_plus_nw / B|gmm_diag|3 / wealthy_exposed: share in healthiest tier",
+      "expected": 98.6,
+      "actual": 98.6,
+      "pass": true
+    },
+    {
+      "section": "\u00a73 archetype placement",
+      "claim": "banking_core4 / A|kmeans|2 / wealthy_exposed: share in healthiest tier",
+      "expected": 93.2,
+      "actual": 93.2,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_core4: macro-silhouette",
+      "expected": 0.2588,
+      "actual": 0.2588,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_core4: smallest cluster %",
+      "expected": 42.02,
+      "actual": 42.02,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_core4: clears the 5% floor",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_plus_nw: macro-silhouette",
+      "expected": 0.3496,
+      "actual": 0.3496,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_plus_nw: smallest cluster %",
+      "expected": 3.59,
+      "actual": 3.59,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|kmeans|2 @ banking_plus_nw: clears the 5% floor",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_core4: macro-silhouette",
+      "expected": 0.1693,
+      "actual": 0.1693,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_core4: smallest cluster %",
+      "expected": 26.56,
+      "actual": 26.56,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_core4: clears the 5% floor",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_plus_nw: macro-silhouette",
+      "expected": 0.1134,
+      "actual": 0.1134,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_plus_nw: smallest cluster %",
+      "expected": 25.94,
+      "actual": 25.94,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "A|fuzzy_cmeans|3 @ banking_plus_nw: clears the 5% floor",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_core3: macro-silhouette",
+      "expected": 0.1976,
+      "actual": 0.1976,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_core3: smallest cluster %",
+      "expected": 8.51,
+      "actual": 8.51,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_core3: clears the 5% floor",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_plus_nw: macro-silhouette",
+      "expected": 0.1732,
+      "actual": 0.1732,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_plus_nw: smallest cluster %",
+      "expected": 3.61,
+      "actual": 3.61,
+      "pass": true
+    },
+    {
+      "section": "\u00a74 controlled comparison",
+      "claim": "B|agglomerative|5 @ investment_plus_nw: clears the 5% floor",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: net_worth_to_income is the binding benchmark",
+      "expected": 18,
+      "actual": 18,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: emergency_fund_months is the binding benchmark",
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: savings_rate is the binding benchmark",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: healthy_debt_ratio is the binding benchmark",
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: dti is the binding benchmark",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "banking_core4: binding counts total = survivors",
+      "expected": 28,
+      "actual": 28,
+      "pass": true
+    },
+    {
+      "section": "\u00a75 binding benchmark",
+      "claim": "net_worth_to_income is the MOST binding",
+      "expected": "net_worth_to_income",
+      "actual": "net_worth_to_income",
+      "pass": true
+    }
+  ]
+}

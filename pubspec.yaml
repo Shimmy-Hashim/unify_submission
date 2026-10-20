@@ -1,0 +1,51 @@
+name: unify
+description: "Unified Insurance & Banking Portfolio Dashboard"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  http: ^1.2.0
+
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  # No firebase_storage: the insurance PDF is parsed in-memory and discarded,
+  # and no Storage bucket exists for this project (brief Section 8).
+  # 14.x is the line that matches firebase_core ^2.x — 15.x requires core ^3.x.
+  firebase_messaging: ^14.7.20
+  google_sign_in: ^6.2.1
+
+  plaid_flutter: ^3.0.0
+  # No fl_chart: its only consumer app-wide was the Investments screen's
+  # Holdings Breakdown donut, which the UI/UX audit removed — every slice's
+  # percentage is printed as exact text on the holding cards instead. Same
+  # decision recorded here as for firebase_storage above, so it cannot be
+  # re-added absent-mindedly.
+  file_picker: ^8.0.3
+  shared_preferences: ^2.2.3
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/images/app_logo.png"

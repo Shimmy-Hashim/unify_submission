@@ -1,0 +1,42 @@
+{
+  "policy_id": "004",
+  "filename": "policy_02.pdf",
+  "ground_truth": {
+    "policy_name": "PruActive Term",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "life",
+    "policy_type_raw": "PruActive Term",
+    "sum_assured_sgd": 100000.0,
+    "annual_premium_sgd": 700.0,
+    "renewal_date": "2045-08",
+    "exclusions": [
+      "Death due to an activity under Special Exclusion or Special Terms and Conditions shown on the Certificate of Life Assurance (premiums refunded or surrender value paid instead of the sum assured)",
+      "Death by suicide within 12 months from the cover start date or date of reinstatement (policy voided, premiums refunded)",
+      "Terminal Illness symptoms existing at the cover start date or date of reinstatement",
+      "Terminal Illness or critical illness caused by self-inflicted injuries while sane or insane",
+      "AIDS, AIDS-related complex, or infection by HIV (except HIV due to blood transfusion or occupationally acquired HIV)",
+      "Using unprescribed drugs where the drugs are required by law to be prescribed by a Registered Medical Practitioner",
+      "An activity under Special Exclusion and/or Special Terms and Conditions shown on the Certificate of Life Assurance (for Terminal Illness or Crisis Waiver claims)",
+      "Pre-existing critical illness condition existing before the cover start date or date of reinstatement, unless declared in the proposal and specifically accepted",
+      "Heart attack of specified severity, major cancer, or other serious coronary artery disease diagnosed within 90 days of the cover start date or date of reinstatement",
+      "Coronary artery disease diagnosed within 90 days of the cover start date leading to bypass surgery or needing angioplasty/other invasive coronary treatment",
+      "Taking part in or attempting to take part in an unlawful act (for critical illness waiver claims)"
+    ],
+    "coverage_gaps": [
+      "No critical illness lump-sum payout - Crisis Waiver III and Early Stage Crisis Waiver are attached, but the actual Crisis Care III (PRUActive Term) cash benefit is NOT attached to this policy (CI Waiver != CI Cover); a diagnosed critical illness only waives future premiums, it pays no cash benefit",
+      "Death, Accelerated Terminal Illness, and Accelerated Disability benefits offset against each other (claiming one reduces or ends the others) - the real maximum total payout is $100,000 not $300,000 summed across the three benefit lines",
+      "Accelerated Disability coverage ends in 2040 (around holder age band redacted), five years before the Death/Terminal Illness benefit ends in 2045 (around holder age band redacted) - no disability protection for the final years of the term",
+      "No hospitalisation or Integrated Shield Plan coverage in this policy",
+      "No standalone income protection or ongoing disability income benefit - Accelerated Disability is a one-off lump sum, not income replacement",
+      "Life coverage of $100,000 is on the low side relative to typical income-replacement benchmarks"
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": false,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "CI WAIVER != CI COVER - clearest example yet of this principle in the dataset. The certificate lists Crisis Waiver III and Early Stage Crisis Waiver (both attached twice, once for the Death/TI term and once for the shorter Accelerated Disability term) but does NOT list 'Crisis Care III (PRUActive Term)' - the actual CI lump-sum benefit described in Section 13 of the policy document. A naive extractor reading the full policy document (which spends ~10 pages on Crisis Care III mechanics, illness lists, and step-up rules) could easily assume CI cash cover exists; the certificate is the authoritative source and shows it does not. sum_assured_sgd = $100,000 is the Death benefit only; Terminal Illness shares this same pool (accelerated, not additive) and Accelerated Disability is excluded per schema (disability, not life/death) - this is also a case where a naive sum across all three '$100,000' rows would triple-count. Crisis Waiver III and Early Stage Crisis Waiver exclusions consolidated into one list since the two sections (14.3 and 15.8) are near-duplicate standard CI-waiver exclusion language; duplicative items were merged rather than repeated. Accelerated Disability's own dedicated 'what is not covered' subsection was not located in available search results and may exist elsewhere in the document - worth a follow-up pass if precision on that specific benefit matters. renewal_date populated with the Death/TI benefit's Cover End Date (2045-08), consistent with established dataset convention; this is a genuine fixed-term policy with no annual renewal mechanism (no 'Renewing benefits' section exists, unlike PRUPersonal Accident), so unlike that case this is not a stretch."
+}

@@ -1,0 +1,7 @@
+model,n_clusters,silhouette_score,davies_bouldin_index,calinski_harabasz_index,bic,aic,cluster_distribution,runtime_seconds,recommended
+KMeans,3,0.5583,0.7589,1215.7371,,,"[113, 684, 413]",1.2917,True
+KMedoids,3,0.5394,0.8732,1082.2199,,,"[135, 387, 688]",0.0498,False
+FuzzyCMeans,3,0.5579,0.7659,1213.2158,,,"[116, 681, 413]",0.0125,False
+GMM,3,0.3364,1.3668,510.6133,-22342.3278,-22658.4271,"[544, 379, 287]",0.0181,False
+DBSCAN,5,0.3464,0.5106,73.6728,,,"[1133, 19, 10, 10, 10]",0.0141,False
+Agglomerative,3,0.5345,0.8446,1064.6386,,,"[125, 727, 358]",0.0301,False

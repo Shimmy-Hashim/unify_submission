@@ -1,0 +1,50 @@
+{
+  "model": "KMeans",
+  "n_clusters": 3,
+  "dataset": "SCF 2022 age 21-35 (n=1210)",
+  "benchmarks_source": "SCF 2022 full dataset (22778 rows)",
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "tier": "Stable",
+      "score": 4.0,
+      "centroid": {
+        "savings_rate": 0.0842,
+        "emergency_fund_ratio": 1.8192,
+        "debt_to_income": 0.6957,
+        "expense_to_income": 0.9158,
+        "healthy_debt_ratio": 0.9711
+      },
+      "count": 684,
+      "warnings": []
+    },
+    {
+      "cluster_id": 1,
+      "tier": "At Risk",
+      "score": 3.5,
+      "centroid": {
+        "savings_rate": 0.1153,
+        "emergency_fund_ratio": 2.4394,
+        "debt_to_income": 2.2079,
+        "expense_to_income": 0.8847,
+        "healthy_debt_ratio": 0.176
+      },
+      "count": 418,
+      "warnings": []
+    },
+    {
+      "cluster_id": 2,
+      "tier": "High Performer",
+      "score": 4.0,
+      "centroid": {
+        "savings_rate": 0.765,
+        "emergency_fund_ratio": 11.2669,
+        "debt_to_income": 1.8304,
+        "expense_to_income": 0.235,
+        "healthy_debt_ratio": 0.6465
+      },
+      "count": 108,
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "run_timestamp": "2026-05-30T13:21:50.224657+00:00",
+  "k": 3,
+  "rationale_for_k3": "k=2 archetype analysis showed mismatch profile separation and age gradients rather than financial health archetypes. HDBSCAN independently found 3 clusters (0.13% noise). k=3 selected to enable At Risk / Building / Stable tier structure.",
+  "algorithm_comparison": {
+    "approach_a": {
+      "k_used": 3,
+      "results": {
+        "kmeans": {
+          "silhouette_score": 0.1732,
+          "davies_bouldin_index": 1.9087,
+          "calinski_harabasz_index": 222.7657,
+          "cluster_sizes": [
+            1116,
+            229,
+            97,
+            218,
+            433,
+            741,
+            573,
+            460,
+            394,
+            223,
+            518,
+            637,
+            634,
+            85,
+            642
+          ],
+          "size_balance": 0.3102,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 4
+        },
+        "kmedoids": {
+          "silhouette_score": 0.1048,
+          "davies_bouldin_index": 2.4551,
+          "calinski_harabasz_index": 146.2023,
+          "cluster_sizes": [
+            175,
+            406,
+            861,
+            997,
+            179,
+            216,
+            528,
+            320,
+            579,
+            310,
+            570,
+            498,
+            353,
+            452,
+            556
+          ],
+          "size_balance": 0.4228,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "composite_rank": 10
+        },
+        "gmm": {
+          "silhouette_score": 0.2619,
+          "davies_bouldin_index": 2.0251,
+          "calinski_harabasz_index": 160.9457,
+          "cluster_sizes": [
+            1130,
+            215,
+            97,
+            1112,
+            110,
+            170,
+            150,
+            169,
+            1108,
+            1144,
+            143,
+            91,
+            1111,
+            134,
+            116
+          ],
+          "size_balance": 0.1008,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "aic": 22720.3687,
+          "bic": 23753.4358,
+          "composite_rank": 5
+        },
+        "fuzzy_cmeans": {
+          "silhouette_score": -0.0186,
+          "davies_bouldin_index": 2.3607,
+          "calinski_harabasz_index": 116.1279,
+          "cluster_sizes": [
+            142,
+            683,
+            617,
+            735,
+            651,
+            6,
+            3,
+            694,
+            730,
+            146,
+            543,
+            689,
+            2,
+            667,
+            692
+          ],
+          "size_balance": 0.087,
+          "metric_basis": "mean of per-band within-band scores (age-stratified model)",
+          "fuzzy_partition_coefficient": 0.3333,
+          "composite_rank": 11
+        }
+      },
+      "winner": "kmeans",
+      "ideal_cluster_id": 31,
+      "ideal_cluster_label": "Stable",
+      "archetype_labels": {
+        "cluster_10": "At Risk",
+        "cluster_11": "Building",
+        "cluster_12": "Stable",
+        "cluster_22": "At Risk",
+        "cluster_20": "Building",
+        "cluster_21": "Stable",
+        "cluster_30": "At Risk",
+        "cluster_32": "Building",
+        "cluster_31": "Stable",
+        "cluster_42": "At Risk",
+        "cluster_41": "Building",
+        "cluster_40": "Stable",
+        "cluster_52": "At Risk",
+        "cluster_51": "Building",
+        "cluster_50": "Stable"
+      }
+    },
+    "approach_b": {
+      "k_used": 3,
+      "results": {
+        "kmeans": {
+          "silhouette_score": 0.1853,
+          "davies_bouldin_index": 1.8357,
+          "calinski_harabasz_index": 1336.6813,
+          "cluster_sizes": [
+            1728,
+            2599,
+            2673
+          ],
+          "size_balance": 0.6465,
+          "composite_rank": 3
+        },
+        "kmedoids": {
+          "silhouette_score": 0.1173,
+          "davies_bouldin_index": 2.3735,
+          "calinski_harabasz_index": 963.3745,
+          "cluster_sizes": [
+            1969,
+            1380,
+            3651
+          ],
+          "size_balance": 0.378,
+          "composite_rank": 11
+        },
+        "gmm": {
+          "silhouette_score": 0.1555,
+          "davies_bouldin_index": 2.3268,
+          "calinski_harabasz_index": 911.8196,
+          "cluster_sizes": [
+            847,
+            3090,
+            3063
+          ],
+          "size_balance": 0.2741,
+          "bic": 147125.7215,
+          "aic": 145528.8174,
+          "composite_rank": 9
+        },
+        "fuzzy_cmeans": {
+          "silhouette_score": 0.1294,
+          "davies_bouldin_index": 2.2824,
+          "calinski_harabasz_index": 1050.0025,
+          "cluster_sizes": [
+            1170,
+            2833,
+            2997
+          ],
+          "size_balance": 0.3904,
+          "fuzzy_partition_coefficient": 0.35,
+          "composite_rank": 7
+        }
+      },
+      "winner": "kmeans",
+      "ideal_cluster_id": 1,
+      "ideal_cluster_label": "Stable",
+      "archetype_labels": {
+        "cluster_2": "At Risk",
+        "cluster_0": "Building",
+        "cluster_1": "Stable"
+      }
+    }
+  },
+  "k2_vs_k3_delta": {
+    "approach_a_winner_silhouette_k2": 0.2037,
+    "approach_a_winner_silhouette_k3": 0.1732,
+    "approach_b_winner_silhouette_k2": 0.1881,
+    "approach_b_winner_silhouette_k3": 0.1853
+  },
+  "recommended_approach": "B",
+  "recommended_algorithm": "kmeans",
+  "recommendation_reasoning": "Approach B (kmeans) attains the higher silhouette at k=3 (0.1853 vs Approach A kmeans 0.1732). A single age-aware k=3 model is simpler to operate and yields one global At Risk / Building / Stable tiering."
+}

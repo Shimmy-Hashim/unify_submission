@@ -1,0 +1,1524 @@
+{
+  "base_rates_pct": {
+    "overall": {
+      "life_coverage_ratio": 14.0,
+      "ci_coverage_ratio": 7.5,
+      "savings_rate": 56.3,
+      "net_worth_to_income": 43.8,
+      "dti": 86.4
+    },
+    "by_band": {
+      "1": {
+        "life_coverage_ratio": 3.7,
+        "ci_coverage_ratio": 3.7,
+        "savings_rate": 49.4,
+        "net_worth_to_income": 55.0,
+        "dti": 95.1
+      },
+      "2": {
+        "life_coverage_ratio": 16.2,
+        "ci_coverage_ratio": 7.6,
+        "savings_rate": 64.7,
+        "net_worth_to_income": 42.8,
+        "dti": 67.0
+      },
+      "3": {
+        "life_coverage_ratio": 30.2,
+        "ci_coverage_ratio": 13.0,
+        "savings_rate": 69.8,
+        "net_worth_to_income": 38.5,
+        "dti": 79.7
+      },
+      "4": {
+        "life_coverage_ratio": 14.4,
+        "ci_coverage_ratio": 8.6,
+        "savings_rate": 56.2,
+        "net_worth_to_income": 40.8,
+        "dti": 94.7
+      },
+      "5": {
+        "life_coverage_ratio": 4.9,
+        "ci_coverage_ratio": 4.3,
+        "savings_rate": 41.2,
+        "net_worth_to_income": 41.5,
+        "dti": 95.5
+      }
+    }
+  },
+  "majority_criterion_reachability": {
+    "life_coverage_ratio": {
+      "base_rate_pct": 14.0,
+      "max_majority_clearing_cluster_share_pct": 28.0,
+      "reachable_above_5pct_floor": true
+    },
+    "ci_coverage_ratio": {
+      "base_rate_pct": 7.5,
+      "max_majority_clearing_cluster_share_pct": 15.0,
+      "reachable_above_5pct_floor": true
+    },
+    "savings_rate": {
+      "base_rate_pct": 56.3,
+      "max_majority_clearing_cluster_share_pct": 100.0,
+      "reachable_above_5pct_floor": true
+    },
+    "net_worth_to_income": {
+      "base_rate_pct": 43.8,
+      "max_majority_clearing_cluster_share_pct": 87.6,
+      "reachable_above_5pct_floor": true
+    },
+    "dti": {
+      "base_rate_pct": 86.4,
+      "max_majority_clearing_cluster_share_pct": 100.0,
+      "reachable_above_5pct_floor": true
+    }
+  },
+  "majority_threshold": 0.5,
+  "discrimination_lift_by_combination": {
+    "A|kmeans|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 5.4,
+        "base_rate_worst_group": 4.9,
+        "lift_pp_worst_group": 0.5,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.7
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.6,
+        "base_rate_worst_group": 7.6,
+        "lift_pp_worst_group": 0.0,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 3.1
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 44.8,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 3.6,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.7
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 41.0,
+        "base_rate_worst_group": 40.8,
+        "lift_pp_worst_group": 0.2,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 1.7
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 81.6,
+        "base_rate_worst_group": 79.7,
+        "lift_pp_worst_group": 1.9,
+        "lift_ratio_worst_group": 1.02,
+        "mean_lift_pp_across_groups": 3.3
+      }
+    },
+    "A|kmedoids|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 4.4,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 0.7,
+        "lift_ratio_worst_group": 1.18,
+        "mean_lift_pp_across_groups": 10.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 4.7,
+        "base_rate_worst_group": 4.3,
+        "lift_pp_worst_group": 0.4,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 75.7,
+        "base_rate_worst_group": 69.8,
+        "lift_pp_worst_group": 5.9,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 13.8
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 46.1,
+        "base_rate_worst_group": 42.8,
+        "lift_pp_worst_group": 3.3,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 17.2
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 96.4,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 0.9,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 4.1
+      }
+    },
+    "A|fuzzy_cmeans|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.7,
+        "base_rate_worst_group": 4.9,
+        "lift_pp_worst_group": 3.8,
+        "lift_ratio_worst_group": 1.78,
+        "mean_lift_pp_across_groups": 13.4
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 6.7,
+        "base_rate_worst_group": 4.3,
+        "lift_pp_worst_group": 2.4,
+        "lift_ratio_worst_group": 1.56,
+        "mean_lift_pp_across_groups": 7.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 50.6,
+        "base_rate_worst_group": 49.4,
+        "lift_pp_worst_group": 1.2,
+        "lift_ratio_worst_group": 1.02,
+        "mean_lift_pp_across_groups": 10.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 43.2,
+        "base_rate_worst_group": 40.8,
+        "lift_pp_worst_group": 2.4,
+        "lift_ratio_worst_group": 1.06,
+        "mean_lift_pp_across_groups": 11.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 67.0,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": -0.0,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 2.0
+      }
+    },
+    "A|gmm_full|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 16.9,
+        "base_rate_worst_group": 16.2,
+        "lift_pp_worst_group": 0.7,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 15.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 19.4,
+        "base_rate_worst_group": 13.0,
+        "lift_pp_worst_group": 6.4,
+        "lift_ratio_worst_group": 1.49,
+        "mean_lift_pp_across_groups": 15.4
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 75.4,
+        "base_rate_worst_group": 69.8,
+        "lift_pp_worst_group": 5.6,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 13.2
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 39.2,
+        "base_rate_worst_group": 38.5,
+        "lift_pp_worst_group": 0.7,
+        "lift_ratio_worst_group": 1.02,
+        "mean_lift_pp_across_groups": 12.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 67.1,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": 0.1,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 3.7
+      }
+    },
+    "A|gmm_diag|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 31.8,
+        "base_rate_worst_group": 30.2,
+        "lift_pp_worst_group": 1.6,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 17.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 13.2,
+        "base_rate_worst_group": 13.0,
+        "lift_pp_worst_group": 0.2,
+        "lift_ratio_worst_group": 1.02,
+        "mean_lift_pp_across_groups": 15.4
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 47.4,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 6.2,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 16.7
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 43.9,
+        "base_rate_worst_group": 41.5,
+        "lift_pp_worst_group": 2.4,
+        "lift_ratio_worst_group": 1.06,
+        "mean_lift_pp_across_groups": 14.2
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 71.2,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": 4.2,
+        "lift_ratio_worst_group": 1.06,
+        "mean_lift_pp_across_groups": 4.7
+      }
+    },
+    "A|spectral|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 5.4,
+        "base_rate_worst_group": 4.9,
+        "lift_pp_worst_group": 0.5,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 1.4
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.6,
+        "base_rate_worst_group": 7.6,
+        "lift_pp_worst_group": 0.0,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 0.7
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 44.8,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 3.6,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 38.6,
+        "base_rate_worst_group": 38.5,
+        "lift_pp_worst_group": 0.1,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 1.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 69.8,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": 2.8,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 3.7
+      }
+    },
+    "A|agglomerative|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 5.4,
+        "base_rate_worst_group": 4.9,
+        "lift_pp_worst_group": 0.5,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 1.4
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.6,
+        "base_rate_worst_group": 7.6,
+        "lift_pp_worst_group": 0.0,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 0.7
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 44.8,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 3.6,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 38.6,
+        "base_rate_worst_group": 38.5,
+        "lift_pp_worst_group": 0.1,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 1.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 69.8,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": 2.8,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 3.7
+      }
+    },
+    "A|birch|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 5.4,
+        "base_rate_worst_group": 4.9,
+        "lift_pp_worst_group": 0.5,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 1.2
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.6,
+        "base_rate_worst_group": 7.6,
+        "lift_pp_worst_group": 0.0,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 0.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 44.8,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 3.6,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 38.7,
+        "base_rate_worst_group": 38.5,
+        "lift_pp_worst_group": 0.2,
+        "lift_ratio_worst_group": 1.0,
+        "mean_lift_pp_across_groups": 1.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 69.8,
+        "base_rate_worst_group": 67.0,
+        "lift_pp_worst_group": 2.8,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 3.7
+      }
+    },
+    "A|kmedoids|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 6.5,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 2.8,
+        "lift_ratio_worst_group": 1.75,
+        "mean_lift_pp_across_groups": 11.1
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 6.5,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 2.8,
+        "lift_ratio_worst_group": 1.75,
+        "mean_lift_pp_across_groups": 6.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 74.6,
+        "base_rate_worst_group": 69.8,
+        "lift_pp_worst_group": 4.8,
+        "lift_ratio_worst_group": 1.07,
+        "mean_lift_pp_across_groups": 23.8
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 48.2,
+        "base_rate_worst_group": 42.8,
+        "lift_pp_worst_group": 5.4,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 17.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 99.5,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.0,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 5.0
+      }
+    },
+    "A|gmm_diag|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 49.7,
+        "base_rate_worst_group": 30.2,
+        "lift_pp_worst_group": 19.5,
+        "lift_ratio_worst_group": 1.64,
+        "mean_lift_pp_across_groups": 34.8
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 32.9,
+        "base_rate_worst_group": 13.0,
+        "lift_pp_worst_group": 19.9,
+        "lift_ratio_worst_group": 2.53,
+        "mean_lift_pp_across_groups": 29.7
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 50.8,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 9.6,
+        "lift_ratio_worst_group": 1.23,
+        "mean_lift_pp_across_groups": 23.0
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 46.7,
+        "base_rate_worst_group": 41.5,
+        "lift_pp_worst_group": 5.2,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 18.6
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.5,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 6.4
+      }
+    },
+    "A|kmedoids|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 5.8,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 2.1,
+        "lift_ratio_worst_group": 1.56,
+        "mean_lift_pp_across_groups": 12.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.3,
+        "base_rate_worst_group": 4.3,
+        "lift_pp_worst_group": 4.0,
+        "lift_ratio_worst_group": 1.93,
+        "mean_lift_pp_across_groups": 7.9
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 78.0,
+        "base_rate_worst_group": 56.2,
+        "lift_pp_worst_group": 21.8,
+        "lift_ratio_worst_group": 1.39,
+        "mean_lift_pp_across_groups": 33.8
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.1,
+        "base_rate_worst_group": 40.8,
+        "lift_pp_worst_group": 6.3,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 21.8
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 99.3,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 3.8,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 7.1
+      }
+    },
+    "A|gmm_diag|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 66.1,
+        "base_rate_worst_group": 30.2,
+        "lift_pp_worst_group": 35.9,
+        "lift_ratio_worst_group": 2.19,
+        "mean_lift_pp_across_groups": 47.5
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 37.1,
+        "base_rate_worst_group": 7.6,
+        "lift_pp_worst_group": 29.5,
+        "lift_ratio_worst_group": 4.88,
+        "mean_lift_pp_across_groups": 39.0
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 50.7,
+        "base_rate_worst_group": 41.2,
+        "lift_pp_worst_group": 9.5,
+        "lift_ratio_worst_group": 1.23,
+        "mean_lift_pp_across_groups": 28.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 51.5,
+        "base_rate_worst_group": 41.5,
+        "lift_pp_worst_group": 10.0,
+        "lift_ratio_worst_group": 1.24,
+        "mean_lift_pp_across_groups": 25.1
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.5,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 6.2
+      }
+    },
+    "A|kmedoids|5": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 6.8,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 3.1,
+        "lift_ratio_worst_group": 1.84,
+        "mean_lift_pp_across_groups": 29.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.9,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 4.2,
+        "lift_ratio_worst_group": 2.12,
+        "mean_lift_pp_across_groups": 27.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 78.0,
+        "base_rate_worst_group": 56.2,
+        "lift_pp_worst_group": 21.8,
+        "lift_ratio_worst_group": 1.39,
+        "mean_lift_pp_across_groups": 34.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 67.6,
+        "base_rate_worst_group": 55.0,
+        "lift_pp_worst_group": 12.6,
+        "lift_ratio_worst_group": 1.23,
+        "mean_lift_pp_across_groups": 28.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.5,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 8.8
+      }
+    },
+    "A|gmm_diag|5": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 66.7,
+        "base_rate_worst_group": 30.2,
+        "lift_pp_worst_group": 36.5,
+        "lift_ratio_worst_group": 2.21,
+        "mean_lift_pp_across_groups": 52.3
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 47.5,
+        "base_rate_worst_group": 13.0,
+        "lift_pp_worst_group": 34.5,
+        "lift_ratio_worst_group": 3.65,
+        "mean_lift_pp_across_groups": 44.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 98.8,
+        "base_rate_worst_group": 69.8,
+        "lift_pp_worst_group": 29.0,
+        "lift_ratio_worst_group": 1.42,
+        "mean_lift_pp_across_groups": 39.7
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 69.6,
+        "base_rate_worst_group": 41.5,
+        "lift_pp_worst_group": 28.1,
+        "lift_ratio_worst_group": 1.68,
+        "mean_lift_pp_across_groups": 33.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.5,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 10.4
+      }
+    },
+    "A|kmedoids|6": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.5,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 3.8,
+        "lift_ratio_worst_group": 2.03,
+        "mean_lift_pp_across_groups": 42.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 6.2,
+        "base_rate_worst_group": 3.7,
+        "lift_pp_worst_group": 2.5,
+        "lift_ratio_worst_group": 1.69,
+        "mean_lift_pp_across_groups": 42.5
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 97.2,
+        "base_rate_worst_group": 69.8,
+        "lift_pp_worst_group": 27.4,
+        "lift_ratio_worst_group": 1.39,
+        "mean_lift_pp_across_groups": 35.9
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 73.1,
+        "base_rate_worst_group": 55.0,
+        "lift_pp_worst_group": 18.1,
+        "lift_ratio_worst_group": 1.33,
+        "mean_lift_pp_across_groups": 32.6
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 95.5,
+        "lift_pp_worst_group": 4.5,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 9.3
+      }
+    },
+    "B|kmeans|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 15.1,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 1.1,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 1.1
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.1,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 0.6,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 0.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 61.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 5.1,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 51.5,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 7.7,
+        "lift_ratio_worst_group": 1.18,
+        "mean_lift_pp_across_groups": 7.7
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 96.6,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 10.2,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 10.2
+      }
+    },
+    "B|kmedoids|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 17.0,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 3.0,
+        "lift_ratio_worst_group": 1.22,
+        "mean_lift_pp_across_groups": 3.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.8,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 1.3,
+        "lift_ratio_worst_group": 1.17,
+        "mean_lift_pp_across_groups": 1.3
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 57.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 1.4,
+        "lift_ratio_worst_group": 1.03,
+        "mean_lift_pp_across_groups": 1.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 49.7,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 5.9,
+        "lift_ratio_worst_group": 1.14,
+        "mean_lift_pp_across_groups": 5.9
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 95.5,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 9.1,
+        "lift_ratio_worst_group": 1.11,
+        "mean_lift_pp_across_groups": 9.1
+      }
+    },
+    "B|fuzzy_cmeans|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 15.7,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 1.7,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 1.7
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.5,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 1.0,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 1.0
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 59.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 3.1,
+        "lift_ratio_worst_group": 1.06,
+        "mean_lift_pp_across_groups": 3.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 49.2,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 5.4,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 5.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 95.1,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 8.7,
+        "lift_ratio_worst_group": 1.1,
+        "mean_lift_pp_across_groups": 8.7
+      }
+    },
+    "B|gmm_full|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 16.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 2.9,
+        "lift_ratio_worst_group": 1.21,
+        "mean_lift_pp_across_groups": 2.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.9,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 1.4,
+        "lift_ratio_worst_group": 1.18,
+        "mean_lift_pp_across_groups": 1.4
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 61.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 5.1,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.3,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 3.5,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 3.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 96.9,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 10.5,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 10.5
+      }
+    },
+    "B|gmm_diag|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 14.8,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 0.8,
+        "lift_ratio_worst_group": 1.06,
+        "mean_lift_pp_across_groups": 0.8
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 9.4,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 1.9,
+        "lift_ratio_worst_group": 1.25,
+        "mean_lift_pp_across_groups": 1.9
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 66.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 10.4,
+        "lift_ratio_worst_group": 1.19,
+        "mean_lift_pp_across_groups": 10.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 54.6,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 10.8,
+        "lift_ratio_worst_group": 1.25,
+        "mean_lift_pp_across_groups": 10.8
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 96.1,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 9.7,
+        "lift_ratio_worst_group": 1.11,
+        "mean_lift_pp_across_groups": 9.7
+      }
+    },
+    "B|agglomerative|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 21.0,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 7.0,
+        "lift_ratio_worst_group": 1.5,
+        "mean_lift_pp_across_groups": 7.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 11.3,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 3.8,
+        "lift_ratio_worst_group": 1.5,
+        "mean_lift_pp_across_groups": 3.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 62.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 6.4,
+        "lift_ratio_worst_group": 1.11,
+        "mean_lift_pp_across_groups": 6.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 46.2,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 2.4,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 2.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 94.1,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 7.7,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 7.7
+      }
+    },
+    "B|birch|2": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 14.2,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 0.2,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 0.2
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 7.6,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 0.1,
+        "lift_ratio_worst_group": 1.02,
+        "mean_lift_pp_across_groups": 0.1
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 61.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 5.1,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 5.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 44.4,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 0.6,
+        "lift_ratio_worst_group": 1.01,
+        "mean_lift_pp_across_groups": 0.6
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 90.1,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 3.7,
+        "lift_ratio_worst_group": 1.04,
+        "mean_lift_pp_across_groups": 3.7
+      }
+    },
+    "B|kmeans|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 18.2,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 4.2,
+        "lift_ratio_worst_group": 1.3,
+        "mean_lift_pp_across_groups": 4.2
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 10.2,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 2.7,
+        "lift_ratio_worst_group": 1.36,
+        "mean_lift_pp_across_groups": 2.7
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 63.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 7.1,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 7.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 52.8,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 9.0,
+        "lift_ratio_worst_group": 1.21,
+        "mean_lift_pp_across_groups": 9.0
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 98.0,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.6,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.6
+      }
+    },
+    "B|kmedoids|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 16.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 2.9,
+        "lift_ratio_worst_group": 1.21,
+        "mean_lift_pp_across_groups": 2.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 8.4,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 0.9,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 0.9
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 87.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 31.1,
+        "lift_ratio_worst_group": 1.55,
+        "mean_lift_pp_across_groups": 31.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 95.2,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 51.4,
+        "lift_ratio_worst_group": 2.17,
+        "mean_lift_pp_across_groups": 51.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 98.6,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 12.2,
+        "lift_ratio_worst_group": 1.14,
+        "mean_lift_pp_across_groups": 12.2
+      }
+    },
+    "B|gmm_full|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 37.8,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 23.8,
+        "lift_ratio_worst_group": 2.7,
+        "mean_lift_pp_across_groups": 23.8
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 28.5,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 21.0,
+        "lift_ratio_worst_group": 3.8,
+        "mean_lift_pp_across_groups": 21.0
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 64.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 8.4,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 8.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.8,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 4.0,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 4.0
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 96.7,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 10.3,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 10.3
+      }
+    },
+    "B|gmm_diag|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 36.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 22.9,
+        "lift_ratio_worst_group": 2.64,
+        "mean_lift_pp_across_groups": 22.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 19.9,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 12.4,
+        "lift_ratio_worst_group": 2.65,
+        "mean_lift_pp_across_groups": 12.4
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 65.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 9.1,
+        "lift_ratio_worst_group": 1.16,
+        "mean_lift_pp_across_groups": 9.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 50.7,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 6.9,
+        "lift_ratio_worst_group": 1.16,
+        "mean_lift_pp_across_groups": 6.9
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 97.6,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.2,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.2
+      }
+    },
+    "B|agglomerative|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 21.0,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 7.0,
+        "lift_ratio_worst_group": 1.5,
+        "mean_lift_pp_across_groups": 7.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 11.3,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 3.8,
+        "lift_ratio_worst_group": 1.5,
+        "mean_lift_pp_across_groups": 3.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 62.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 6.4,
+        "lift_ratio_worst_group": 1.11,
+        "mean_lift_pp_across_groups": 6.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 46.2,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 2.4,
+        "lift_ratio_worst_group": 1.05,
+        "mean_lift_pp_across_groups": 2.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 94.1,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 7.7,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 7.7
+      }
+    },
+    "B|birch|3": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 20.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 6.9,
+        "lift_ratio_worst_group": 1.5,
+        "mean_lift_pp_across_groups": 6.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 11.5,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 4.0,
+        "lift_ratio_worst_group": 1.54,
+        "mean_lift_pp_across_groups": 4.0
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 63.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 7.4,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 7.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.3,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 3.5,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 3.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 97.8,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.4,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.4
+      }
+    },
+    "B|kmeans|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 49.2,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 35.2,
+        "lift_ratio_worst_group": 3.51,
+        "mean_lift_pp_across_groups": 35.2
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 27.3,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 19.8,
+        "lift_ratio_worst_group": 3.64,
+        "mean_lift_pp_across_groups": 19.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 62.6,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 6.3,
+        "lift_ratio_worst_group": 1.11,
+        "mean_lift_pp_across_groups": 6.3
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 52.7,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 8.9,
+        "lift_ratio_worst_group": 1.2,
+        "mean_lift_pp_across_groups": 8.9
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 98.0,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.6,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.6
+      }
+    },
+    "B|kmedoids|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 49.8,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 35.8,
+        "lift_ratio_worst_group": 3.56,
+        "mean_lift_pp_across_groups": 35.8
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 26.6,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 19.1,
+        "lift_ratio_worst_group": 3.55,
+        "mean_lift_pp_across_groups": 19.1
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 92.2,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 35.9,
+        "lift_ratio_worst_group": 1.64,
+        "mean_lift_pp_across_groups": 35.9
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 96.4,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 52.6,
+        "lift_ratio_worst_group": 2.2,
+        "mean_lift_pp_across_groups": 52.6
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 98.5,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 12.1,
+        "lift_ratio_worst_group": 1.14,
+        "mean_lift_pp_across_groups": 12.1
+      }
+    },
+    "B|gmm_full|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 45.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 31.9,
+        "lift_ratio_worst_group": 3.28,
+        "mean_lift_pp_across_groups": 31.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 38.1,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 30.6,
+        "lift_ratio_worst_group": 5.08,
+        "mean_lift_pp_across_groups": 30.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 63.2,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 6.9,
+        "lift_ratio_worst_group": 1.12,
+        "mean_lift_pp_across_groups": 6.9
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.5,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 3.7,
+        "lift_ratio_worst_group": 1.09,
+        "mean_lift_pp_across_groups": 3.7
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 97.3,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 10.9,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 10.9
+      }
+    },
+    "B|gmm_diag|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 33.6,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 19.6,
+        "lift_ratio_worst_group": 2.4,
+        "mean_lift_pp_across_groups": 19.6
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 18.0,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 10.5,
+        "lift_ratio_worst_group": 2.4,
+        "mean_lift_pp_across_groups": 10.5
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 94.7,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 38.4,
+        "lift_ratio_worst_group": 1.68,
+        "mean_lift_pp_across_groups": 38.4
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 71.2,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 27.4,
+        "lift_ratio_worst_group": 1.63,
+        "mean_lift_pp_across_groups": 27.4
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 13.6,
+        "lift_ratio_worst_group": 1.16,
+        "mean_lift_pp_across_groups": 13.6
+      }
+    },
+    "B|agglomerative|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 38.3,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 24.3,
+        "lift_ratio_worst_group": 2.74,
+        "mean_lift_pp_across_groups": 24.3
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 20.3,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 12.8,
+        "lift_ratio_worst_group": 2.71,
+        "mean_lift_pp_across_groups": 12.8
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 66.6,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 10.3,
+        "lift_ratio_worst_group": 1.18,
+        "mean_lift_pp_across_groups": 10.3
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 50.4,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 6.6,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 6.6
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 97.7,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.3,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.3
+      }
+    },
+    "B|birch|4": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 43.9,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 29.9,
+        "lift_ratio_worst_group": 3.14,
+        "mean_lift_pp_across_groups": 29.9
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 26.1,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 18.6,
+        "lift_ratio_worst_group": 3.47,
+        "mean_lift_pp_across_groups": 18.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 68.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 12.1,
+        "lift_ratio_worst_group": 1.22,
+        "mean_lift_pp_across_groups": 12.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 47.3,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 3.5,
+        "lift_ratio_worst_group": 1.08,
+        "mean_lift_pp_across_groups": 3.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 97.8,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 11.4,
+        "lift_ratio_worst_group": 1.13,
+        "mean_lift_pp_across_groups": 11.4
+      }
+    },
+    "B|kmedoids|5": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 55.4,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 41.4,
+        "lift_ratio_worst_group": 3.96,
+        "mean_lift_pp_across_groups": 41.4
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 30.8,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 23.3,
+        "lift_ratio_worst_group": 4.11,
+        "mean_lift_pp_across_groups": 23.3
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 92.6,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 36.3,
+        "lift_ratio_worst_group": 1.65,
+        "mean_lift_pp_across_groups": 36.3
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 96.7,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 52.9,
+        "lift_ratio_worst_group": 2.21,
+        "mean_lift_pp_across_groups": 52.9
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 99.6,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 13.2,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 13.2
+      }
+    },
+    "B|gmm_full|5": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 44.0,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 30.0,
+        "lift_ratio_worst_group": 3.14,
+        "mean_lift_pp_across_groups": 30.0
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 36.1,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 28.6,
+        "lift_ratio_worst_group": 4.81,
+        "mean_lift_pp_across_groups": 28.6
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 99.4,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 43.1,
+        "lift_ratio_worst_group": 1.77,
+        "mean_lift_pp_across_groups": 43.1
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 75.3,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 31.5,
+        "lift_ratio_worst_group": 1.72,
+        "mean_lift_pp_across_groups": 31.5
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 13.6,
+        "lift_ratio_worst_group": 1.16,
+        "mean_lift_pp_across_groups": 13.6
+      }
+    },
+    "B|gmm_diag|5": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 63.3,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 49.3,
+        "lift_ratio_worst_group": 4.52,
+        "mean_lift_pp_across_groups": 49.3
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 48.9,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 41.4,
+        "lift_ratio_worst_group": 6.52,
+        "mean_lift_pp_across_groups": 41.4
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 68.2,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 11.9,
+        "lift_ratio_worst_group": 1.21,
+        "mean_lift_pp_across_groups": 11.9
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 53.0,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 9.2,
+        "lift_ratio_worst_group": 1.21,
+        "mean_lift_pp_across_groups": 9.2
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 99.3,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 12.9,
+        "lift_ratio_worst_group": 1.15,
+        "mean_lift_pp_across_groups": 12.9
+      }
+    },
+    "B|gmm_diag|6": {
+      "life_coverage_ratio": {
+        "best_cluster_pct_worst_group": 56.1,
+        "base_rate_worst_group": 14.0,
+        "lift_pp_worst_group": 42.1,
+        "lift_ratio_worst_group": 4.01,
+        "mean_lift_pp_across_groups": 42.1
+      },
+      "ci_coverage_ratio": {
+        "best_cluster_pct_worst_group": 44.0,
+        "base_rate_worst_group": 7.5,
+        "lift_pp_worst_group": 36.5,
+        "lift_ratio_worst_group": 5.87,
+        "mean_lift_pp_across_groups": 36.5
+      },
+      "savings_rate": {
+        "best_cluster_pct_worst_group": 96.6,
+        "base_rate_worst_group": 56.3,
+        "lift_pp_worst_group": 40.3,
+        "lift_ratio_worst_group": 1.72,
+        "mean_lift_pp_across_groups": 40.3
+      },
+      "net_worth_to_income": {
+        "best_cluster_pct_worst_group": 71.5,
+        "base_rate_worst_group": 43.8,
+        "lift_pp_worst_group": 27.7,
+        "lift_ratio_worst_group": 1.63,
+        "mean_lift_pp_across_groups": 27.7
+      },
+      "dti": {
+        "best_cluster_pct_worst_group": 100.0,
+        "base_rate_worst_group": 86.4,
+        "lift_pp_worst_group": 13.6,
+        "lift_ratio_worst_group": 1.16,
+        "mean_lift_pp_across_groups": 13.6
+      }
+    }
+  },
+  "ranked_by_insurance_lift": [
+    "A|gmm_diag|5",
+    "B|gmm_diag|5",
+    "A|gmm_diag|4",
+    "A|kmedoids|6",
+    "B|gmm_diag|6",
+    "B|kmedoids|5",
+    "A|gmm_diag|3",
+    "B|gmm_full|4",
+    "B|gmm_full|5",
+    "A|kmedoids|5",
+    "B|kmeans|4",
+    "B|kmedoids|4",
+    "B|birch|4",
+    "B|gmm_full|3",
+    "B|agglomerative|4",
+    "B|gmm_diag|3",
+    "A|gmm_diag|2",
+    "A|gmm_full|2",
+    "B|gmm_diag|4",
+    "A|fuzzy_cmeans|2",
+    "A|kmedoids|4",
+    "A|kmedoids|3",
+    "A|kmedoids|2",
+    "B|birch|3",
+    "B|agglomerative|2",
+    "B|agglomerative|3",
+    "A|kmeans|2",
+    "B|kmeans|3",
+    "B|gmm_full|2",
+    "B|kmedoids|2",
+    "B|kmedoids|3",
+    "B|gmm_diag|2",
+    "B|fuzzy_cmeans|2",
+    "A|spectral|2",
+    "A|agglomerative|2",
+    "A|birch|2",
+    "B|kmeans|2",
+    "B|birch|2"
+  ]
+}

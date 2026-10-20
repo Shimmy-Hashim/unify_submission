@@ -1,0 +1,9 @@
+profile_type,banking_mean_tier,investment_mean_tier,insurance_mean_tier,expected,modal_actual,modal_pct,pct_matching_expected_all3,pct_matching_expected_overridden_only
+normal,0.52,2.07,0.99,MID|MID|MID,LOW|LOW|MID,20.0,0.0,
+conservative_saver,0.0,2.78,0.89,HIGH|LOW|MID,HIGH|LOW|MID,32.9,32.9,64.0
+over_invested,1.0,0.05,0.92,LOW|HIGH|MID,LOW|HIGH|MID,40.8,40.8,99.7
+protection_first,0.87,2.01,0.0,LOW|MID|HIGH,LOW|HIGH|HIGH,37.0,13.0,87.0
+wealthy_exposed,0.07,2.08,1.4,HIGH|MID|LOW,HIGH|LOW|MID,38.4,2.1,36.6
+high_debt_investor,1.0,0.23,0.94,LOW|HIGH|MID,LOW|HIGH|MID,37.8,37.8,95.9
+underinsured_saver,0.04,2.11,1.37,HIGH|MID|LOW,HIGH|LOW|MID,42.3,1.4,34.4
+outlier,0.56,2.09,0.77,,LOW|LOW|MID,16.6,,

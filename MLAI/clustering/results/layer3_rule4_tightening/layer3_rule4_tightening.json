@@ -1,0 +1,474 @@
+{
+  "dataset": {
+    "path": "MLAI/clustering/data/processed/synthetic_users.csv",
+    "n_users": 7000
+  },
+  "criteria": {
+    "min_lift": 3.0,
+    "min_recall_pct": 25.0,
+    "max_band_rate_pct": 25.0,
+    "note": "fixed before results were seen"
+  },
+  "step1_archetype": {
+    "archetype": "conservative_saver",
+    "n": 292,
+    "population_prevalence_pct": 4.17,
+    "generator_overrides": {
+      "savings_rate": {
+        "kind": "uniform",
+        "low": 0.28,
+        "high": 0.55
+      },
+      "emergency_fund_months": {
+        "kind": "uniform",
+        "low": 5.0,
+        "high": 18.0
+      },
+      "investment_rate": {
+        "kind": "uniform",
+        "low": 0.0,
+        "high": 0.03
+      }
+    },
+    "features": {
+      "savings_rate": {
+        "override_range": [
+          0.28,
+          0.55
+        ],
+        "normal_median": 0.22,
+        "normal_q25": 0.1588,
+        "normal_q75": 0.2809,
+        "normal_q90": 0.3383,
+        "pct_of_normals_inside_override_range": 25.3,
+        "override_low_as_normal_percentile": 74.7,
+        "archetype_median": 0.4198
+      },
+      "emergency_fund_months": {
+        "override_range": [
+          5.0,
+          18.0
+        ],
+        "normal_median": 4.6681,
+        "normal_q25": 2.8445,
+        "normal_q75": 6.9846,
+        "normal_q90": 9.5208,
+        "pct_of_normals_inside_override_range": 45.4,
+        "override_low_as_normal_percentile": 54.5,
+        "archetype_median": 11.4145
+      },
+      "investment_rate": {
+        "override_range": [
+          0.0,
+          0.03
+        ],
+        "normal_median": 0.0884,
+        "normal_q25": 0.0556,
+        "normal_q75": 0.1174,
+        "normal_q90": 0.1413,
+        "pct_of_normals_inside_override_range": 16.1,
+        "override_low_as_normal_percentile": 0.0,
+        "archetype_median": 0.0146
+      }
+    },
+    "overlapping_archetypes": {
+      "over_invested": {
+        "investment_rate": [
+          0.22,
+          0.4
+        ],
+        "emergency_fund_months": [
+          0.0,
+          1.5
+        ],
+        "savings_rate": [
+          0.02,
+          0.1
+        ]
+      },
+      "protection_first": {
+        "savings_rate": [
+          0.03,
+          0.12
+        ]
+      },
+      "wealthy_exposed": {
+        "savings_rate": [
+          0.3,
+          0.6
+        ]
+      },
+      "high_debt_investor": {
+        "investment_rate": [
+          0.18,
+          0.38
+        ],
+        "savings_rate": [
+          0.01,
+          0.08
+        ],
+        "emergency_fund_months": [
+          0.0,
+          2.0
+        ]
+      },
+      "underinsured_saver": {
+        "savings_rate": [
+          0.25,
+          0.55
+        ],
+        "emergency_fund_months": [
+          4.0,
+          15.0
+        ]
+      }
+    },
+    "non_investor_confounder": {
+      "investor_prob": 0.88,
+      "pct_of_normals_with_zero_investment_rate": 12.6,
+      "pct_of_normals_at_or_below_ir_max": 16.1,
+      "note": "investment_rate <= 0.03 catches every non-investor in the normal population, not only conservative savers \u2014 so a share of any flagged set is ordinary users who simply do not invest"
+    }
+  },
+  "step2_3_candidates": {
+    "R4 (original)": {
+      "description": "Banking = Stable AND Investment = Getting Started",
+      "conditions": [
+        "Banking = Stable",
+        "Investment = Getting Started"
+      ],
+      "n_flagged": 1998,
+      "full_population_pct": 28.5,
+      "normal_only_pct": 25.5,
+      "independence_predicted_pct": 29.7,
+      "observed_over_predicted": 0.96,
+      "conservative_saver_pct_of_flagged": 14.6,
+      "lift_over_prevalence": 3.5,
+      "recall_of_archetype_pct": 100.0,
+      "by_band_full_pct": {
+        "1": 26.6,
+        "2": 26.4,
+        "3": 27.0,
+        "4": 30.1,
+        "5": 32.8
+      },
+      "by_band_normal_pct": {
+        "1": 22.8,
+        "2": 22.5,
+        "3": 23.7,
+        "4": 29.5,
+        "5": 29.0
+      },
+      "profile_mix_pct": {
+        "normal": 58.0,
+        "conservative_saver": 14.6,
+        "wealthy_exposed": 9.0,
+        "underinsured_saver": 8.7,
+        "outlier": 8.7,
+        "protection_first": 1.1
+      },
+      "flagged_composition": {
+        "normal_pct": 58.0,
+        "normal_non_investors_pct": 6.5,
+        "normal_investors_pct": 51.6
+      },
+      "recall_is_tautological": false,
+      "recall_note": "a real measurement \u2014 tier membership is not defined by the overrides",
+      "max_band_rate_pct": 32.8,
+      "meets_lift": true,
+      "meets_recall": true,
+      "meets_band_rate": false,
+      "meets_all_criteria": false
+    },
+    "C1 (+ investment_rate cut)": {
+      "description": "R4 AND investment_rate <= 0.03 \u2014 the archetype's own investment_rate ceiling",
+      "conditions": [
+        "Banking = Stable",
+        "Investment = Getting Started",
+        "investment_rate <= 0.03"
+      ],
+      "n_flagged": 599,
+      "full_population_pct": 8.6,
+      "normal_only_pct": 4.1,
+      "independence_predicted_pct": 5.5,
+      "observed_over_predicted": 1.57,
+      "conservative_saver_pct_of_flagged": 48.7,
+      "lift_over_prevalence": 11.69,
+      "recall_of_archetype_pct": 100.0,
+      "by_band_full_pct": {
+        "1": 7.1,
+        "2": 7.9,
+        "3": 7.6,
+        "4": 9.4,
+        "5": 10.9
+      },
+      "by_band_normal_pct": {
+        "1": 3.3,
+        "2": 2.8,
+        "3": 2.6,
+        "4": 6.3,
+        "5": 5.6
+      },
+      "profile_mix_pct": {
+        "conservative_saver": 48.7,
+        "normal": 31.2,
+        "outlier": 7.5,
+        "underinsured_saver": 6.5,
+        "wealthy_exposed": 5.8,
+        "protection_first": 0.2
+      },
+      "flagged_composition": {
+        "normal_pct": 31.2,
+        "normal_non_investors_pct": 21.5,
+        "normal_investors_pct": 9.7
+      },
+      "recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cut is the archetype's own override bound, so every member passes it by definition; this number is not evidence",
+      "max_band_rate_pct": 10.9,
+      "meets_lift": true,
+      "meets_recall": true,
+      "meets_band_rate": true,
+      "meets_all_criteria": true
+    },
+    "C2 (+ Banking headroom)": {
+      "description": "C1 AND savings_rate >= 0.28 AND emergency_fund_months >= 5.0 \u2014 the archetype's Banking-side override floors, so 'strong foundation' means clearly inside the signature rather than barely inside a tier",
+      "conditions": [
+        "Banking = Stable",
+        "Investment = Getting Started",
+        "investment_rate <= 0.03",
+        "savings_rate >= 0.28",
+        "emergency_fund_months >= 5.0"
+      ],
+      "n_flagged": 383,
+      "full_population_pct": 5.5,
+      "normal_only_pct": 0.7,
+      "independence_predicted_pct": 0.8,
+      "observed_over_predicted": 7.02,
+      "conservative_saver_pct_of_flagged": 76.2,
+      "lift_over_prevalence": 18.28,
+      "recall_of_archetype_pct": 100.0,
+      "by_band_full_pct": {
+        "1": 3.8,
+        "2": 5.3,
+        "3": 6.0,
+        "4": 5.8,
+        "5": 6.5
+      },
+      "by_band_normal_pct": {
+        "1": 0.0,
+        "2": 0.5,
+        "3": 1.1,
+        "4": 1.7,
+        "5": 0.4
+      },
+      "profile_mix_pct": {
+        "conservative_saver": 76.2,
+        "normal": 8.6,
+        "underinsured_saver": 8.4,
+        "wealthy_exposed": 3.7,
+        "outlier": 3.1
+      },
+      "flagged_composition": {
+        "normal_pct": 8.6,
+        "normal_non_investors_pct": 6.3,
+        "normal_investors_pct": 2.3
+      },
+      "recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cut is the archetype's own override bound, so every member passes it by definition; this number is not evidence",
+      "max_band_rate_pct": 6.5,
+      "meets_lift": true,
+      "meets_recall": true,
+      "meets_band_rate": true,
+      "meets_all_criteria": true
+    },
+    "C3 (continuous only, no tiers)": {
+      "description": "the full override signature with BOTH tier conditions dropped \u2014 the control that shows whether the tiers contribute anything at all",
+      "conditions": [
+        "investment_rate <= 0.03",
+        "savings_rate >= 0.28",
+        "emergency_fund_months >= 5.0"
+      ],
+      "n_flagged": 385,
+      "full_population_pct": 5.5,
+      "normal_only_pct": 0.7,
+      "independence_predicted_pct": 2.6,
+      "observed_over_predicted": 2.09,
+      "conservative_saver_pct_of_flagged": 75.8,
+      "lift_over_prevalence": 18.18,
+      "recall_of_archetype_pct": 100.0,
+      "by_band_full_pct": {
+        "1": 3.8,
+        "2": 5.4,
+        "3": 6.0,
+        "4": 5.8,
+        "5": 6.6
+      },
+      "by_band_normal_pct": {
+        "1": 0.0,
+        "2": 0.6,
+        "3": 1.1,
+        "4": 1.7,
+        "5": 0.4
+      },
+      "profile_mix_pct": {
+        "conservative_saver": 75.8,
+        "normal": 8.8,
+        "underinsured_saver": 8.6,
+        "wealthy_exposed": 3.6,
+        "outlier": 3.1
+      },
+      "flagged_composition": {
+        "normal_pct": 8.8,
+        "normal_non_investors_pct": 6.5,
+        "normal_investors_pct": 2.3
+      },
+      "recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cut is the archetype's own override bound, so every member passes it by definition; this number is not evidence",
+      "max_band_rate_pct": 6.6,
+      "meets_lift": true,
+      "meets_recall": true,
+      "meets_band_rate": true,
+      "meets_all_criteria": true
+    }
+  },
+  "sensitivity": {
+    "investment_rate_max": {
+      "0.01": {
+        "n_flagged": 166,
+        "full_population_pct": 2.4,
+        "precision_pct": 56.0,
+        "lift": 13.43,
+        "recall_pct": 31.8,
+        "is_override_bound": false
+      },
+      "0.02": {
+        "n_flagged": 272,
+        "full_population_pct": 3.9,
+        "precision_pct": 69.9,
+        "lift": 16.75,
+        "recall_pct": 65.1,
+        "is_override_bound": false
+      },
+      "0.03": {
+        "n_flagged": 383,
+        "full_population_pct": 5.5,
+        "precision_pct": 76.2,
+        "lift": 18.28,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "0.05": {
+        "n_flagged": 424,
+        "full_population_pct": 6.1,
+        "precision_pct": 68.9,
+        "lift": 16.51,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.08": {
+        "n_flagged": 575,
+        "full_population_pct": 8.2,
+        "precision_pct": 50.8,
+        "lift": 12.17,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.12": {
+        "n_flagged": 856,
+        "full_population_pct": 12.2,
+        "precision_pct": 34.1,
+        "lift": 8.18,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      }
+    },
+    "savings_rate_min": {
+      "0.2": {
+        "n_flagged": 453,
+        "full_population_pct": 6.5,
+        "precision_pct": 64.5,
+        "lift": 15.45,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.24": {
+        "n_flagged": 420,
+        "full_population_pct": 6.0,
+        "precision_pct": 69.5,
+        "lift": 16.67,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.28": {
+        "n_flagged": 383,
+        "full_population_pct": 5.5,
+        "precision_pct": 76.2,
+        "lift": 18.28,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "0.32": {
+        "n_flagged": 308,
+        "full_population_pct": 4.4,
+        "precision_pct": 77.3,
+        "lift": 18.52,
+        "recall_pct": 81.5,
+        "is_override_bound": false
+      },
+      "0.36": {
+        "n_flagged": 236,
+        "full_population_pct": 3.4,
+        "precision_pct": 82.6,
+        "lift": 19.81,
+        "recall_pct": 66.8,
+        "is_override_bound": false
+      }
+    },
+    "emergency_fund_months_min": {
+      "3.0": {
+        "n_flagged": 410,
+        "full_population_pct": 5.9,
+        "precision_pct": 71.2,
+        "lift": 17.07,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "4.0": {
+        "n_flagged": 400,
+        "full_population_pct": 5.7,
+        "precision_pct": 73.0,
+        "lift": 17.5,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "5.0": {
+        "n_flagged": 383,
+        "full_population_pct": 5.5,
+        "precision_pct": 76.2,
+        "lift": 18.28,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "6.0": {
+        "n_flagged": 342,
+        "full_population_pct": 4.9,
+        "precision_pct": 78.9,
+        "lift": 18.93,
+        "recall_pct": 92.5,
+        "is_override_bound": false
+      },
+      "8.0": {
+        "n_flagged": 269,
+        "full_population_pct": 3.8,
+        "precision_pct": 82.2,
+        "lift": 19.69,
+        "recall_pct": 75.7,
+        "is_override_bound": false
+      }
+    }
+  },
+  "step4_recommendation": "C2 (+ Banking headroom)",
+  "plots": [
+    "MLAI/clustering/results/layer3_rule4_tightening/plots/rule4_candidates.png"
+  ]
+}

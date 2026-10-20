@@ -1,0 +1,657 @@
+{
+  "n_users": 7000,
+  "orphan_criterion_pct": 50.0,
+  "partial_gap_criterion_pct": 25.0,
+  "rules_audited": [
+    "Wealth Without Protection",
+    "Protection First",
+    "Strong Foundation, Room to Grow",
+    "Aggressive Investing, Weak Foundation"
+  ],
+  "rules_source": "backend/ml/layer3.py (the shipped implementation)",
+  "tier_replay": {
+    "banking": {
+      "labels": [
+        "Stable",
+        "Building"
+      ],
+      "shares_pct": [
+        47.9,
+        52.1
+      ]
+    },
+    "investment": {
+      "labels": [
+        "On Track",
+        "Getting Started"
+      ],
+      "shares_pct": [
+        38.1,
+        61.9
+      ]
+    },
+    "insurance": {
+      "labels": [
+        "Covered",
+        "Not Covered"
+      ],
+      "shares_pct": [
+        33.7,
+        66.3
+      ]
+    }
+  },
+  "step1_mismatch_types": {
+    "n_mismatch_types": 6,
+    "config_shares": {
+      "normal_pct": 0.65,
+      "mismatch_pct": 0.25,
+      "outlier_pct": 0.1
+    },
+    "archetypes": [
+      {
+        "profile": "conservative_saver",
+        "n": 292,
+        "pct": 4.17,
+        "n_overrides": 3,
+        "overrides": {
+          "savings_rate": "0.28-0.55",
+          "emergency_fund_months": "5-18",
+          "investment_rate": "0-0.03"
+        },
+        "domains_touched": {
+          "banking": 2,
+          "investment": 1
+        }
+      },
+      {
+        "profile": "over_invested",
+        "n": 292,
+        "pct": 4.17,
+        "n_overrides": 3,
+        "overrides": {
+          "investment_rate": "0.22-0.4",
+          "emergency_fund_months": "0-1.5",
+          "savings_rate": "0.02-0.1"
+        },
+        "domains_touched": {
+          "banking": 2,
+          "investment": 1
+        }
+      },
+      {
+        "profile": "protection_first",
+        "n": 292,
+        "pct": 4.17,
+        "n_overrides": 7,
+        "overrides": {
+          "life_coverage_ratio": "8-18",
+          "ci_coverage_ratio": "3-7",
+          "hospitalisation_coverage": "=1",
+          "income_protection_coverage": "=1",
+          "insurance_spend_ratio": "0.08-0.16",
+          "savings_rate": "0.03-0.12",
+          "net_worth_to_income": "0-2.5"
+        },
+        "domains_touched": {
+          "banking": 1,
+          "insurance": 3,
+          "layer-1 flag": 2,
+          "out-of-model benchmark": 1
+        }
+      },
+      {
+        "profile": "wealthy_exposed",
+        "n": 292,
+        "pct": 4.17,
+        "n_overrides": 7,
+        "overrides": {
+          "net_worth_to_income": "10-35",
+          "savings_rate": "0.3-0.6",
+          "life_coverage_ratio": "0-1",
+          "ci_coverage_ratio": "0-0.5",
+          "hospitalisation_coverage": "=0",
+          "income_protection_coverage": "=0",
+          "insurance_spend_ratio": "0-0.01"
+        },
+        "domains_touched": {
+          "banking": 1,
+          "insurance": 3,
+          "layer-1 flag": 2,
+          "out-of-model benchmark": 1
+        }
+      },
+      {
+        "profile": "high_debt_investor",
+        "n": 291,
+        "pct": 4.16,
+        "n_overrides": 5,
+        "overrides": {
+          "investment_rate": "0.18-0.38",
+          "dti": "0.4-0.55",
+          "savings_rate": "0.01-0.08",
+          "emergency_fund_months": "0-2",
+          "healthy_debt_ratio": "0-0.35"
+        },
+        "domains_touched": {
+          "banking": 4,
+          "investment": 1
+        }
+      },
+      {
+        "profile": "underinsured_saver",
+        "n": 291,
+        "pct": 4.16,
+        "n_overrides": 7,
+        "overrides": {
+          "savings_rate": "0.25-0.55",
+          "emergency_fund_months": "4-15",
+          "life_coverage_ratio": "0-1.5",
+          "ci_coverage_ratio": "0-0.8",
+          "hospitalisation_coverage": "=0",
+          "income_protection_coverage": "=0",
+          "insurance_spend_ratio": "0-0.015"
+        },
+        "domains_touched": {
+          "banking": 2,
+          "insurance": 3,
+          "layer-1 flag": 2
+        }
+      }
+    ],
+    "other_profiles": [
+      {
+        "profile": "normal",
+        "n": 4550,
+        "pct": 65.0
+      },
+      {
+        "profile": "outlier",
+        "n": 700,
+        "pct": 10.0
+      }
+    ],
+    "profile_types_present": [
+      "conservative_saver",
+      "high_debt_investor",
+      "normal",
+      "outlier",
+      "over_invested",
+      "protection_first",
+      "underinsured_saver",
+      "wealthy_exposed"
+    ]
+  },
+  "step2_coverage": [
+    {
+      "profile": "conservative_saver",
+      "n": 292,
+      "zero_pct": 0.0,
+      "one_pct": 38.7,
+      "two_plus_pct": 61.3,
+      "per_rule_pct": {
+        "Wealth Without Protection": 61.3,
+        "Protection First": 0.0,
+        "Strong Foundation, Room to Grow": 100.0,
+        "Aggressive Investing, Weak Foundation": 0.0
+      },
+      "intended_rule": "Strong Foundation, Room to Grow",
+      "intended_rule_pct": 100.0,
+      "intended_is_tautological": true,
+      "max_flags": 2
+    },
+    {
+      "profile": "high_debt_investor",
+      "n": 291,
+      "zero_pct": 0.0,
+      "one_pct": 66.3,
+      "two_plus_pct": 33.7,
+      "per_rule_pct": {
+        "Wealth Without Protection": 0.0,
+        "Protection First": 33.7,
+        "Strong Foundation, Room to Grow": 0.0,
+        "Aggressive Investing, Weak Foundation": 100.0
+      },
+      "intended_rule": "Aggressive Investing, Weak Foundation",
+      "intended_rule_pct": 100.0,
+      "intended_is_tautological": true,
+      "max_flags": 2
+    },
+    {
+      "profile": "normal",
+      "n": 4550,
+      "zero_pct": 57.3,
+      "one_pct": 42.2,
+      "two_plus_pct": 0.5,
+      "per_rule_pct": {
+        "Wealth Without Protection": 29.0,
+        "Protection First": 13.3,
+        "Strong Foundation, Room to Grow": 0.7,
+        "Aggressive Investing, Weak Foundation": 0.2
+      },
+      "intended_rule": null,
+      "intended_rule_pct": null,
+      "intended_is_tautological": null,
+      "max_flags": 2
+    },
+    {
+      "profile": "outlier",
+      "n": 700,
+      "zero_pct": 48.9,
+      "one_pct": 48.7,
+      "two_plus_pct": 2.4,
+      "per_rule_pct": {
+        "Wealth Without Protection": 23.7,
+        "Protection First": 24.1,
+        "Strong Foundation, Room to Grow": 1.7,
+        "Aggressive Investing, Weak Foundation": 4.0
+      },
+      "intended_rule": null,
+      "intended_rule_pct": null,
+      "intended_is_tautological": null,
+      "max_flags": 2
+    },
+    {
+      "profile": "over_invested",
+      "n": 292,
+      "zero_pct": 0.0,
+      "one_pct": 66.4,
+      "two_plus_pct": 33.6,
+      "per_rule_pct": {
+        "Wealth Without Protection": 0.0,
+        "Protection First": 33.6,
+        "Strong Foundation, Room to Grow": 0.0,
+        "Aggressive Investing, Weak Foundation": 100.0
+      },
+      "intended_rule": "Aggressive Investing, Weak Foundation",
+      "intended_rule_pct": 100.0,
+      "intended_is_tautological": true,
+      "max_flags": 2
+    },
+    {
+      "profile": "protection_first",
+      "n": 292,
+      "zero_pct": 13.0,
+      "one_pct": 86.3,
+      "two_plus_pct": 0.7,
+      "per_rule_pct": {
+        "Wealth Without Protection": 0.0,
+        "Protection First": 87.0,
+        "Strong Foundation, Room to Grow": 0.0,
+        "Aggressive Investing, Weak Foundation": 0.7
+      },
+      "intended_rule": "Protection First",
+      "intended_rule_pct": 87.0,
+      "intended_is_tautological": false,
+      "max_flags": 2
+    },
+    {
+      "profile": "underinsured_saver",
+      "n": 291,
+      "zero_pct": 3.8,
+      "one_pct": 85.2,
+      "two_plus_pct": 11.0,
+      "per_rule_pct": {
+        "Wealth Without Protection": 96.2,
+        "Protection First": 0.0,
+        "Strong Foundation, Room to Grow": 11.0,
+        "Aggressive Investing, Weak Foundation": 0.0
+      },
+      "intended_rule": "Wealth Without Protection",
+      "intended_rule_pct": 96.2,
+      "intended_is_tautological": false,
+      "max_flags": 2
+    },
+    {
+      "profile": "wealthy_exposed",
+      "n": 292,
+      "zero_pct": 6.8,
+      "one_pct": 88.4,
+      "two_plus_pct": 4.8,
+      "per_rule_pct": {
+        "Wealth Without Protection": 93.2,
+        "Protection First": 0.0,
+        "Strong Foundation, Room to Grow": 4.8,
+        "Aggressive Investing, Weak Foundation": 0.0
+      },
+      "intended_rule": "Wealth Without Protection",
+      "intended_rule_pct": 93.2,
+      "intended_is_tautological": false,
+      "max_flags": 2
+    }
+  ],
+  "step3_orphans": [
+    {
+      "profile": "conservative_saver",
+      "zero_flag_pct": 0.0,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Stable / Getting Started / Not Covered",
+          "n": 179,
+          "pct": 61.3
+        },
+        {
+          "combination": "Stable / Getting Started / Covered",
+          "n": 113,
+          "pct": 38.7
+        }
+      ],
+      "n_uncovered": 0
+    },
+    {
+      "profile": "high_debt_investor",
+      "zero_flag_pct": 0.0,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 193,
+          "pct": 66.3
+        },
+        {
+          "combination": "Building / On Track / Covered",
+          "n": 98,
+          "pct": 33.7
+        }
+      ],
+      "n_uncovered": 0
+    },
+    {
+      "profile": "over_invested",
+      "zero_flag_pct": 0.0,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 194,
+          "pct": 66.4
+        },
+        {
+          "combination": "Building / On Track / Covered",
+          "n": 98,
+          "pct": 33.6
+        }
+      ],
+      "n_uncovered": 0
+    },
+    {
+      "profile": "protection_first",
+      "zero_flag_pct": 13.0,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Building / Getting Started / Covered",
+          "n": 171,
+          "pct": 58.6
+        },
+        {
+          "combination": "Building / On Track / Covered",
+          "n": 83,
+          "pct": 28.4
+        },
+        {
+          "combination": "Stable / Getting Started / Covered",
+          "n": 22,
+          "pct": 7.5
+        },
+        {
+          "combination": "Stable / On Track / Covered",
+          "n": 16,
+          "pct": 5.5
+        }
+      ],
+      "n_uncovered": 38,
+      "tier_distribution_uncovered": [
+        {
+          "combination": "Stable / Getting Started / Covered",
+          "n": 22,
+          "pct": 57.9
+        },
+        {
+          "combination": "Stable / On Track / Covered",
+          "n": 16,
+          "pct": 42.1
+        }
+      ],
+      "overrides": {
+        "life_coverage_ratio": "8-18",
+        "ci_coverage_ratio": "3-7",
+        "hospitalisation_coverage": "=1",
+        "income_protection_coverage": "=1",
+        "insurance_spend_ratio": "0.08-0.16",
+        "savings_rate": "0.03-0.12",
+        "net_worth_to_income": "0-2.5"
+      }
+    },
+    {
+      "profile": "underinsured_saver",
+      "zero_flag_pct": 3.8,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Stable / Getting Started / Not Covered",
+          "n": 173,
+          "pct": 59.5
+        },
+        {
+          "combination": "Stable / On Track / Not Covered",
+          "n": 107,
+          "pct": 36.8
+        },
+        {
+          "combination": "Building / Getting Started / Not Covered",
+          "n": 9,
+          "pct": 3.1
+        },
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 2,
+          "pct": 0.7
+        }
+      ],
+      "n_uncovered": 11,
+      "tier_distribution_uncovered": [
+        {
+          "combination": "Building / Getting Started / Not Covered",
+          "n": 9,
+          "pct": 81.8
+        },
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 2,
+          "pct": 18.2
+        }
+      ],
+      "overrides": {
+        "savings_rate": "0.25-0.55",
+        "emergency_fund_months": "4-15",
+        "life_coverage_ratio": "0-1.5",
+        "ci_coverage_ratio": "0-0.8",
+        "hospitalisation_coverage": "=0",
+        "income_protection_coverage": "=0",
+        "insurance_spend_ratio": "0-0.015"
+      }
+    },
+    {
+      "profile": "wealthy_exposed",
+      "zero_flag_pct": 6.8,
+      "verdict": "COVERED",
+      "tier_distribution_all": [
+        {
+          "combination": "Stable / Getting Started / Not Covered",
+          "n": 179,
+          "pct": 61.3
+        },
+        {
+          "combination": "Stable / On Track / Not Covered",
+          "n": 93,
+          "pct": 31.8
+        },
+        {
+          "combination": "Building / Getting Started / Not Covered",
+          "n": 16,
+          "pct": 5.5
+        },
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 4,
+          "pct": 1.4
+        }
+      ],
+      "n_uncovered": 20,
+      "tier_distribution_uncovered": [
+        {
+          "combination": "Building / Getting Started / Not Covered",
+          "n": 16,
+          "pct": 80.0
+        },
+        {
+          "combination": "Building / On Track / Not Covered",
+          "n": 4,
+          "pct": 20.0
+        }
+      ],
+      "overrides": {
+        "net_worth_to_income": "10-35",
+        "savings_rate": "0.3-0.6",
+        "life_coverage_ratio": "0-1",
+        "ci_coverage_ratio": "0-0.5",
+        "hospitalisation_coverage": "=0",
+        "income_protection_coverage": "=0",
+        "insurance_spend_ratio": "0-0.01"
+      }
+    }
+  ],
+  "zero_flag_pct_by_band": {
+    "conservative_saver": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+    },
+    "over_invested": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+    },
+    "protection_first": {
+      "1": 6.2,
+      "2": 7.5,
+      "3": 1.6,
+      "4": 17.9,
+      "5": 29.5
+    },
+    "wealthy_exposed": {
+      "1": 4.8,
+      "2": 6.2,
+      "3": 4.7,
+      "4": 10.6,
+      "5": 7.7
+    },
+    "high_debt_investor": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+    },
+    "underinsured_saver": {
+      "1": 1.6,
+      "2": 1.7,
+      "3": 3.2,
+      "4": 3.8,
+      "5": 9.3
+    }
+  },
+  "intended_rule_map": {
+    "wealthy_exposed": "Wealth Without Protection",
+    "underinsured_saver": "Wealth Without Protection",
+    "protection_first": "Protection First",
+    "conservative_saver": "Strong Foundation, Room to Grow",
+    "over_invested": "Aggressive Investing, Weak Foundation",
+    "high_debt_investor": "Aggressive Investing, Weak Foundation"
+  },
+  "tautological_rules": [
+    "Aggressive Investing, Weak Foundation",
+    "Strong Foundation, Room to Grow"
+  ],
+  "tier_region_coverage": [
+    {
+      "combination": "Building / Getting Started / Not Covered",
+      "n": 1635,
+      "pop_pct": 23.4,
+      "zero_flag_pct": 100.0,
+      "reachable_rules": []
+    },
+    {
+      "combination": "Stable / Getting Started / Not Covered",
+      "n": 1415,
+      "pop_pct": 20.2,
+      "zero_flag_pct": 0.0,
+      "reachable_rules": [
+        "Strong Foundation, Room to Grow",
+        "Wealth Without Protection"
+      ]
+    },
+    {
+      "combination": "Stable / On Track / Not Covered",
+      "n": 802,
+      "pop_pct": 11.5,
+      "zero_flag_pct": 0.0,
+      "reachable_rules": [
+        "Wealth Without Protection"
+      ]
+    },
+    {
+      "combination": "Building / On Track / Not Covered",
+      "n": 786,
+      "pop_pct": 11.2,
+      "zero_flag_pct": 48.0,
+      "reachable_rules": [
+        "Aggressive Investing, Weak Foundation"
+      ]
+    },
+    {
+      "combination": "Building / Getting Started / Covered",
+      "n": 700,
+      "pop_pct": 10.0,
+      "zero_flag_pct": 0.0,
+      "reachable_rules": [
+        "Protection First"
+      ]
+    },
+    {
+      "combination": "Stable / Getting Started / Covered",
+      "n": 583,
+      "pop_pct": 8.3,
+      "zero_flag_pct": 77.0,
+      "reachable_rules": [
+        "Strong Foundation, Room to Grow"
+      ]
+    },
+    {
+      "combination": "Stable / On Track / Covered",
+      "n": 556,
+      "pop_pct": 7.9,
+      "zero_flag_pct": 100.0,
+      "reachable_rules": []
+    },
+    {
+      "combination": "Building / On Track / Covered",
+      "n": 523,
+      "pop_pct": 7.5,
+      "zero_flag_pct": 0.0,
+      "reachable_rules": [
+        "Aggressive Investing, Weak Foundation",
+        "Protection First"
+      ]
+    }
+  ],
+  "plots": [
+    "MLAI/clustering/results/layer3_coverage_audit/plots/coverage_by_archetype.png"
+  ]
+}

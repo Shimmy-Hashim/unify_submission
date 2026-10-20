@@ -1,0 +1,43 @@
+{
+  "policy_id": "003",
+  "filename": "policy_01.pdf",
+  "ground_truth": {
+    "policy_name": "PRUActive Protect",
+    "insurer": "Prudential Assurance Co. Singapore (Pte) Ltd.",
+    "policy_type": "critical_illness",
+    "policy_type_raw": "PRUActive Protect",
+    "sum_assured_sgd": 20000.0,
+    "annual_premium_sgd": 2400.0,
+    "renewal_date": "2045-08",
+    "exclusions": [
+      "Death due to an activity under Special Exclusion or Special Terms and Conditions shown on the Certificate of Life Assurance (premiums refunded instead of the Death benefit)",
+      "Death by suicide within 12 months from the cover start date or date of reinstatement (policy voided, premiums refunded)",
+      "Covered illness (Critical Illness or Early Protect) existing before the cover start date or date of reinstatement",
+      "Any benefit for a covered illness due directly or indirectly to a pre-existing condition, unless declared in the proposal and specifically accepted",
+      "Heart attack of specified severity, major cancer (including carcinoma in situ), or other serious coronary artery disease diagnosed within 90 days of the cover start date or reinstatement",
+      "Coronary artery disease diagnosed within 90 days of the cover start date leading to bypass surgery, or needing angioplasty/other invasive coronary treatment",
+      "Diabetic complications diagnosed within 90 days of the cover start date or reinstatement",
+      "Covered illness caused by self-inflicted injuries while sane or insane",
+      "AIDS, AIDS-related complex, or infection by HIV (except specifically defined exceptions for blood transfusion or occupationally acquired HIV)",
+      "Using unprescribed drugs where the drugs are required by law to be prescribed by a Registered Medical Practitioner",
+      "An activity under Special Exclusion and/or Special Terms and Conditions shown on the Certificate of Life Assurance (critical illness claims)",
+      "Taking part in or attempting to take part in an unlawful act",
+      "Alcohol or drug abuse"
+    ],
+    "coverage_gaps": [
+      "Life/death coverage is only $20,000 - structurally fixed at 20% of the Critical Illness sum assured, not an independent death benefit; this is a CI-led plan with a small bolt-on death benefit, not a life plan with a CI rider",
+      "Critical Illness and Early Protect (pre-critical/early-stage) benefits share the same $100,000 pool - claiming one reduces what remains for the other, so the real maximum CI-related payout ceiling is $100,000 not $200,000",
+      "No disability or income protection benefit attached to this policy at all (no Accelerated Disability, no TPD rider) - unlike the PRUActive Term policy held by the same person",
+      "No hospitalisation or Integrated Shield Plan coverage",
+      "No accidental death and dismemberment coverage"
+    ]
+  },
+  "absent_fields": {
+    "sum_assured_sgd": false,
+    "annual_premium_sgd": false,
+    "renewal_date": false,
+    "exclusions": false,
+    "coverage_gaps": false
+  },
+  "notes": "FABRICATION TRAP (sharpest yet): the certificate's first benefit row is literally labeled 'PRUActive Protect' (matching the product name) and shows $100,000 prominently - this is the Critical Illness benefit (Section 7.1), not life/death coverage. Section 7.3 explicitly defines the Death benefit as '20% of the PRUActive Protect sum assured' = $20,000 which is shown as a separate 'Death' row on the certificate with its own (smaller) figure. A naive extractor pattern-matching on the policy name or grabbing the largest/first sum assured figure will almost certainly output $100,000 for sum_assured_sgd; correct ground truth per the life/death-only schema definition is $20,000. This is a more direct version of the PRUActive Term fabrication trap (formula-derived sum, not an independently underwritten figure) but harder to catch since the benefit row name matches the product name exactly. Exclusions consolidated from Section 8.4 (applies to Critical Illness, Protect Plus, Early Protect, Early Protect Plus, Special benefits - only Critical Illness and Early Protect are actually attached per the certificate; the others are not) plus Section 7.3's Death-benefit-specific exclusions. Crisis Care Accelerator (7.2) is not a separate certificate line item and appears to be a built-in feature of the main CI benefit rather than an optional rider; it also draws from the same shared $100,000 pool. renewal_date populated with Cover End Date (2045-08), consistent with established dataset convention; unlike PRUActive Term, all three benefit lines on this certificate share the same single end date."
+}

@@ -1,0 +1,10 @@
+formula,levels_possible,levels_reached,modal_pct,top3_pct,mean,sd,ordering_indep_min_rho,ordering_indep_mean_rho,ordering_all12_min_rho,protection_gap_group_mean,protection_gap_minus_normal_mean,protection_gap_PASSES,protection_first_rank,protection_first_mean,wealthy_exposed_rank,underinsured_saver_rank,rho_vs_insurance,rho_vs_banking,rho_vs_investment,pct_score_set_by_cap,insurance_dominated
+naive,7,7,30.6,78.71000000000001,52.04,20.33,0.464,0.935,0.464,38.19,-13.31,True,1,73.0,8,7,0.659,0.527,0.585,0.0,False
+option_b,10,10,16.11,46.699999999999996,43.94,24.9,0.685,0.931,0.418,45.8,3.13,False,3,48.97,8,5,0.356,0.752,0.725,0.0,False
+a_hard_ceiling[lenient],4,4,47.24,91.86,39.53,31.12,0.8,0.915,0.2,57.11,20.05,False,8,23.46,2,1,0.052,0.815,0.759,11.26,False
+c_optionb_capped[lenient],10,10,16.11,46.699999999999996,43.43,24.28,0.685,0.931,0.418,45.8,3.82,False,3,48.97,7,5,0.356,0.752,0.725,5.89,False
+a_hard_ceiling[band_ladder],5,5,35.91,85.97,36.67,30.03,0.3,0.787,0.3,39.0,3.68,False,8,23.46,5,4,0.193,0.773,0.691,22.59,False
+c_optionb_capped[band_ladder],11,11,16.11,46.699999999999996,41.94,23.65,0.5,0.821,0.498,35.45,-5.55,True,3,48.97,8,7,0.419,0.729,0.673,11.26,False
+a_hard_ceiling[strict],5,5,37.99,91.86,31.4,24.74,0.5,0.887,0.5,39.0,10.04,False,8,23.46,5,4,0.302,0.724,0.602,43.84,False
+c_optionb_capped[strict],9,9,26.66,57.959999999999994,38.17,20.41,0.517,0.878,0.517,35.45,-0.85,True,1,48.97,8,7,0.482,0.695,0.598,32.51,False
+b_multiplicative_gate,8,8,33.36,63.949999999999996,30.73,26.94,0.214,0.845,0.214,34.35,4.46,False,8,23.46,5,4,0.202,0.78,0.75,0.0,False

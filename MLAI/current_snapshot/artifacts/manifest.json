@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "generated_utc": "2026-07-26T13:56:49.672664+00:00",
+  "generated_by": "MLAI/clustering/build_production_artifacts.py",
+  "purpose": "Production artifact set for the DOMAIN-SPLIT (three-model) Layer 2 architecture, locked July 2026. Supersedes the single-combined-model artifacts in the parent directory (fitted_scaler.pkl, synthetic_ideal_centroids.json, archetype_profiles_k3.csv), which are retained for historical/report reference only and must not be used for domain-split scoring.",
+  "dataset": {
+    "path": "MLAI/clustering/data/processed/synthetic_users.csv",
+    "n_users": 7000,
+    "sha256": "843758a99de5d98de485f5cfb9f0a81b4ea0a8741c2266e0eb5ea5883b4ae6d5",
+    "note": "the current canonical dataset, with the portfolio_concentration and risk_age_deviation corrections applied \u2014 the same file every domain-split validation script read"
+  },
+  "library_versions": {
+    "python": "3.14.2",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "scikit-learn-extra": "0.3.0",
+    "scikit-fuzzy": "0.5.0"
+  },
+  "domains": {
+    "banking": {
+      "combination": "A|kmeans|2",
+      "shipped_tiers": 2,
+      "tier_labels": [
+        "Stable",
+        "Building"
+      ],
+      "clustering_features": [
+        "savings_rate",
+        "emergency_fund_months",
+        "dti",
+        "healthy_debt_ratio"
+      ]
+    },
+    "investment": {
+      "combination": "A|fuzzy_cmeans|2",
+      "shipped_tiers": 2,
+      "tier_labels": [
+        "On Track",
+        "Getting Started"
+      ],
+      "clustering_features": [
+        "investment_rate",
+        "portfolio_concentration",
+        "risk_age_deviation"
+      ]
+    },
+    "insurance": {
+      "combination": "B|kmedoids|3",
+      "shipped_tiers": 2,
+      "tier_labels": [
+        "Covered",
+        "Not Covered"
+      ],
+      "clustering_features": [
+        "life_coverage_ratio",
+        "ci_coverage_ratio",
+        "insurance_spend_ratio"
+      ]
+    }
+  },
+  "files": {
+    "banking_model.json": "5657fa3bbbc905e5b9cf4fd8e04a2e17c213f8eacb51c557936d698abeade01a",
+    "banking_scaler.pkl": "b25a77230a7c4e5f2e93a680fbbf8eeb44d8197d9d00c125defd1b2623ae81cb",
+    "investment_model.json": "149597af848764981b17f61bae061f4b169b73d1280474631b4f8789657a32c3",
+    "investment_scaler.pkl": "423327694109030ead8a7492e886f962cea8e7932dca1a9976734697ecda183d",
+    "insurance_model.json": "c0f00784eca880800ccb4de580092789d3babb4f6fdc65bb4b2077282ee9cd7a",
+    "insurance_scaler.pkl": "ec2ec1c970db7ee7042737dc3df8f71575ffecec3c6c6ec822a7de51ef22fc20",
+    "insurance_age_scaler.pkl": "70e35b1a0ccf55c6f8071aadf3272ebfa83e8d05c6a22772488df733c693a9ed"
+  },
+  "reproduction_checks": {
+    "total": 31,
+    "passed": 31,
+    "all_passed": true,
+    "evidence_sources": [
+      "MLAI/clustering/results/domain_split/domain_split_grid.csv",
+      "MLAI/clustering/results/domain_split/FINAL_TIER_DECISIONS.md"
+    ],
+    "checks": [
+      {
+        "domain": "banking",
+        "check": "silhouette_macro",
+        "passed": true,
+        "reproduced": 0.2588,
+        "validated": 0.2588
+      },
+      {
+        "domain": "banking",
+        "check": "silhouette_micro",
+        "passed": true,
+        "reproduced": 0.262,
+        "validated": 0.262
+      },
+      {
+        "domain": "banking",
+        "check": "davies_bouldin",
+        "passed": true,
+        "reproduced": 1.3934,
+        "validated": 1.3934
+      },
+      {
+        "domain": "banking",
+        "check": "calinski_harabasz",
+        "passed": true,
+        "reproduced": 527.4488,
+        "validated": 527.4488
+      },
+      {
+        "domain": "banking",
+        "check": "min_cluster_pct",
+        "passed": true,
+        "reproduced": 42.02,
+        "validated": 42.02
+      },
+      {
+        "domain": "banking",
+        "check": "shipped_tier_shares_pct",
+        "passed": true,
+        "reproduced": [
+          47.9,
+          52.1
+        ],
+        "validated": [
+          47.9,
+          52.1
+        ]
+      },
+      {
+        "domain": "banking",
+        "check": "min_spearman_rho",
+        "passed": true,
+        "reproduced": 1.0,
+        "validated": 1.0
+      },
+      {
+        "domain": "banking",
+        "check": "normal_population_floor_pct",
+        "passed": true,
+        "reproduced": 40.17,
+        "validated": 40.2
+      },
+      {
+        "domain": "banking",
+        "check": "normal_population_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 40.17,
+        "validated": ">= 5.0"
+      },
+      {
+        "domain": "banking",
+        "check": "size_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 42.02,
+        "validated": ">= 5.0"
+      },
+      {
+        "domain": "investment",
+        "check": "silhouette_macro",
+        "passed": true,
+        "reproduced": 0.2481,
+        "validated": 0.2481
+      },
+      {
+        "domain": "investment",
+        "check": "silhouette_micro",
+        "passed": true,
+        "reproduced": 0.2771,
+        "validated": 0.2771
+      },
+      {
+        "domain": "investment",
+        "check": "davies_bouldin",
+        "passed": true,
+        "reproduced": 1.3556,
+        "validated": 1.3556
+      },
+      {
+        "domain": "investment",
+        "check": "calinski_harabasz",
+        "passed": true,
+        "reproduced": 597.0478,
+        "validated": 597.0478
+      },
+      {
+        "domain": "investment",
+        "check": "min_cluster_pct",
+        "passed": true,
+        "reproduced": 34.53,
+        "validated": 34.53
+      },
+      {
+        "domain": "investment",
+        "check": "shipped_tier_shares_pct",
+        "passed": true,
+        "reproduced": [
+          38.1,
+          61.9
+        ],
+        "validated": [
+          38.1,
+          61.9
+        ]
+      },
+      {
+        "domain": "investment",
+        "check": "min_spearman_rho",
+        "passed": true,
+        "reproduced": 1.0,
+        "validated": 1.0
+      },
+      {
+        "domain": "investment",
+        "check": "normal_population_floor_pct",
+        "passed": true,
+        "reproduced": 29.76,
+        "validated": 29.8
+      },
+      {
+        "domain": "investment",
+        "check": "normal_population_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 29.76,
+        "validated": ">= 5.0"
+      },
+      {
+        "domain": "investment",
+        "check": "size_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 34.53,
+        "validated": ">= 5.0"
+      },
+      {
+        "domain": "insurance",
+        "check": "silhouette_macro",
+        "passed": true,
+        "reproduced": 0.3516,
+        "validated": 0.3516
+      },
+      {
+        "domain": "insurance",
+        "check": "silhouette_micro",
+        "passed": true,
+        "reproduced": 0.3495,
+        "validated": 0.3495
+      },
+      {
+        "domain": "insurance",
+        "check": "davies_bouldin",
+        "passed": true,
+        "reproduced": 1.0291,
+        "validated": 1.0291
+      },
+      {
+        "domain": "insurance",
+        "check": "calinski_harabasz",
+        "passed": true,
+        "reproduced": 3473.3186,
+        "validated": 3473.3186
+      },
+      {
+        "domain": "insurance",
+        "check": "min_cluster_pct",
+        "passed": true,
+        "reproduced": 28.6,
+        "validated": 28.6
+      },
+      {
+        "domain": "insurance",
+        "check": "native_tier_shares_pct",
+        "passed": true,
+        "reproduced": [
+          33.7,
+          37.7,
+          28.6
+        ],
+        "validated": [
+          33.7,
+          37.7,
+          28.6
+        ]
+      },
+      {
+        "domain": "insurance",
+        "check": "shipped_tier_shares_pct",
+        "passed": true,
+        "reproduced": [
+          33.7,
+          66.3
+        ],
+        "validated": [
+          33.7,
+          66.3
+        ]
+      },
+      {
+        "domain": "insurance",
+        "check": "min_spearman_rho",
+        "passed": true,
+        "reproduced": 1.0,
+        "validated": 1.0
+      },
+      {
+        "domain": "insurance",
+        "check": "normal_population_floor_pct",
+        "passed": true,
+        "reproduced": 31.87,
+        "validated": 31.9
+      },
+      {
+        "domain": "insurance",
+        "check": "normal_population_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 31.87,
+        "validated": ">= 5.0"
+      },
+      {
+        "domain": "insurance",
+        "check": "size_floor_clears_5pct",
+        "passed": true,
+        "reproduced": 28.6,
+        "validated": ">= 5.0"
+      }
+    ]
+  },
+  "not_included_deliberately": [
+    "No scoring function, tier-threshold mapping or 0-100 conversion \u2014 Phase 3.",
+    "No Layer 3 combination-detection rules \u2014 a separate later task.",
+    "No change to backend/ml/scoring.py or to the parent-directory artifacts."
+  ]
+}

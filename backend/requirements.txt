@@ -1,0 +1,33 @@
+# Unify backend API — curated dependencies (pip resolves transitives).
+# ML research/benchmark dependencies live in MLAI/requirements.txt.
+# No numpy/scikit-learn here on purpose: the API never touches the numeric
+# stack. ml/tier_assignment.py reads each artifact's scaler as plain JSON
+# numbers rather than unpickling a fitted estimator, so inference is arithmetic
+# over builtins. Anything needing numpy is research code — install
+# MLAI/requirements.txt alongside this in the shared venv.
+fastapi==0.135.3
+firebase-admin==7.5.0
+# Pinned: 2.35.0 (and likely every version above 2.28.0) percent-encodes the
+# Firestore "(default)" database ID in the gRPC routing header, so every
+# Firestore call fails with `InvalidArgument: 400 Invalid database id
+# %28default%29`. The encoding happens in google/api_core/gapic_v1/
+# routing_header.py, whose urlencode() passes safe="/" — leaving "(" and ")"
+# to be escaped. Not fixable in application code: explicit projectId, explicit
+# database_id, and bypassing firebase_admin's wrapper to build
+# google.cloud.firestore.Client directly were all verified no-ops.
+# Do not bump without re-testing this specific failure mode.
+google-api-core==2.28.0
+google-genai==2.8.0
+# Required at runtime by google-api-core 2.28.0, which imports it but does NOT
+# declare it as a dependency. Omitting it makes the server die at startup with
+# ModuleNotFoundError: No module named 'packaging' — while `pip check` still
+# reports "No broken requirements found", since pip only validates declared
+# metadata. Remove only if the google-api-core pin above is lifted.
+packaging
+plaid-python==39.0.0
+pydantic==2.12.5
+pypdf==6.13.2
+python-dotenv==1.2.2
+python-multipart==0.0.32  # FastAPI multipart/form-data uploads (insurance PDF endpoint)
+requests==2.33.1
+uvicorn==0.42.0

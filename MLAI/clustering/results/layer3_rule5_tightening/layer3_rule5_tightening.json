@@ -1,0 +1,599 @@
+{
+  "dataset": {
+    "path": "MLAI/clustering/data/processed/synthetic_users.csv",
+    "n_users": 7000
+  },
+  "criteria": {
+    "min_lift": 3.0,
+    "min_tier_recall_pct": 25.0,
+    "max_band_rate_pct": 25.0,
+    "note": "fixed before results were seen"
+  },
+  "cuts_used": {
+    "investment_rate_min": 0.18,
+    "emergency_fund_months_max": 2.0,
+    "savings_rate_max": 0.1,
+    "note": "loosest override bound across the two targets"
+  },
+  "step1_archetypes": {
+    "targets": [
+      "over_invested",
+      "high_debt_investor"
+    ],
+    "combined_n": 583,
+    "combined_prevalence_pct": 8.33,
+    "per_archetype": {
+      "over_invested": {
+        "n": 292,
+        "prevalence_pct": 4.17,
+        "features": {
+          "investment_rate": {
+            "override_range": [
+              0.22,
+              0.4
+            ],
+            "normal_median": 0.0884,
+            "normal_q10": 0.0,
+            "normal_q75": 0.1174,
+            "normal_q90": 0.1413,
+            "pct_of_normals_inside_override_range": 0.1,
+            "realized_range": [
+              0.221,
+              0.4
+            ]
+          },
+          "emergency_fund_months": {
+            "override_range": [
+              0.0,
+              1.5
+            ],
+            "normal_median": 4.6681,
+            "normal_q10": 1.6025,
+            "normal_q75": 6.9846,
+            "normal_q90": 9.5208,
+            "pct_of_normals_inside_override_range": 8.8,
+            "realized_range": [
+              0.001,
+              1.5
+            ]
+          },
+          "savings_rate": {
+            "override_range": [
+              0.02,
+              0.1
+            ],
+            "normal_median": 0.22,
+            "normal_q10": 0.0988,
+            "normal_q75": 0.2809,
+            "normal_q90": 0.3383,
+            "pct_of_normals_inside_override_range": 8.8,
+            "realized_range": [
+              0.02,
+              0.1
+            ]
+          }
+        }
+      },
+      "high_debt_investor": {
+        "n": 291,
+        "prevalence_pct": 4.16,
+        "features": {
+          "investment_rate": {
+            "override_range": [
+              0.18,
+              0.38
+            ],
+            "normal_median": 0.0884,
+            "normal_q10": 0.0,
+            "normal_q75": 0.1174,
+            "normal_q90": 0.1413,
+            "pct_of_normals_inside_override_range": 1.3,
+            "realized_range": [
+              0.181,
+              0.38
+            ]
+          },
+          "dti": {
+            "override_range": [
+              0.4,
+              0.55
+            ],
+            "normal_median": 0.1618,
+            "normal_q10": 0.0449,
+            "normal_q75": 0.2604,
+            "normal_q90": 0.3407,
+            "pct_of_normals_inside_override_range": 4.4,
+            "realized_range": [
+              0.4,
+              0.549
+            ]
+          },
+          "savings_rate": {
+            "override_range": [
+              0.01,
+              0.08
+            ],
+            "normal_median": 0.22,
+            "normal_q10": 0.0988,
+            "normal_q75": 0.2809,
+            "normal_q90": 0.3383,
+            "pct_of_normals_inside_override_range": 6.0,
+            "realized_range": [
+              0.01,
+              0.08
+            ]
+          },
+          "emergency_fund_months": {
+            "override_range": [
+              0.0,
+              2.0
+            ],
+            "normal_median": 4.6681,
+            "normal_q10": 1.6025,
+            "normal_q75": 6.9846,
+            "normal_q90": 9.5208,
+            "pct_of_normals_inside_override_range": 13.9,
+            "realized_range": [
+              0.001,
+              1.997
+            ]
+          },
+          "healthy_debt_ratio": {
+            "override_range": [
+              0.0,
+              0.35
+            ],
+            "normal_median": 0.6719,
+            "normal_q10": 0.3856,
+            "normal_q75": 0.7908,
+            "normal_q90": 0.8894,
+            "pct_of_normals_inside_override_range": 7.8,
+            "realized_range": [
+              0.001,
+              0.35
+            ]
+          }
+        }
+      }
+    },
+    "overlapping_non_target_archetypes": {
+      "protection_first": {
+        "savings_rate": {
+          "range": [
+            0.03,
+            0.12
+          ],
+          "collides_with": [
+            "over_invested",
+            "high_debt_investor"
+          ]
+        }
+      }
+    },
+    "target_separability": {
+      "over_invested_only_overrides": [],
+      "high_debt_investor_only_overrides": [
+        "dti",
+        "healthy_debt_ratio"
+      ],
+      "separable_in_principle": true,
+      "discriminating_features": [
+        "dti",
+        "healthy_debt_ratio"
+      ]
+    }
+  },
+  "tier_membership": {
+    "over_invested": {
+      "n": 292,
+      "pct_in_Building": 100.0,
+      "pct_in_On_Track": 100.0,
+      "pct_in_both": 100.0
+    },
+    "high_debt_investor": {
+      "n": 291,
+      "pct_in_Building": 100.0,
+      "pct_in_On_Track": 100.0,
+      "pct_in_both": 100.0
+    },
+    "normal": {
+      "n": 4550,
+      "pct_in_Building": 52.4,
+      "pct_in_On_Track": 33.6,
+      "pct_in_both": 11.5
+    }
+  },
+  "step3_4_candidates": {
+    "R5 (original)": {
+      "description": "Banking = Building AND Investment = On Track",
+      "conditions": [
+        "Banking = Building",
+        "Investment = On Track"
+      ],
+      "n_flagged": 1309,
+      "full_population_pct": 18.7,
+      "normal_only_pct": 11.5,
+      "independence_predicted_pct": 19.8,
+      "observed_over_predicted": 0.94,
+      "target_pct_of_flagged": 44.5,
+      "lift_over_prevalence": 5.35,
+      "archetype_recall_pct": 100.0,
+      "per_target_pct_of_flagged": {
+        "over_invested": 22.3,
+        "high_debt_investor": 22.2
+      },
+      "per_target_recall_pct": {
+        "over_invested": 100.0,
+        "high_debt_investor": 100.0
+      },
+      "by_band_full_pct": {
+        "1": 19.9,
+        "2": 18.9,
+        "3": 21.2,
+        "4": 17.9,
+        "5": 15.4
+      },
+      "by_band_normal_pct": {
+        "1": 12.4,
+        "2": 10.6,
+        "3": 14.6,
+        "4": 10.4,
+        "5": 9.3
+      },
+      "profile_mix_pct": {
+        "normal": 39.9,
+        "over_invested": 22.3,
+        "high_debt_investor": 22.2,
+        "outlier": 8.8,
+        "protection_first": 6.3,
+        "wealthy_exposed": 0.3,
+        "underinsured_saver": 0.2
+      },
+      "flagged_composition": {
+        "normal_pct": 39.9,
+        "normal_median_investment_rate": 0.1242,
+        "normal_median_emergency_fund_months": 3.7
+      },
+      "archetype_recall_is_tautological": false,
+      "recall_note": "a real measurement \u2014 tier membership is not defined by the overrides",
+      "max_band_rate_pct": 21.2,
+      "meets_lift": true,
+      "meets_band_rate": true
+    },
+    "D1 (+ investment_rate cut)": {
+      "description": "R5 AND investment_rate >= 0.18 \u2014 the lower of the two archetypes' investment_rate floors, so neither is excluded by construction",
+      "conditions": [
+        "Banking = Building",
+        "Investment = On Track",
+        "investment_rate >= 0.18"
+      ],
+      "n_flagged": 623,
+      "full_population_pct": 8.9,
+      "normal_only_pct": 0.2,
+      "independence_predicted_pct": 2.0,
+      "observed_over_predicted": 4.35,
+      "target_pct_of_flagged": 93.6,
+      "lift_over_prevalence": 11.24,
+      "archetype_recall_pct": 100.0,
+      "per_target_pct_of_flagged": {
+        "over_invested": 46.9,
+        "high_debt_investor": 46.7
+      },
+      "per_target_recall_pct": {
+        "over_invested": 100.0,
+        "high_debt_investor": 100.0
+      },
+      "by_band_full_pct": {
+        "1": 9.4,
+        "2": 9.7,
+        "3": 8.6,
+        "4": 8.8,
+        "5": 7.9
+      },
+      "by_band_normal_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.2,
+        "5": 0.2
+      },
+      "profile_mix_pct": {
+        "over_invested": 46.9,
+        "high_debt_investor": 46.7,
+        "outlier": 4.5,
+        "normal": 1.6,
+        "protection_first": 0.3
+      },
+      "flagged_composition": {
+        "normal_pct": 1.6,
+        "normal_median_investment_rate": 0.1938,
+        "normal_median_emergency_fund_months": 4.06
+      },
+      "archetype_recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cuts are the archetypes' own override bounds, so members pass by definition; not evidence",
+      "max_band_rate_pct": 9.7,
+      "meets_lift": true,
+      "meets_band_rate": true
+    },
+    "D2 (+ Banking weakness)": {
+      "description": "D1 AND emergency_fund_months <= 2.0 AND savings_rate <= 0.1 \u2014 the loosest Banking-side override ceilings across both archetypes, so 'foundation still building' means genuinely thin rather than merely inside the Building tier",
+      "conditions": [
+        "Banking = Building",
+        "Investment = On Track",
+        "investment_rate >= 0.18",
+        "emergency_fund_months <= 2.0",
+        "savings_rate <= 0.1"
+      ],
+      "n_flagged": 585,
+      "full_population_pct": 8.4,
+      "normal_only_pct": 0.0,
+      "independence_predicted_pct": 0.1,
+      "observed_over_predicted": 100.08,
+      "target_pct_of_flagged": 99.7,
+      "lift_over_prevalence": 11.97,
+      "archetype_recall_pct": 100.0,
+      "per_target_pct_of_flagged": {
+        "over_invested": 49.9,
+        "high_debt_investor": 49.7
+      },
+      "per_target_recall_pct": {
+        "over_invested": 100.0,
+        "high_debt_investor": 100.0
+      },
+      "by_band_full_pct": {
+        "1": 9.0,
+        "2": 9.1,
+        "3": 8.0,
+        "4": 8.1,
+        "5": 7.5
+      },
+      "by_band_normal_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "profile_mix_pct": {
+        "over_invested": 49.9,
+        "high_debt_investor": 49.7,
+        "outlier": 0.3
+      },
+      "flagged_composition": {
+        "normal_pct": 0.0,
+        "normal_median_investment_rate": null,
+        "normal_median_emergency_fund_months": null
+      },
+      "archetype_recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cuts are the archetypes' own override bounds, so members pass by definition; not evidence",
+      "max_band_rate_pct": 9.1,
+      "meets_lift": true,
+      "meets_band_rate": true
+    },
+    "D3 (continuous only, no tiers)": {
+      "description": "the full signature with BOTH tier conditions dropped \u2014 the redundancy control, same as C3 in the Rule 4 task",
+      "conditions": [
+        "investment_rate >= 0.18",
+        "emergency_fund_months <= 2.0",
+        "savings_rate <= 0.1"
+      ],
+      "n_flagged": 585,
+      "full_population_pct": 8.4,
+      "normal_only_pct": 0.0,
+      "independence_predicted_pct": 0.4,
+      "observed_over_predicted": 19.85,
+      "target_pct_of_flagged": 99.7,
+      "lift_over_prevalence": 11.97,
+      "archetype_recall_pct": 100.0,
+      "per_target_pct_of_flagged": {
+        "over_invested": 49.9,
+        "high_debt_investor": 49.7
+      },
+      "per_target_recall_pct": {
+        "over_invested": 100.0,
+        "high_debt_investor": 100.0
+      },
+      "by_band_full_pct": {
+        "1": 9.0,
+        "2": 9.1,
+        "3": 8.0,
+        "4": 8.1,
+        "5": 7.5
+      },
+      "by_band_normal_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "profile_mix_pct": {
+        "over_invested": 49.9,
+        "high_debt_investor": 49.7,
+        "outlier": 0.3
+      },
+      "flagged_composition": {
+        "normal_pct": 0.0,
+        "normal_median_investment_rate": null,
+        "normal_median_emergency_fund_months": null
+      },
+      "archetype_recall_is_tautological": true,
+      "recall_note": "tautological \u2014 the cuts are the archetypes' own override bounds, so members pass by definition; not evidence",
+      "max_band_rate_pct": 9.1,
+      "meets_lift": true,
+      "meets_band_rate": true
+    }
+  },
+  "separability": {
+    "within": "D2's flagged set",
+    "n_flagged": 585,
+    "split_on": "dti >= 0.4 (high_debt_investor's own dti floor)",
+    "above": {
+      "n": 303,
+      "profile_mix_pct": {
+        "high_debt_investor": 96.0,
+        "over_invested": 3.6,
+        "outlier": 0.3
+      }
+    },
+    "below": {
+      "n": 282,
+      "profile_mix_pct": {
+        "over_invested": 99.6,
+        "outlier": 0.4
+      }
+    },
+    "over_invested_pct_above_dti_cut": 3.8,
+    "high_debt_investor_pct_above_dti_cut": 100.0
+  },
+  "synthetic_suppression_check": {
+    "population": "normal users only",
+    "marginal_pct": {
+      "investment_rate >= 0.18": 1.34,
+      "emergency_fund_months <= 2.0": 13.89,
+      "savings_rate <= 0.1": 10.26
+    },
+    "observed_joint_pct": 0.0,
+    "independence_predicted_joint_pct": 0.019,
+    "suppression_ratio": 0.0,
+    "pairwise_spearman_among_normals": {
+      "savings_rate~investment_rate": 0.42,
+      "emergency_fund_months~investment_rate": 0.214,
+      "savings_rate~emergency_fund_months": 0.31
+    },
+    "note": "a suppression ratio below 1 means the synthetic normal population produces this combination LESS often than chance, so the precision figure is partly a property of the generator's correlation structure and must not be quoted as an expected real-world precision"
+  },
+  "sensitivity": {
+    "investment_rate_min": {
+      "0.1": {
+        "n_flagged": 604,
+        "full_population_pct": 8.6,
+        "precision_pct": 96.5,
+        "lift": 11.59,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.14": {
+        "n_flagged": 586,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.5,
+        "lift": 11.95,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.18": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "0.22": {
+        "n_flagged": 517,
+        "full_population_pct": 7.4,
+        "precision_pct": 99.6,
+        "lift": 11.96,
+        "recall_pct": 88.3,
+        "is_override_bound": false
+      },
+      "0.26": {
+        "n_flagged": 406,
+        "full_population_pct": 5.8,
+        "precision_pct": 99.5,
+        "lift": 11.95,
+        "recall_pct": 69.3,
+        "is_override_bound": false
+      }
+    },
+    "emergency_fund_months_max": {
+      "1.0": {
+        "n_flagged": 357,
+        "full_population_pct": 5.1,
+        "precision_pct": 100.0,
+        "lift": 12.01,
+        "recall_pct": 61.2,
+        "is_override_bound": false
+      },
+      "1.5": {
+        "n_flagged": 528,
+        "full_population_pct": 7.5,
+        "precision_pct": 100.0,
+        "lift": 12.01,
+        "recall_pct": 90.6,
+        "is_override_bound": false
+      },
+      "2.0": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "3.0": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "4.0": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      }
+    },
+    "savings_rate_max": {
+      "0.06": {
+        "n_flagged": 340,
+        "full_population_pct": 4.9,
+        "precision_pct": 100.0,
+        "lift": 12.01,
+        "recall_pct": 58.3,
+        "is_override_bound": false
+      },
+      "0.08": {
+        "n_flagged": 511,
+        "full_population_pct": 7.3,
+        "precision_pct": 100.0,
+        "lift": 12.01,
+        "recall_pct": 87.7,
+        "is_override_bound": false
+      },
+      "0.1": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": true
+      },
+      "0.14": {
+        "n_flagged": 585,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.7,
+        "lift": 11.97,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      },
+      "0.18": {
+        "n_flagged": 587,
+        "full_population_pct": 8.4,
+        "precision_pct": 99.3,
+        "lift": 11.93,
+        "recall_pct": 100.0,
+        "is_override_bound": false
+      }
+    }
+  },
+  "step5_best_tightened": "D2 (+ Banking weakness)",
+  "step5_original_meets_criteria": true,
+  "plots": [
+    "MLAI/clustering/results/layer3_rule5_tightening/plots/rule5_candidates.png"
+  ]
+}

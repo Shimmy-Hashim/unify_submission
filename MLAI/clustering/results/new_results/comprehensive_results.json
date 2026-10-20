@@ -1,0 +1,867 @@
+{
+  "run_timestamp": "2026-07-25T14:33:55.099559+00:00",
+  "supersedes_note": "CANONICAL 12-algorithm / 11-continuous-feature run (July 2026). Supersedes the prior 5-algo/10-feature run, archived under results/archive/comprehensive_10feature_5algo/.",
+  "dataset": {
+    "n_users": 7000,
+    "n_features": 11,
+    "features": [
+      "savings_rate",
+      "emergency_fund_months",
+      "dti",
+      "net_worth_to_income",
+      "investment_rate",
+      "portfolio_concentration",
+      "risk_age_deviation",
+      "life_coverage_ratio",
+      "ci_coverage_ratio",
+      "healthy_debt_ratio",
+      "insurance_spend_ratio"
+    ],
+    "scaler": "RobustScaler (in-memory, 11-feature)"
+  },
+  "algorithm_families": {
+    "kmeans": "centroid",
+    "kmedoids": "centroid",
+    "fuzzy_cmeans": "centroid",
+    "dbscan": "density",
+    "hdbscan": "density",
+    "gmm_full": "distribution",
+    "gmm_diag": "distribution",
+    "spectral": "graph",
+    "umap_hdbscan": "graph",
+    "agglomerative": "hierarchical",
+    "birch": "hierarchical",
+    "archetypal": "bonus (outside taxonomy)"
+  },
+  "k_based_algorithms": [
+    "kmeans",
+    "kmedoids",
+    "fuzzy_cmeans",
+    "gmm_full",
+    "gmm_diag",
+    "spectral",
+    "agglomerative",
+    "birch",
+    "archetypal"
+  ],
+  "non_k_algorithms": [
+    "dbscan",
+    "hdbscan",
+    "umap_hdbscan"
+  ],
+  "seed": 42,
+  "approach_a": {
+    "results_by_k": {
+      "2": {
+        "winner": "spectral",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.2698,
+            "davies_bouldin_index": 1.6036,
+            "calinski_harabasz_index": 245.0625,
+            "size_balance": 0.0864,
+            "composite_rank": 13
+          },
+          "kmedoids": {
+            "silhouette_score": 0.1359,
+            "davies_bouldin_index": 2.6189,
+            "calinski_harabasz_index": 158.7085,
+            "size_balance": 0.3563,
+            "composite_rank": 23
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.1391,
+            "davies_bouldin_index": 2.3475,
+            "calinski_harabasz_index": 204.1278,
+            "size_balance": 0.7228,
+            "composite_rank": 19
+          },
+          "gmm_full": {
+            "silhouette_score": 0.305,
+            "davies_bouldin_index": 2.588,
+            "calinski_harabasz_index": 153.1584,
+            "size_balance": 0.1699,
+            "composite_rank": 19
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.2883,
+            "davies_bouldin_index": 2.7213,
+            "calinski_harabasz_index": 138.656,
+            "size_balance": 0.166,
+            "composite_rank": 23
+          },
+          "spectral": {
+            "silhouette_score": 0.3262,
+            "davies_bouldin_index": 1.2385,
+            "calinski_harabasz_index": 238.5224,
+            "size_balance": 0.0859,
+            "composite_rank": 8
+          },
+          "agglomerative": {
+            "silhouette_score": 0.3255,
+            "davies_bouldin_index": 1.2431,
+            "calinski_harabasz_index": 238.4079,
+            "size_balance": 0.0861,
+            "composite_rank": 11
+          },
+          "birch": {
+            "silhouette_score": 0.3268,
+            "davies_bouldin_index": 1.2357,
+            "calinski_harabasz_index": 238.1744,
+            "size_balance": 0.0857,
+            "composite_rank": 8
+          },
+          "archetypal": {
+            "silhouette_score": 0.5511,
+            "davies_bouldin_index": 1.1621,
+            "calinski_harabasz_index": 73.6086,
+            "size_balance": 0.0035,
+            "composite_rank": 11
+          }
+        }
+      },
+      "3": {
+        "winner": "spectral",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.2123,
+            "davies_bouldin_index": 1.6793,
+            "calinski_harabasz_index": 253.9212,
+            "size_balance": 0.0588,
+            "composite_rank": 13
+          },
+          "kmedoids": {
+            "silhouette_score": 0.1123,
+            "davies_bouldin_index": 2.2931,
+            "calinski_harabasz_index": 171.9958,
+            "size_balance": 0.1382,
+            "composite_rank": 19
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.0717,
+            "davies_bouldin_index": 2.5425,
+            "calinski_harabasz_index": 116.1835,
+            "size_balance": 0.0068,
+            "composite_rank": 25
+          },
+          "gmm_full": {
+            "silhouette_score": 0.2979,
+            "davies_bouldin_index": 2.5813,
+            "calinski_harabasz_index": 170.5166,
+            "size_balance": 0.0745,
+            "composite_rank": 20
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.2149,
+            "davies_bouldin_index": 2.5163,
+            "calinski_harabasz_index": 143.7998,
+            "size_balance": 0.0912,
+            "composite_rank": 20
+          },
+          "spectral": {
+            "silhouette_score": 0.3357,
+            "davies_bouldin_index": 1.2143,
+            "calinski_harabasz_index": 233.3179,
+            "size_balance": 0.0472,
+            "composite_rank": 5
+          },
+          "agglomerative": {
+            "silhouette_score": 0.3031,
+            "davies_bouldin_index": 1.3749,
+            "calinski_harabasz_index": 232.9243,
+            "size_balance": 0.049,
+            "composite_rank": 11
+          },
+          "birch": {
+            "silhouette_score": 0.3356,
+            "davies_bouldin_index": 1.2332,
+            "calinski_harabasz_index": 231.9702,
+            "size_balance": 0.0462,
+            "composite_rank": 9
+          },
+          "archetypal": {
+            "silhouette_score": 0.4363,
+            "davies_bouldin_index": 1.3293,
+            "calinski_harabasz_index": 73.3143,
+            "size_balance": 0.0007,
+            "composite_rank": 13
+          }
+        }
+      },
+      "4": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.227,
+            "davies_bouldin_index": 1.5147,
+            "calinski_harabasz_index": 252.6629,
+            "size_balance": 0.0494,
+            "composite_rank": 8
+          },
+          "kmedoids": {
+            "silhouette_score": 0.0991,
+            "davies_bouldin_index": 2.1412,
+            "calinski_harabasz_index": 178.658,
+            "size_balance": 0.1606,
+            "composite_rank": 23
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.0508,
+            "davies_bouldin_index": 2.5634,
+            "calinski_harabasz_index": 88.4226,
+            "size_balance": 0.0013,
+            "composite_rank": 26
+          },
+          "gmm_full": {
+            "silhouette_score": 0.2829,
+            "davies_bouldin_index": 1.8176,
+            "calinski_harabasz_index": 203.5561,
+            "size_balance": 0.0541,
+            "composite_rank": 13
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1808,
+            "davies_bouldin_index": 2.0463,
+            "calinski_harabasz_index": 179.1467,
+            "size_balance": 0.0914,
+            "composite_rank": 20
+          },
+          "spectral": {
+            "silhouette_score": 0.3278,
+            "davies_bouldin_index": 1.2875,
+            "calinski_harabasz_index": 197.1988,
+            "size_balance": 0.0431,
+            "composite_rank": 9
+          },
+          "agglomerative": {
+            "silhouette_score": 0.2041,
+            "davies_bouldin_index": 1.6528,
+            "calinski_harabasz_index": 228.7969,
+            "size_balance": 0.0522,
+            "composite_rank": 13
+          },
+          "birch": {
+            "silhouette_score": 0.2146,
+            "davies_bouldin_index": 1.5893,
+            "calinski_harabasz_index": 227.2873,
+            "size_balance": 0.0496,
+            "composite_rank": 12
+          },
+          "archetypal": {
+            "silhouette_score": 0.3757,
+            "davies_bouldin_index": 1.2697,
+            "calinski_harabasz_index": 84.3707,
+            "size_balance": 0.0021,
+            "composite_rank": 11
+          }
+        }
+      },
+      "5": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1698,
+            "davies_bouldin_index": 1.5891,
+            "calinski_harabasz_index": 235.3496,
+            "size_balance": 0.0168,
+            "composite_rank": 8
+          },
+          "kmedoids": {
+            "silhouette_score": 0.0805,
+            "davies_bouldin_index": 2.3425,
+            "calinski_harabasz_index": 150.8092,
+            "size_balance": 0.2187,
+            "composite_rank": 23
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": -0.0508,
+            "davies_bouldin_index": 2.8064,
+            "calinski_harabasz_index": 66.4422,
+            "size_balance": 0.0027,
+            "composite_rank": 27
+          },
+          "gmm_full": {
+            "silhouette_score": 0.2339,
+            "davies_bouldin_index": 2.0309,
+            "calinski_harabasz_index": 178.5878,
+            "size_balance": 0.0088,
+            "composite_rank": 15
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1448,
+            "davies_bouldin_index": 2.0091,
+            "calinski_harabasz_index": 173.8127,
+            "size_balance": 0.0947,
+            "composite_rank": 19
+          },
+          "spectral": {
+            "silhouette_score": 0.3079,
+            "davies_bouldin_index": 1.3641,
+            "calinski_harabasz_index": 180.5586,
+            "size_balance": 0.0452,
+            "composite_rank": 8
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1609,
+            "davies_bouldin_index": 1.7061,
+            "calinski_harabasz_index": 214.9324,
+            "size_balance": 0.0116,
+            "composite_rank": 13
+          },
+          "birch": {
+            "silhouette_score": 0.1684,
+            "davies_bouldin_index": 1.6151,
+            "calinski_harabasz_index": 211.3189,
+            "size_balance": 0.0106,
+            "composite_rank": 12
+          },
+          "archetypal": {
+            "silhouette_score": 0.3527,
+            "davies_bouldin_index": 1.1618,
+            "calinski_harabasz_index": 85.5929,
+            "size_balance": 0.0007,
+            "composite_rank": 10
+          }
+        }
+      },
+      "6": {
+        "winner": "birch",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1572,
+            "davies_bouldin_index": 1.5917,
+            "calinski_harabasz_index": 221.9693,
+            "size_balance": 0.0186,
+            "composite_rank": 10
+          },
+          "kmedoids": {
+            "silhouette_score": 0.0749,
+            "davies_bouldin_index": 2.2591,
+            "calinski_harabasz_index": 146.1739,
+            "size_balance": 0.2012,
+            "composite_rank": 23
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": -0.0882,
+            "davies_bouldin_index": 2.674,
+            "calinski_harabasz_index": 56.253,
+            "size_balance": 0.0013,
+            "composite_rank": 27
+          },
+          "gmm_full": {
+            "silhouette_score": 0.2284,
+            "davies_bouldin_index": 1.7605,
+            "calinski_harabasz_index": 159.6,
+            "size_balance": 0.0088,
+            "composite_rank": 14
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.124,
+            "davies_bouldin_index": 2.1255,
+            "calinski_harabasz_index": 170.8384,
+            "size_balance": 0.0724,
+            "composite_rank": 19
+          },
+          "spectral": {
+            "silhouette_score": 0.2268,
+            "davies_bouldin_index": 1.5119,
+            "calinski_harabasz_index": 188.2763,
+            "size_balance": 0.0455,
+            "composite_rank": 10
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1329,
+            "davies_bouldin_index": 1.6512,
+            "calinski_harabasz_index": 201.722,
+            "size_balance": 0.0132,
+            "composite_rank": 13
+          },
+          "birch": {
+            "silhouette_score": 0.172,
+            "davies_bouldin_index": 1.4906,
+            "calinski_harabasz_index": 198.3963,
+            "size_balance": 0.0087,
+            "composite_rank": 9
+          },
+          "archetypal": {
+            "silhouette_score": 0.31,
+            "davies_bouldin_index": 1.3532,
+            "calinski_harabasz_index": 80.5793,
+            "size_balance": 0.0014,
+            "composite_rank": 10
+          }
+        }
+      }
+    },
+    "selection_scores_by_k": {
+      "2": 0.9044,
+      "3": 0.7856,
+      "4": 0.5176,
+      "5": 0.1965,
+      "6": 0.069
+    },
+    "recommended_k": 2,
+    "recommended_algorithm": "spectral"
+  },
+  "approach_b": {
+    "results_by_k": {
+      "2": {
+        "winner": "birch",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1585,
+            "davies_bouldin_index": 2.201,
+            "calinski_harabasz_index": 1204.4466,
+            "size_balance": 0.8163,
+            "composite_rank": 11
+          },
+          "kmedoids": {
+            "silhouette_score": 0.2275,
+            "davies_bouldin_index": 1.8165,
+            "calinski_harabasz_index": 648.7223,
+            "size_balance": 0.0986,
+            "composite_rank": 14
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.1545,
+            "davies_bouldin_index": 2.2176,
+            "calinski_harabasz_index": 1188.2406,
+            "size_balance": 0.9926,
+            "composite_rank": 14
+          },
+          "gmm_full": {
+            "silhouette_score": 0.1372,
+            "davies_bouldin_index": 2.4052,
+            "calinski_harabasz_index": 1011.5597,
+            "size_balance": 0.8325,
+            "composite_rank": 19
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1224,
+            "davies_bouldin_index": 2.4459,
+            "calinski_harabasz_index": 948.5655,
+            "size_balance": 0.7885,
+            "composite_rank": 23
+          },
+          "spectral": {
+            "silhouette_score": 0.5184,
+            "davies_bouldin_index": 2.1469,
+            "calinski_harabasz_index": 289.7815,
+            "size_balance": 0.021,
+            "composite_rank": 14
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1405,
+            "davies_bouldin_index": 2.28,
+            "calinski_harabasz_index": 994.9401,
+            "size_balance": 0.4957,
+            "composite_rank": 18
+          },
+          "birch": {
+            "silhouette_score": 0.2609,
+            "davies_bouldin_index": 1.4693,
+            "calinski_harabasz_index": 898.3919,
+            "size_balance": 0.1006,
+            "composite_rank": 10
+          },
+          "archetypal": {
+            "silhouette_score": 0.5199,
+            "davies_bouldin_index": 1.6379,
+            "calinski_harabasz_index": 286.4371,
+            "size_balance": 0.0139,
+            "composite_rank": 12
+          }
+        }
+      },
+      "3": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1836,
+            "davies_bouldin_index": 1.8332,
+            "calinski_harabasz_index": 1155.7317,
+            "size_balance": 0.1748,
+            "composite_rank": 6
+          },
+          "kmedoids": {
+            "silhouette_score": 0.1444,
+            "davies_bouldin_index": 2.0217,
+            "calinski_harabasz_index": 858.6106,
+            "size_balance": 0.111,
+            "composite_rank": 18
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.0599,
+            "davies_bouldin_index": 2.3205,
+            "calinski_harabasz_index": 600.6568,
+            "size_balance": 0.0057,
+            "composite_rank": 26
+          },
+          "gmm_full": {
+            "silhouette_score": 0.1268,
+            "davies_bouldin_index": 2.2804,
+            "calinski_harabasz_index": 872.5018,
+            "size_balance": 0.4158,
+            "composite_rank": 21
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1339,
+            "davies_bouldin_index": 2.1449,
+            "calinski_harabasz_index": 995.1759,
+            "size_balance": 0.7888,
+            "composite_rank": 17
+          },
+          "spectral": {
+            "silhouette_score": 0.2754,
+            "davies_bouldin_index": 1.9408,
+            "calinski_harabasz_index": 629.9905,
+            "size_balance": 0.0232,
+            "composite_rank": 12
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1683,
+            "davies_bouldin_index": 1.9453,
+            "calinski_harabasz_index": 1035.8117,
+            "size_balance": 0.1581,
+            "composite_rank": 10
+          },
+          "birch": {
+            "silhouette_score": 0.1577,
+            "davies_bouldin_index": 1.9793,
+            "calinski_harabasz_index": 969.3682,
+            "size_balance": 0.1477,
+            "composite_rank": 14
+          },
+          "archetypal": {
+            "silhouette_score": 0.4604,
+            "davies_bouldin_index": 1.6737,
+            "calinski_harabasz_index": 272.7719,
+            "size_balance": 0.0137,
+            "composite_rank": 11
+          }
+        }
+      },
+      "4": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1802,
+            "davies_bouldin_index": 1.6871,
+            "calinski_harabasz_index": 1184.1958,
+            "size_balance": 0.2645,
+            "composite_rank": 6
+          },
+          "kmedoids": {
+            "silhouette_score": 0.171,
+            "davies_bouldin_index": 1.7818,
+            "calinski_harabasz_index": 989.9981,
+            "size_balance": 0.1182,
+            "composite_rank": 9
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": -0.0183,
+            "davies_bouldin_index": 3.4783,
+            "calinski_harabasz_index": 401.3282,
+            "size_balance": 0.0034,
+            "composite_rank": 26
+          },
+          "gmm_full": {
+            "silhouette_score": 0.1157,
+            "davies_bouldin_index": 2.2821,
+            "calinski_harabasz_index": 748.4477,
+            "size_balance": 0.2313,
+            "composite_rank": 21
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1296,
+            "davies_bouldin_index": 2.1545,
+            "calinski_harabasz_index": 815.8541,
+            "size_balance": 0.2504,
+            "composite_rank": 18
+          },
+          "spectral": {
+            "silhouette_score": 0.2801,
+            "davies_bouldin_index": 1.414,
+            "calinski_harabasz_index": 534.1325,
+            "size_balance": 0.0066,
+            "composite_rank": 10
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1144,
+            "davies_bouldin_index": 1.9715,
+            "calinski_harabasz_index": 932.1417,
+            "size_balance": 0.2138,
+            "composite_rank": 18
+          },
+          "birch": {
+            "silhouette_score": 0.1595,
+            "davies_bouldin_index": 1.9379,
+            "calinski_harabasz_index": 966.1281,
+            "size_balance": 0.2135,
+            "composite_rank": 13
+          },
+          "archetypal": {
+            "silhouette_score": 0.4571,
+            "davies_bouldin_index": 1.8235,
+            "calinski_harabasz_index": 185.0,
+            "size_balance": 0.0031,
+            "composite_rank": 14
+          }
+        }
+      },
+      "5": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1912,
+            "davies_bouldin_index": 1.5884,
+            "calinski_harabasz_index": 1125.4248,
+            "size_balance": 0.1201,
+            "composite_rank": 6
+          },
+          "kmedoids": {
+            "silhouette_score": 0.1599,
+            "davies_bouldin_index": 1.7406,
+            "calinski_harabasz_index": 968.9874,
+            "size_balance": 0.1148,
+            "composite_rank": 9
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.0022,
+            "davies_bouldin_index": 3.8894,
+            "calinski_harabasz_index": 302.7644,
+            "size_balance": 0.0023,
+            "composite_rank": 26
+          },
+          "gmm_full": {
+            "silhouette_score": 0.1316,
+            "davies_bouldin_index": 2.4548,
+            "calinski_harabasz_index": 642.4542,
+            "size_balance": 0.1292,
+            "composite_rank": 20
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1182,
+            "davies_bouldin_index": 2.0589,
+            "calinski_harabasz_index": 828.1215,
+            "size_balance": 0.2206,
+            "composite_rank": 20
+          },
+          "spectral": {
+            "silhouette_score": 0.2779,
+            "davies_bouldin_index": 1.3684,
+            "calinski_harabasz_index": 444.2941,
+            "size_balance": 0.0066,
+            "composite_rank": 10
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1264,
+            "davies_bouldin_index": 1.8528,
+            "calinski_harabasz_index": 905.0895,
+            "size_balance": 0.1275,
+            "composite_rank": 17
+          },
+          "birch": {
+            "silhouette_score": 0.1584,
+            "davies_bouldin_index": 1.8406,
+            "calinski_harabasz_index": 925.1499,
+            "size_balance": 0.1361,
+            "composite_rank": 13
+          },
+          "archetypal": {
+            "silhouette_score": 0.4439,
+            "davies_bouldin_index": 1.7865,
+            "calinski_harabasz_index": 140.0889,
+            "size_balance": 0.0032,
+            "composite_rank": 14
+          }
+        }
+      },
+      "6": {
+        "winner": "kmeans",
+        "algorithms": {
+          "kmeans": {
+            "silhouette_score": 0.1908,
+            "davies_bouldin_index": 1.4651,
+            "calinski_harabasz_index": 1036.3224,
+            "size_balance": 0.0268,
+            "composite_rank": 6
+          },
+          "kmedoids": {
+            "silhouette_score": 0.1035,
+            "davies_bouldin_index": 2.0331,
+            "calinski_harabasz_index": 817.5342,
+            "size_balance": 0.1318,
+            "composite_rank": 18
+          },
+          "fuzzy_cmeans": {
+            "silhouette_score": 0.0057,
+            "davies_bouldin_index": 3.5706,
+            "calinski_harabasz_index": 242.4556,
+            "size_balance": 0.0011,
+            "composite_rank": 26
+          },
+          "gmm_full": {
+            "silhouette_score": 0.1368,
+            "davies_bouldin_index": 2.1179,
+            "calinski_harabasz_index": 599.8392,
+            "size_balance": 0.0102,
+            "composite_rank": 18
+          },
+          "gmm_diag": {
+            "silhouette_score": 0.1247,
+            "davies_bouldin_index": 2.2411,
+            "calinski_harabasz_index": 719.4192,
+            "size_balance": 0.2106,
+            "composite_rank": 20
+          },
+          "spectral": {
+            "silhouette_score": 0.2732,
+            "davies_bouldin_index": 1.1322,
+            "calinski_harabasz_index": 530.7277,
+            "size_balance": 0.007,
+            "composite_rank": 10
+          },
+          "agglomerative": {
+            "silhouette_score": 0.1321,
+            "davies_bouldin_index": 1.7875,
+            "calinski_harabasz_index": 889.4978,
+            "size_balance": 0.1465,
+            "composite_rank": 13
+          },
+          "birch": {
+            "silhouette_score": 0.1615,
+            "davies_bouldin_index": 1.6723,
+            "calinski_harabasz_index": 845.2882,
+            "size_balance": 0.0173,
+            "composite_rank": 10
+          },
+          "archetypal": {
+            "silhouette_score": 0.2986,
+            "davies_bouldin_index": 1.6949,
+            "calinski_harabasz_index": 179.1129,
+            "size_balance": 0.0039,
+            "composite_rank": 14
+          }
+        }
+      }
+    },
+    "selection_scores_by_k": {
+      "2": 0.5748,
+      "3": 0.3913,
+      "4": 0.5992,
+      "5": 0.4971,
+      "6": 0.4035
+    },
+    "recommended_k": 4,
+    "recommended_algorithm": "kmeans"
+  },
+  "non_k_results": {
+    "dbscan": {
+      "params": {
+        "eps": 3.0,
+        "min_samples": 24
+      },
+      "n_clusters_found": 3,
+      "noise_pct": 1.286,
+      "cluster_sizes": [
+        43,
+        6837,
+        30
+      ],
+      "silhouette_score": 0.4799,
+      "davies_bouldin_index": 0.7001,
+      "calinski_harabasz_index": 223.4187,
+      "ran": true
+    },
+    "hdbscan": {
+      "params": {
+        "min_cluster_size": 70
+      },
+      "n_clusters_found": 0,
+      "noise_pct": 100.0,
+      "cluster_sizes": [],
+      "silhouette_score": null,
+      "davies_bouldin_index": null,
+      "calinski_harabasz_index": null,
+      "ran": true
+    },
+    "umap_hdbscan": {
+      "ran": false,
+      "error": "ImportError: DLL load failed while importing _helperlib: An Application Control policy has blocked this file."
+    }
+  },
+  "hdbscan_noise_check": {
+    "space": "pure 11-feature (no age)",
+    "min_cluster_size_sweep": [
+      {
+        "min_cluster_size": 30,
+        "clusters_found": 2,
+        "noise_pct": 0.571
+      },
+      {
+        "min_cluster_size": 50,
+        "clusters_found": 2,
+        "noise_pct": 39.7
+      },
+      {
+        "min_cluster_size": 70,
+        "clusters_found": 0,
+        "noise_pct": 100.0
+      },
+      {
+        "min_cluster_size": 100,
+        "clusters_found": 0,
+        "noise_pct": 100.0
+      },
+      {
+        "min_cluster_size": 150,
+        "clusters_found": 0,
+        "noise_pct": 100.0
+      },
+      {
+        "min_cluster_size": 200,
+        "clusters_found": 0,
+        "noise_pct": 100.0
+      }
+    ],
+    "original_corroboration": "3 clusters / 0.13% noise (OLD data)"
+  },
+  "winning_approach": "A",
+  "winning_algorithm": "spectral",
+  "winning_k": 2,
+  "winner_silhouette_A": 0.3262,
+  "winner_silhouette_B": 0.1802,
+  "benchmark_violation_check": [
+    {
+      "band": 1,
+      "ideal_cluster": 0,
+      "life_coverage_ratio": 3.22,
+      "violates_lia": true
+    },
+    {
+      "band": 2,
+      "ideal_cluster": 0,
+      "life_coverage_ratio": 5.81,
+      "violates_lia": false
+    },
+    {
+      "band": 3,
+      "ideal_cluster": 0,
+      "life_coverage_ratio": 7.01,
+      "violates_lia": false
+    },
+    {
+      "band": 4,
+      "ideal_cluster": 0,
+      "life_coverage_ratio": 5.6,
+      "violates_lia": false
+    },
+    {
+      "band": 5,
+      "ideal_cluster": 0,
+      "life_coverage_ratio": 3.42,
+      "violates_lia": true
+    }
+  ]
+}
